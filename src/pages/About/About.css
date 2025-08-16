@@ -1,7 +1,8 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin-left: 180px;
+
+  margin-left: 20%;
 }
 .about__top {
   display: flex;

@@ -1,5 +1,11 @@
+.contacti {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 10%;
+}
 .contacti__top {
-  margin-left: 180px;
+  top: 15%;
 }
 .contacti__top h1 {
   font-size: 34px;
@@ -108,8 +114,8 @@
 
 .logo3 {
   position: absolute;
-  top: 0%;
-  right: 52%;
+  top: -10%;
+  right: 60%;
   width: 670px;
   transform: rotate(-120deg); /* Минус = влево */
 }

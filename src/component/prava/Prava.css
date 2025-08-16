@@ -1,0 +1,6 @@
+.footer__prava {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  background-color: #f8fafc;
+}

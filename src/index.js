@@ -1,17 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ModalProvider } from "./component/Modal/Modal";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+/* Стили */
+import "./index.css";
+
+/* Компоненты */
+import Header from "./component/Header/Header";
+import Footer from "./component/Footer/Footer";
+import Prava from "./component/prava/Prava";
+import CursorTrail from "./component/CursorTrail/CursorTrail";
+
+/* Страницы */
+import Home from "./pages/Home/Home";
+import Service from "./pages/Service/Service";
+import About from "./pages/About/About";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Contacts from "./pages/Contacts/Contacts";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <ModalProvider>
+    <Router>
+      <CursorTrail />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+      <Footer />
+      <Prava />
+    </Router>
+  </ModalProvider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,0 +1,142 @@
+.forma__right {
+  width: 600px;
+  height: 350px;
+  background-color: #e6f4fc;
+  border-radius: 30px;
+}
+.forma__tile {
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+/*стили для инпутов*/
+.forma__text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+
+  justify-content: center;
+}
+/*нижняя часть формы*/
+.forma__bot {
+  display: flex;
+  gap: 20px;
+}
+.forma__text input {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  height: 35px;
+  text-align: center;
+}
+
+.forma__text input:focus {
+  /* Стили при фокусе */
+  border-color: #51b5ed;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(81, 181, 237, 0.2);
+}
+
+.forma__text input::placeholder {
+  /* Стили для placeholder */
+  color: #999;
+  opacity: 1; /* Для Firefox */
+}
+/* Скрываем стандартный чекбокс */
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Кастомный чекбокс */
+.checkbox-custom {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #51b5ed;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Стиль при наведении */
+.checkbox-container:hover .checkbox-input ~ .checkbox-custom {
+  background-color: #51b5ed;
+}
+
+/* Стиль когда чекбокс отмечен */
+.checkbox-input:checked ~ .checkbox-custom {
+  background-color: #51b5ed;
+}
+
+/* Галочка (скрыта по умолчанию) */
+.checkbox-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Показываем галочку когда отмечено */
+.checkbox-input:checked ~ .checkbox-custom:after {
+  display: block;
+}
+
+/* Стиль галочки */
+.checkbox-custom:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Стиль текста */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 15px;
+  margin-left: 84px;
+}
+.forma__bot p {
+  text-align: center;
+  width: 250px;
+  font-size: 11px;
+}
+.forma__button {
+  margin-top: 10px;
+  margin-right: 60px;
+  margin-left: -20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  color: white;
+  background-color: #2295d4b2;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.forma__button:hover {
+  background-color: #2295d4;
+  box-shadow: 0 4px 8px rgba(34, 149, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+.forma__button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(34, 149, 212, 0.4);
+}

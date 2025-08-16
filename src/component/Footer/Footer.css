@@ -1,0 +1,173 @@
+/* Footer.css */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 5vw;
+  border-top: 4px solid #2295d4;
+  background-color: #f8fafc;
+}
+
+.footer__left {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 340px;
+}
+
+.footer__img {
+  width: 220px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer__img:hover {
+  transform: scale(1.03);
+}
+
+.footer__info {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.footer__centr {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__nav {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.footer__glavnaya,
+.footer__yslugi,
+.footer__port,
+.footer__company {
+  font-size: 1.125rem;
+  color: #0385ce;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer__glavnaya::after,
+.footer__yslugi::after,
+.footer__port::after,
+.footer__company::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0385ce;
+  transition: width 0.3s ease;
+}
+
+.footer__glavnaya:hover,
+.footer__yslugi:hover,
+.footer__port:hover,
+.footer__company:hover {
+  color: #2b6cb0;
+  transform: translateX(5px);
+}
+
+.footer__glavnaya:hover::after,
+.footer__yslugi:hover::after,
+.footer__port:hover::after,
+.footer__company:hover::after {
+  width: 30px;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__contakt h4 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.footer__nomer,
+.footer__email,
+.footer__email1,
+.footer__adres {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.footer__nomer:hover,
+.footer__email:hover,
+.footer__email1:hover,
+.footer__adres:hover {
+  transform: translateX(5px);
+}
+
+.footer__nomer img,
+.footer__email img,
+.footer__email1 img,
+.footer__adres img {
+  width: 24px;
+  height: 24px;
+  margin-top: 0.125rem;
+}
+
+.footer__nomer p,
+.footer__email p,
+.footer__email1 p,
+.footer__adres p {
+  font-size: 0.9375rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer__adres {
+  max-width: 300px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    padding: 2rem 5vw;
+    gap: 2.5rem;
+  }
+
+  .footer__left,
+  .footer__centr,
+  .footer__right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__glavnaya,
+  .footer__yslugi,
+  .footer__port,
+  .footer__company {
+    font-size: 1rem;
+  }
+
+  .footer__contakt h4 {
+    font-size: 1.25rem;
+  }
+
+  .footer__nav {
+    font-size: 1.25rem;
+  }
+}

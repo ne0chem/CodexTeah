@@ -1,0 +1,194 @@
+/*первый разедл ( главный)*/
+
+/* Основной контейнер страницы */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Хедер (уже правильно центрирован) */
+.heder {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.heder h3 {
+  font-size: 50px;
+}
+.heder p {
+  font-size: 27px;
+}
+.menu__button {
+  display: flex;
+  gap: 100px;
+}
+
+.button__left,
+.button__right {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Основная кнопка (синяя) */
+.button__left {
+  background-color: #2295d4;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 5px rgba(34, 149, 212, 0.3);
+}
+
+.button__left:hover {
+  background-color: #1b7cb4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(34, 149, 212, 0.4);
+}
+
+.button__left:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(34, 149, 212, 0.4);
+}
+
+/* Контурная кнопка (белая с синей рамкой) */
+.button__right {
+  background-color: white;
+  color: #2295d4;
+  border: 2px solid #2295d4;
+  transition: all 0.3s ease, border-color 0.2s;
+}
+
+.button__right:hover {
+  background-color: #f0f8ff;
+  color: #1b7cb4;
+  border-color: #1b7cb4;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(34, 149, 212, 0.2);
+}
+
+.button__right:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Общие эффекты для обеих кнопок */
+.button__left:hover,
+.button__right:hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.opit {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+}
+
+.opit__centr,
+.opit__right {
+  display: flex;
+  gap: 20px;
+  width: 180px;
+  text-align: center;
+}
+.opit__left {
+  display: flex;
+  gap: 20px;
+  width: 180px;
+  text-align: center;
+}
+.logo {
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 500px;
+}
+
+/*наши услуги*/
+.logo2 {
+  position: absolute;
+  transform: rotate(-70deg); /* Минус = влево */
+  left: 10%;
+}
+.logo4 {
+  position: absolute;
+  transform: rotate(140deg); /* Минус = влево */
+  right: 10%;
+  top: 100%;
+}
+.usligii__glanv {
+  margin-top: 106px;
+  margin-bottom: 70px;
+  font-size: 40px;
+  z-index: 10;
+}
+.uslugi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  width: 1500px;
+  z-index: 10;
+}
+/*контейнер для услуг*/
+.uslugi1,
+.uslugi2,
+.uslugi3,
+.uslugi4,
+.uslugi5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6f4fc;
+  width: 360px;
+  height: 350px;
+  border-radius: 20px;
+}
+.uslugi1__img1 {
+  margin-top: 24px;
+  width: 124px;
+  height: 124px;
+}
+.uslugi1__img2 {
+  margin-top: 24px;
+  width: 116px;
+  height: 116px;
+}
+.uslugi1__img3 {
+  margin-top: 24px;
+  width: 118px;
+  height: 118px;
+}
+.uslugi__title {
+  font-size: 24px;
+  width: 270px;
+  text-align: center;
+}
+.uslugi__title1 {
+  font-size: 20px;
+  width: 270px;
+  text-align: center;
+}
+.uslugi__subtitle {
+  font-size: 18px;
+  width: 250px;
+  text-align: center;
+}
+.uslugi__price {
+  margin-top: 10px;
+}

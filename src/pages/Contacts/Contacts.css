@@ -1,0 +1,124 @@
+.contacti {
+}
+.contacti__top {
+  margin-left: 180px;
+}
+.contacti__top h1 {
+  font-size: 34px;
+  width: 180px;
+  border-bottom: 2px solid #0385ce;
+}
+.contacti__top p {
+  font-size: 18px;
+}
+.contacti__bot {
+  margin-left: 180px;
+  display: flex;
+  gap: 250px;
+  margin-top: 70px;
+}
+.contacti__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacti__left input[name="name"] {
+  width: 250px;
+  height: 40px;
+  border: 2px solid #0385ce;
+  border-radius: 30px;
+  background-color: #f0f8fc;
+  padding: 0 15px; /* Отступ слева и справа (по горизонтали) */
+  box-sizing: border-box;
+}
+
+.contacti__left input[name="email"] {
+  width: 250px;
+  height: 40px;
+  border: 2px solid #0385ce;
+  border-radius: 30px;
+  background-color: #f0f8fc;
+  padding: 0 15px; /* Отступ слева и справа (по горизонтали) */
+  box-sizing: border-box;
+}
+
+.contacti__left input[name="service"] {
+  width: 250px;
+  height: 70px;
+  border: 2px solid #0385ce;
+  border-radius: 30px;
+  background-color: #f0f8fc;
+  padding: 0 15px; /* Отступ слева и справа (по горизонтали) */
+  box-sizing: border-box;
+}
+.contacti__button {
+  width: 150px;
+  background-color: #51b5ed;
+  color: white;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(34, 149, 212, 0.3);
+  z-index: 1000;
+}
+
+.contacti__button:hover {
+  background-color: #1b7cb4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(34, 149, 212, 0.4);
+}
+
+.contacti__button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(34, 149, 212, 0.4);
+}
+
+/*стили для раздела с телефоном*/
+.contacti__center {
+  display: flex;
+  flex-direction: column;
+  margin-top: -40px;
+  gap: 10px;
+}
+.center__top h5 {
+  font-size: 20px;
+}
+.center__bot h5 {
+  font-size: 18px;
+  color: #0385ce;
+}
+
+.contacti__right {
+  margin-top: -40px;
+  display: flex;
+  z-index: 800;
+}
+
+.right__bot h5 {
+  font-size: 18px;
+}
+.right__bot p {
+  width: 200px;
+  font-size: 15px;
+}
+.right__bot img {
+  width: 500px;
+  height: 400px;
+  margin-right: 50px;
+}
+
+.logo3 {
+  position: absolute;
+  top: 0%;
+  right: 52%;
+  width: 670px;
+  transform: rotate(-120deg); /* Минус = влево */
+}
+.logo1 {
+  position: absolute;
+  top: 70%;
+  right: 60%;
+  left: 65%;
+  transform: rotate(-220deg); /* Минус = влево */
+}

@@ -1,16 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./Home.css";
 import Forma from "../../component/Forma/Forma";
-import { ModalContext } from "../../component/Modal/Modal";
+import { ModalContext } from "../../component/Modal/Modal"; // Убедитесь, что путь правильный
 import { Link } from "react-router-dom";
 import TypewriterText from "../../component/TypewriterText/TypewriterText";
-const Home = ({ openModal }) => {
-  const [animationStarted, setAnimationStarted] = useState(false);
 
-  // Corrected: using useEffect instead of useState
+const Home = () => {
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const { openModal } = useContext(ModalContext); // Получаем openModal из контекста
+
   useEffect(() => {
     setAnimationStarted(true);
   }, []);
+
+  const handleOpenModal = () => {
+    if (openModal) {
+      openModal(<Forma />); // Передаем компонент Forma в модальное окно
+    } else {
+      console.error("openModal is not a function");
+    }
+  };
 
   return (
     <div className="home-page">
@@ -30,7 +39,7 @@ const Home = ({ openModal }) => {
           )}
         </p>
         <div className="menu__button">
-          <button className="button__left" onClick={() => openModal()}>
+          <button className="button__left" onClick={handleOpenModal}>
             Оставить заявку
           </button>
           <Link to="/service" className="button__right">

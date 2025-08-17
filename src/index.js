@@ -12,6 +12,7 @@ import Footer from "./component/Footer/Footer";
 import Prava from "./component/prava/Prava";
 import CursorTrail from "./component/CursorTrail/CursorTrail";
 import SocSeti from "./component/SocSeti/SocSeti";
+import Particles from "./component/Particles/Particles";
 
 /* Страницы */
 import Home from "./pages/Home/Home";
@@ -24,6 +25,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ModalProvider>
     <Router>
+      <Particles
+        particleCount={300}
+        particleColors={["#4facfe", "#00f2fe"]}
+        className="particles-background"
+      />
       <CursorTrail />
       <SocSeti />
       <Header />

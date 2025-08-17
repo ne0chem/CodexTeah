@@ -1,19 +1,33 @@
-import React, { useContext } from "react";
+import { useState, useEffect } from "react";
 import "./Home.css";
 import Forma from "../../component/Forma/Forma";
 import { ModalContext } from "../../component/Modal/Modal";
 import { Link } from "react-router-dom";
+import TypewriterText from "../../component/TypewriterText/TypewriterText";
+const Home = ({ openModal }) => {
+  const [animationStarted, setAnimationStarted] = useState(false);
 
-const Home = () => {
-  const { openModal } = useContext(ModalContext);
+  // Corrected: using useEffect instead of useState
+  useEffect(() => {
+    setAnimationStarted(true);
+  }, []);
+
   return (
     <div className="home-page">
       <img className="logo" src="./polosi.svg" alt="" />
       <div className="heder">
-        <h3>ІТ-решения под ключ для вашего бизнеса</h3>
+        <h3>
+          {animationStarted && (
+            <TypewriterText text="ІТ-решения под ключ для вашего бизнеса" />
+          )}
+        </h3>
         <p className="header__text">
-          Разработка веб-систем, мобильных приложений и решений для корпораций и
-          госструктур
+          {animationStarted && (
+            <TypewriterText
+              text="Разработка веб-систем, мобильных приложений и решений для корпораций и госструктур"
+              delay={20}
+            />
+          )}
         </p>
         <div className="menu__button">
           <button className="button__left" onClick={() => openModal()}>
@@ -27,17 +41,30 @@ const Home = () => {
       <div className="opit">
         <div className="opit__left">
           <img src="./1.svg" alt="" />
-          <p>Опыт более 5 лет</p>
+          <p>
+            {animationStarted && (
+              <TypewriterText text="Опыт более 5 лет" delay={40} />
+            )}
+          </p>
         </div>
         <div className="opit__centr">
           <img src="./2.svg" alt="" />
-          <p>Современные технологии</p>
+          <p>
+            {animationStarted && (
+              <TypewriterText text="Современные технологии" delay={40} />
+            )}
+          </p>
         </div>
         <div className="opit__right">
           <img src="./3.svg" alt="" />
-          <p>Проекты под ключ</p>
+          <p>
+            {animationStarted && (
+              <TypewriterText text="Проекты под ключ" delay={40} />
+            )}
+          </p>
         </div>
       </div>
+
       <div className="usligii__glanv">
         <img className="logo2" src="./polosi.svg" alt="" />
         <img className="logo4" src="./polosi.SVG" alt="" />

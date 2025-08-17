@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+button,
+input {
+  -moz-outline-style: none;
+  outline-style: none;
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.add-butt-wrapper {
+  display: inline-block;
+  position: fixed; /* Изменено с absolute на fixed */
+  bottom: 30px; /* Отступ от нижнего края */
+  right: 40px; /* Отступ от правого края */
+  height: 100px;
+  width: 100px;
+  text-align: center;
+
+  border-radius: 18px;
+  z-index: 1000;
+  /* Убраны top: 82% и right: 2% */
+  /* Остальные стили остаются без изменений */
+
+  &::before {
+    content: "";
+    background: #fff;
+    z-index: 10;
+    height: 32px;
+    width: 8px;
+    position: absolute;
+    top: 34px;
+    left: 46px;
+    border-radius: 5px;
+  }
+
+  &::after {
+    content: "";
+    background: #fff;
+    z-index: 10;
+    height: 8px;
+    width: 32px;
+    position: absolute;
+    top: 46px;
+    left: 34px;
+    border-radius: 5px;
+  }
+
+  transition: 0.1s;
+  &:hover {
+    transform: rotate(45deg);
+    & > a {
+      animation: add-butt-hover 0.8s ease;
+      margin: 5px;
+      border-radius: 22px;
+      transition: 0.2s;
+      transition-delay: 0.45s;
+      & > i {
+        animation: add-butt-icons 0.8s linear;
+        transform: rotate(-45deg);
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+}
+
+.add-butt {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  padding-top: 16px;
+  background-color: #0384ce57; /* Ваш цвет */
+  color: #fff;
+  text-align: center;
+  transition: 0.1s;
+}
+
+/* Button positioning */
+.add-butt:nth-child(1) {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  border-radius: 15px 0 0 0;
+  margin-right: 0; /* Добавлено */
+  margin-bottom: 0; /* Добавлено */
+}
+
+.add-butt:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  border-radius: 0 15px 0 0;
+  margin-left: 0; /* Добавлено */
+  margin-bottom: 0; /* Добавлено */
+}
+
+.add-butt:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 0 0 15px 0;
+  margin-left: 0; /* Добавлено */
+  margin-top: 0; /* Добавлено */
+}
+
+.add-butt:nth-child(4) {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border-radius: 0 0 0 15px;
+  margin-right: 0; /* Добавлено */
+  margin-top: 0; /* Добавлено */
+}
+
+.add-butt > i {
+  color: rgba(255, 255, 255, 0);
+}
+
+@keyframes add-butt-hover {
+  from {
+    height: 50px;
+    width: 50px;
+  }
+  60% {
+    height: 30px;
+    width: 30px;
+  }
+  75% {
+    height: 52px;
+    width: 52px;
+    margin: 7px;
+  }
+  to {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+  }
+}
+
+@keyframes add-butt-icons {
+  from {
+    color: rgba(255, 255, 255, 0);
+  }
+  60% {
+    color: rgba(255, 255, 255, 0);
+  }
+  to {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Webkit prefixes */
+@-webkit-keyframes add-butt-hover {
+  from {
+    height: 50px;
+    width: 50px;
+  }
+  60% {
+    height: 30px;
+    width: 30px;
+  }
+  75% {
+    height: 52px;
+    width: 52px;
+    margin: 7px;
+  }
+  to {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+  }
+}
+
+@-webkit-keyframes add-butt-icons {
+  from {
+    color: rgba(255, 255, 255, 0);
+  }
+  60% {
+    color: rgba(255, 255, 255, 0);
+  }
+  to {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Добавьте эти стили к вашему существующему CSS */
+
+.main-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  transition: 0.3s;
+}
+
+.add-butt-wrapper:hover .main-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: rotate(0deg);
+}
+
+/* Анимация при наведении */
+.add-butt-wrapper:hover {
+  transform: rotate(45deg);
+  background-color: transparent; /* Убираем фон у плюсика при раскрытии */
+
+  & > a {
+    animation: add-butt-hover 0.8s ease;
+
+    & > .icon-img {
+      animation: add-butt-icons 0.8s linear;
+      opacity: 1;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* Обновляем анимацию */
+@keyframes add-butt-icons {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+}
+
+.add-butt-wrapper:hover > a > .icon-image {
+  animation: add-butt-icons 0.8s linear;
+  transform: rotate(-45deg);
+}

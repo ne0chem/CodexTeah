@@ -18,9 +18,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -50px;
+  margin-top: 50px;
   margin-bottom: 80px;
   text-align: center;
+  gap: 40px;
 }
 .heder h3 {
   font-size: 50px;
@@ -46,6 +47,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin-top: 50px;
 }
 
 /* Основная кнопка (синяя) */

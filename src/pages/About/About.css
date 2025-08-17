@@ -1,12 +1,13 @@
 .about {
   display: flex;
   flex-direction: column;
-
+  margin-top: 50px;
   margin-left: 20%;
 }
 .about__top {
   display: flex;
   flex-direction: column;
+  gap: 50px;
 }
 .about__top h3 {
   font-size: 36px;
@@ -20,7 +21,7 @@
 .about__center {
   display: flex;
   margin-left: 100px;
-  margin-top: 40px;
+  margin-top: 50px;
   gap: 75px;
 }
 .img__circle {
@@ -69,6 +70,8 @@
 .about__bot {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  gap: 50px;
 }
 .about__bot h4 {
   font-size: 36px;
@@ -81,6 +84,7 @@
 }
 .etapi h2 {
   font-size: 45px;
+  margin-top: 150px;
 }
 
 /*предложение нейронки*/
@@ -90,6 +94,7 @@
   justify-content: center;
   position: relative;
   width: auto;
+  margin-top: 50px;
 }
 
 .etapi__left,
@@ -192,6 +197,7 @@
 
 .sotrudniki {
   font-size: 50px;
+  margin-top: 150px;
 }
 .sotrudniki__contaner {
   display: flex;
@@ -199,6 +205,7 @@
   flex-wrap: wrap;
   max-width: 1200px;
   gap: 50px;
+  margin-top: 50px;
 }
 .odin,
 .dva,

@@ -11,6 +11,7 @@ import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 import Prava from "./component/prava/Prava";
 import CursorTrail from "./component/CursorTrail/CursorTrail";
+import SocSeti from "./component/SocSeti/SocSeti";
 
 /* Страницы */
 import Home from "./pages/Home/Home";
@@ -24,6 +25,7 @@ root.render(
   <ModalProvider>
     <Router>
       <CursorTrail />
+      <SocSeti />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

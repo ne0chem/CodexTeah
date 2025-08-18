@@ -4,7 +4,7 @@ import Forma from "../../component/Forma/Forma";
 import { ModalContext } from "../../component/Modal/Modal"; // Убедитесь, что путь правильный
 import { Link } from "react-router-dom";
 import TypewriterText from "../../component/TypewriterText/TypewriterText";
-
+import ServicesCarousel from "../../component/Test/Test";
 const Home = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
   const { openModal } = useContext(ModalContext); // Получаем openModal из контекста
@@ -80,50 +80,7 @@ const Home = () => {
         <b>Наши услуги</b>
       </div>
       <div className="uslugi">
-        <div className="uslugi1">
-          <img src="./pk.svg" alt="" className="uslugi1__img1" />
-          <p className="uslugi__title">
-            <b>Веб-разработка</b>
-          </p>
-          <p className="uslugi__price">
-            <b>от 100 000</b>
-          </p>
-          <p className="uslugi__subtitle">Сайты, веб-системы, дизайн сайтов</p>
-        </div>
-        <div className="uslugi2">
-          <img src="./tlf.svg" alt="" className="uslugi1__img2" />
-          <p className="uslugi__title1">
-            <b>Мобильные приложения</b>
-          </p>
-          <p className="uslugi__price">
-            <b>от 150 000</b>
-          </p>
-          <p className="uslugi__subtitle"></p>
-        </div>
-        <div className="uslugi3">
-          <img src="./3.svg" alt="" className="uslugi1__img3" />
-          <p className="uslugi__title1">
-            <b>Веб-системы и интеграции</b>
-          </p>
-          <p className="uslugi__price"></p>
-          <p className="uslugi__subtitle"></p>
-        </div>
-        <div className="uslugi5">
-          <img src="./3.svg" alt="" className="uslugi1__img3" />
-          <p className="uslugi__title1">
-            <b>Верстка и програмирование</b>
-          </p>
-          <p className="uslugi__price"></p>
-          <p className="uslugi__subtitle"></p>
-        </div>
-        <div className="uslugi3">
-          <img src="./3.svg" alt="" className="uslugi1__img3" />
-          <p className="uslugi__title">
-            <b>Тестирование и запуск</b>
-          </p>
-          <p className="uslugi__price"></p>
-          <p className="uslugi__subtitle"></p>
-        </div>
+        <ServicesCarousel />
       </div>
       <Forma />
     </div>

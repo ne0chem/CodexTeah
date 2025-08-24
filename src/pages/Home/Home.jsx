@@ -3,8 +3,12 @@ import "./Home.css";
 import Forma from "../../component/Forma/Forma";
 import { ModalContext } from "../../component/Modal/Modal"; // Убедитесь, что путь правильный
 import { Link } from "react-router-dom";
-import TypewriterText from "../../component/TypewriterText/TypewriterText";
-import ServicesCarousel from "../../component/Test/Test";
+import TypewriterText from "../../component/HomeComponent/TypewriterText/TypewriterText";
+import ServicesCarousel from "../../component/HomeComponent/Test/Test";
+import Service from "../../component/HomeComponent/Service/Service";
+import Etapi from "../../component/HomeComponent/Etapi/Etapi";
+import FAQ from "../../component/HomeComponent/FAQ/FAQ";
+import ContactCTA from "../../component/HomeComponent/ContactCTA/ContactCTA";
 const Home = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
   const { openModal } = useContext(ModalContext); // Получаем openModal из контекста
@@ -23,7 +27,6 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      <img className="logo" src="./polosi.svg" alt="" />
       <div className="heder">
         <h3>
           {animationStarted && (
@@ -73,16 +76,16 @@ const Home = () => {
           </p>
         </div>
       </div>
-
+      <Service />
       <div className="usligii__glanv">
-        <img className="logo2" src="./polosi.svg" alt="" />
-        <img className="logo4" src="./polosi.SVG" alt="" />
         <b>Наши услуги</b>
       </div>
       <div className="uslugi">
         <ServicesCarousel />
       </div>
-      <Forma />
+      <ContactCTA />
+      <Etapi />
+      <FAQ />
     </div>
   );
 };

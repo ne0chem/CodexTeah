@@ -1,0 +1,184 @@
+/* Секция этапов работы с большими фоновыми цифрами */
+.work-steps {
+  padding: 100px 20px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.work-steps .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  margin-top: -100px;
+}
+
+.work-steps .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #24303b;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 100px;
+}
+
+/* Сетка для этапов */
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+/* Контейнер для каждого этапа с фоновой цифрой */
+.step-item {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  z-index: 2;
+}
+
+/* Большая фоновая цифра */
+.step-bg-number {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(74, 156, 233, 0.199);
+  z-index: 10;
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Стиль одной карточки этапа */
+.step-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 15px 35px rgba(74, 157, 233, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid rgba(122, 194, 245, 0.3);
+  z-index: 1;
+  height: 100%;
+}
+
+.step-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(74, 157, 233, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+}
+
+/* Заголовок этапа */
+.step-title {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  color: #092a3dcc;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+/* Описание этапа */
+.step-desc {
+  color: #4a6580;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+}
+
+/* Декоративный водяной знак */
+
+/* Адаптивность для мобильных */
+@media (min-width: 992px) {
+  .steps-container {
+    justify-content: space-between;
+  }
+
+  .step-item {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .step-connector {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .steps-container {
+    gap: 25px;
+  }
+
+  .step-item {
+    max-width: 300px;
+  }
+
+  .step-bg-number {
+    font-size: 160px;
+    top: -30px;
+  }
+
+  .step-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-steps {
+    padding: 70px 20px;
+  }
+
+  .step-item {
+    max-width: 100%;
+  }
+
+  .step-card {
+    padding: 30px 25px;
+  }
+
+  .work-steps .section-title {
+    font-size: 2rem;
+    margin-bottom: 70px;
+  }
+
+  .step-bg-number {
+    font-size: 140px;
+    top: -25px;
+  }
+
+  .work-steps .watermark {
+    font-size: 150px;
+    right: -30px;
+    top: -30px;
+  }
+
+  .step-connector {
+    display: none;
+  }
+}

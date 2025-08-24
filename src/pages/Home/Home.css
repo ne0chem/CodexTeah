@@ -1,6 +1,12 @@
 /*первый разедл ( главный)*/
+:root {
+  --text-primary: #24303b; /* Основной темный текст */
+  --text-secondary: #4a6580; /* Вторичный текст */
+  --text-accent: #2c6aa0; /* Акцентный цвет */
+  --text-light: #6b7b8f; /* Светлый текст */
+  --text-white: #ffffff; /* Белый текст */
+}
 
-/* Основной контейнер страницы */
 /* Основной контейнер страницы */
 .home-page {
   display: flex;
@@ -20,16 +26,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 80px;
   text-align: center;
-  gap: 40px;
+  gap: 50px;
 }
 .heder h3 {
   font-size: 50px;
+  color: var(--text-primary);
 }
 .heder p {
   font-size: 27px;
+  color: var(--text-secondary);
+  line-height: 1.4;
 }
 .menu__button {
   display: flex;
@@ -101,6 +110,7 @@
   display: flex;
   width: 800px;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .opit__centr,
@@ -136,8 +146,8 @@
   top: 100%;
 }
 .usligii__glanv {
-  margin-top: 106px;
-  margin-bottom: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 40px;
   z-index: 10;
 }
@@ -149,50 +159,24 @@
   width: 1500px;
   z-index: 10;
 }
-/*контейнер для услуг*/
-.uslugi1,
-.uslugi2,
-.uslugi3,
-.uslugi4,
-.uslugi5 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e6f4fc;
-  width: 360px;
-  height: 350px;
-  border-radius: 20px;
+
+/* Добавьте в начало */
+body {
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
-.uslugi1__img1 {
-  margin-top: 24px;
-  width: 124px;
-  height: 124px;
-}
-.uslugi1__img2 {
-  margin-top: 24px;
-  width: 116px;
-  height: 116px;
-}
-.uslugi1__img3 {
-  margin-top: 24px;
-  width: 118px;
-  height: 118px;
-}
-.uslugi__title {
-  font-size: 24px;
-  width: 270px;
-  text-align: center;
-}
-.uslugi__title1 {
-  font-size: 20px;
-  width: 270px;
-  text-align: center;
-}
-.uslugi__subtitle {
-  font-size: 18px;
-  width: 250px;
-  text-align: center;
-}
-.uslugi__price {
-  margin-top: 10px;
+
+/* Для заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
 }

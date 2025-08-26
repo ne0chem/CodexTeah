@@ -16,7 +16,7 @@ import Particles from "./component/Particles/Particles";
 
 /* Страницы */
 import Home from "./pages/Home/Home";
-import Service from "./pages/Service/Service";
+import Service from "./pages/Service/Service"; // Ваша страница услуг
 import About from "./pages/About/About";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contacts from "./pages/Contacts/Contacts";
@@ -35,7 +35,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/service" element={<Service />} />
+        <Route path="/service" element={<Service />} /> {/* Ваш текущий путь */}
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contacts" element={<Contacts />} />

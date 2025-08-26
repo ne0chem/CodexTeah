@@ -1,17 +1,22 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import { useNavigate } from "react-router-dom";
-import "swiper/css";
-import "./ServicesCarousel.css";
-
-const services = [
+export { default } from "./ServiceDetail";
+export const services = [
+  {
+    id: 16,
+    icon: "",
+    title: "Одностраничный сайт",
+    price: "от ???",
+    category: "sites",
+    productionTime: "14-21 день",
+    description:
+      "Одностраничный сайт предназначен для быстрого и легкого продвижения товара или услуги, а также для установления контакта с потенциальными клиентами. Основная задача — побудить к действию.",
+  },
   {
     id: 1,
     icon: "/y1.svg",
     title: "Верстка сайтов",
     price: "от 150 000 ₽",
     category: "sites",
+    productionTime: "14-21 день",
     description:
       "Адаптивная кросс-браузерная верстка по вашему макету (Figma, PSD) с соблюдением всех современных стандартов (HTML5, CSS3, JavaScript)",
   },
@@ -21,6 +26,7 @@ const services = [
     title: "Корпоративные сайты",
     price: "от 250 000 ₽",
     category: "sites",
+    productionTime: "14-21 день",
     description:
       "Разработка многостраничных сайтов для бизнеса с административной панелью, формами обратной связи и системой управления контентом",
   },
@@ -30,6 +36,7 @@ const services = [
     title: "Интернет-магазины",
     price: "от 400 000 ₽",
     category: "sites",
+    productionTime: "14-21 день",
     description:
       "Полнофункциональные e-commerce решения на базе современных платформ с интеграцией платежных систем",
   },
@@ -39,6 +46,7 @@ const services = [
     title: "Мобильные приложения",
     price: "от 700 000 ₽",
     category: "apps",
+    productionTime: "14-21 день",
     description:
       "Разработка нативных и кроссплатформенных приложений для Android с индивидуальным дизайном",
   },
@@ -48,6 +56,7 @@ const services = [
     title: "Веб-приложения",
     price: "от 1 000 000 ₽",
     category: "apps",
+    productionTime: "14-21 день",
     description:
       "Создание сложных веб-приложений (SPA/PWA) с использованием React, Vue.js или Angular и backend-интеграциями",
   },
@@ -57,6 +66,7 @@ const services = [
     title: "UI/UX Дизайн",
     price: "от 170 000 ₽",
     category: "design",
+    productionTime: "14-21 день",
     description:
       "Разработка пользовательских интерфейсов и прототипирование с учетом юзабилити и современных трендов",
   },
@@ -66,6 +76,7 @@ const services = [
     title: "Редизайн сайтов",
     price: "от 200 000 ₽",
     category: "design",
+    productionTime: "14-21 день",
     description:
       "Современное обновление устаревших сайтов с улучшением UX и адаптацией под мобильные устройства",
   },
@@ -75,6 +86,7 @@ const services = [
     title: "Техническая поддержка",
     price: "от 50 000 ₽/мес",
     category: "other",
+    productionTime: "14-21 день",
     description:
       "Постоянное сопровождение сайтов: обновления, доработки, исправление ошибок и консультации",
   },
@@ -84,6 +96,7 @@ const services = [
     title: "Автоматизация бизнеса",
     price: "от 400 000 ₽",
     category: "other",
+    productionTime: "14-21 день",
     description:
       "Создание внутренних систем автоматизации бизнес-процессов и CRM-решений",
   },
@@ -93,74 +106,16 @@ const services = [
     title: "Хостинг и DevOps",
     price: "от 30 000 ₽",
     category: "other",
+    productionTime: "14-21 день",
     description:
       "Настройка серверов, развертывание проектов и обеспечение бесперебойной работы сайтов",
   },
 ];
 
-const ServicesCarousel = () => {
-  const navigate = useNavigate();
-
-  const handleServiceClick = (service) => {
-    // Переходим на страницу услуг (используем /service вместо /services)
-    navigate("/service", {
-      state: {
-        category: service.category,
-        serviceId: service.id,
-      },
-    });
-  };
-
-  return (
-    <div className="services-carousel-container">
-      <div className="services-carousel-wrapper">
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={40}
-          slidesPerView={1}
-          loop={true}
-          grabCursor={true}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 30 },
-            1024: { slidesPerView: 2, spaceBetween: 40 },
-            1280: { slidesPerView: 3, spaceBetween: 50 },
-          }}
-        >
-          {services.map((service) => (
-            <SwiperSlide key={service.id}>
-              <div className="service-card">
-                <div className="card-inner">
-                  <div className="card-front">
-                    <img
-                      src={service.icon}
-                      alt={service.title}
-                      className="service-icon"
-                    />
-                    <h3 className="service-title">{service.title}</h3>
-                    <p className="service-price">{service.price}</p>
-                  </div>
-                  <div className="card-back">
-                    <p className="service-description">{service.description}</p>
-                    <button
-                      className="service-button"
-                      onClick={() => handleServiceClick(service)}
-                    >
-                      Подробнее
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
-  );
+export const categoryNames = {
+  sites: "Разработка сайтов",
+  apps: "Разработка приложений",
+  design: "UI/UX Дизайн",
+  other: "Дополнительные услуги",
+  all: "Все наши услуги",
 };
-
-export default ServicesCarousel;

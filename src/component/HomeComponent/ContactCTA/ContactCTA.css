@@ -93,12 +93,15 @@
 }
 
 .cta-title-gradient {
-  background: linear-gradient(135deg, #2e52c9ad 0%, #3182ce 50%, #63b3ed 100%);
+  display: flex;
+  background: linear-gradient(135deg, #233f9cad 0%, #3182ce 50%, #63b3ed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 200% 100%;
   animation: gradientShift 4s ease-in-out infinite;
+  margin-top: 10px;
+  margin-left: 80px;
 }
 
 .cta-subtitle-modern {

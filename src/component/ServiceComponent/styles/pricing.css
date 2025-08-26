@@ -1,0 +1,304 @@
+/* Современные стили для блока стоимости */
+.service-pricing {
+  border-radius: 24px;
+  padding: 40px;
+  margin: 60px 0;
+  border: none;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-pricing::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(
+    45deg,
+    rgba(79, 70, 229, 0.03) 0%,
+    rgba(168, 85, 247, 0.03) 100%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.price-highlight {
+  padding: 32px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/*для СТОИМОСТЬ РАЗРАБОТКИ ОТ*/
+.price-label {
+  width: 400px;
+  display: block;
+  font-size: 35px;
+  color: #33a6e7; /* Запасной цвет, если градиент не поддерживается */
+  margin-bottom: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+
+  /* Добавляем градиент */
+  background: linear-gradient(135deg, #c975dae7, #33a6e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/*для цены*/
+.price-amount {
+  display: block;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin: 8px 0;
+  background: linear-gradient(135deg, #c975dae7, #33a6e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-left: 150px;
+}
+
+.price-currency {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-left: 4px;
+}
+
+/* Контейнер для блоков с информацией - ДВА СТОЛБЦА */
+.features-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/*блоки  с инфой*/
+.included-features,
+.additional-options {
+  padding: 28px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  border: linear-gradient(135deg, #c1e4f8, #33a6e7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+/*заголовок блоков с инфой*/
+.included-features h3,
+.additional-options h3 {
+  color: #1f2937;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/*блок с тем что вкл в стоимость*/
+.included-features ul,
+.additional-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*список для вкл в стоимость */
+.included-features li,
+.additional-options li {
+  padding: 16px 0;
+  color: #33a6e7;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+/*стили для блока при клике*/
+.included-features li:last-child,
+.additional-options li:last-child {
+  border-bottom: none;
+}
+
+.included-features li:hover,
+.additional-options li:hover {
+  background-color: #c1e4f8;
+}
+
+.included-features li.expanded,
+.additional-options li.expanded {
+  background-color: #c1e4f8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  border-bottom: none;
+}
+
+.feature-header,
+.option-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/*текст в списках*/
+.feature-text,
+.option-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.expand-icon {
+  color: #c975dae7;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+/*текст деталей*/
+.feature-details,
+.option-details {
+  margin-top: 12px;
+  padding: 12px 0 0 32px;
+  color: #c975dae7;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-top: 1px solid rgba(229, 231, 235, 0.6);
+}
+/*стили для списка*/
+.included-features li {
+  color: #33a6e7;
+}
+/*цвет списков*/
+.additional-options li {
+  color: #33a6e7;
+}
+
+/* Адаптивность */
+@media (min-width: 968px) {
+  .pricing-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 968px) {
+  .pricing-content {
+    gap: 32px;
+  }
+
+  .service-pricing {
+    padding: 32px 24px;
+    margin: 40px 0;
+  }
+
+  .price-amount {
+    font-size: 3rem;
+  }
+
+  .price-currency {
+    font-size: 1.5rem;
+  }
+
+  /* На мобильных - один столбец */
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-pricing {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+
+  .price-highlight {
+    padding: 24px;
+  }
+
+  .included-features,
+  .additional-options {
+    padding: 20px;
+  }
+
+  .feature-details,
+  .option-details {
+    padding-left: 20px;
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-pricing {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.price-highlight,
+.included-features,
+.additional-options {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.feature-details,
+.option-details {
+  animation: fadeIn 0.3s ease-out;
+}
+/* Контейнер для двух колонок */
+.two-columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Колонки */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 968px) {
+  .two-columns-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .column {
+    margin-bottom: 16px;
+  }
+}
+
+/* Убираем нижнюю границу у последнего элемента в колонке */
+.column ul li:last-child {
+  border-bottom: none;
+}

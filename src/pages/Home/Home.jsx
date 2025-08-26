@@ -1,17 +1,19 @@
 import { useState, useEffect, useContext } from "react";
 import "./Home.css";
 import Forma from "../../component/Forma/Forma";
-import { ModalContext } from "../../component/Modal/Modal"; // Убедитесь, что путь правильный
-import { Link } from "react-router-dom";
+import { ModalContext } from "../../component/Modal/Modal";
+import { Link, useNavigate } from "react-router-dom"; // Добавляем useNavigate
 import TypewriterText from "../../component/HomeComponent/TypewriterText/TypewriterText";
-import ServicesCarousel from "../../component/HomeComponent/Test/Test";
+import ServicesCarousel from "../../component/HomeComponent/Test/Test"; // Ваша карусель
 import Service from "../../component/HomeComponent/Service/Service";
 import Etapi from "../../component/HomeComponent/Etapi/Etapi";
 import FAQ from "../../component/HomeComponent/FAQ/FAQ";
 import ContactCTA from "../../component/HomeComponent/ContactCTA/ContactCTA";
+
 const Home = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
-  const { openModal } = useContext(ModalContext); // Получаем openModal из контекста
+  const { openModal } = useContext(ModalContext);
+  const navigate = useNavigate(); // Хук для навигации
 
   useEffect(() => {
     setAnimationStarted(true);
@@ -19,10 +21,15 @@ const Home = () => {
 
   const handleOpenModal = () => {
     if (openModal) {
-      openModal(<Forma />); // Передаем компонент Forma в модальное окно
+      openModal(<Forma />);
     } else {
       console.error("openModal is not a function");
     }
+  };
+
+  // Функция для перехода к услугам
+  const handleNavigateToServices = () => {
+    navigate("/services");
   };
 
   return (
@@ -45,9 +52,9 @@ const Home = () => {
           <button className="button__left" onClick={handleOpenModal}>
             Оставить заявку
           </button>
-          <Link to="/service" className="button__right">
+          <button className="button__right" onClick={handleNavigateToServices}>
             Посмотреть услуги
-          </Link>
+          </button>
         </div>
       </div>
       <div className="opit">

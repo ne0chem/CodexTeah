@@ -3,7 +3,7 @@ import "./CursorTrail.css";
 
 export default function CursorTrail() {
   const [positions, setPositions] = useState([]);
-  const trailLength = 60; // Оптимальная длина для градиента
+  const trailLength = 30; // Оптимальная длина для градиента
 
   // Ваши цвета в HSL-формате (для плавных переходов)
   const colors = [
@@ -27,6 +27,7 @@ export default function CursorTrail() {
     document.addEventListener("mousemove", handleMouseMove);
 
     const updateTrail = () => {
+      // Более плавное обновление позиций
       posHistory.unshift({ x: mouseX, y: mouseY });
       if (posHistory.length > trailLength) posHistory.pop();
       setPositions([...posHistory]);
@@ -37,7 +38,6 @@ export default function CursorTrail() {
 
     return () => document.removeEventListener("mousemove", handleMouseMove);
   }, []);
-
   return (
     <>
       {positions.map((pos, index) => {

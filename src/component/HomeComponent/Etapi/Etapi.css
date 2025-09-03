@@ -1,184 +1,129 @@
-/* Секция этапов работы с большими фоновыми цифрами */
 .work-steps {
-  padding: 100px 20px;
-  font-family: "Montserrat", sans-serif;
-  position: relative;
-  overflow: hidden;
-  margin-top: 50px;
+  padding: 80px 0;
+  margin-top: 40px;
 }
 
-.work-steps .container {
-  max-width: 1200px;
+.container {
+  max-width: 1600px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  margin-top: -100px;
+  padding: 0 20px;
 }
 
-.work-steps .section-title {
+.section-title {
   text-align: center;
-  font-size: 2.5rem;
-  color: #24303b;
+  font-size: 60px;
+  color: black;
+  margin-bottom: 60px;
   font-weight: 700;
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 100px;
 }
 
-/* Сетка для этапов */
 .steps-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  position: relative;
+  flex-direction: column;
+  gap: 15px; /* Уменьшили расстояние между карточками */
 }
 
-/* Контейнер для каждого этапа с фоновой цифрой */
 .step-item {
+  max-width: 1200px;
+  padding: 20px 30px; /* Уменьшили вертикальные отступы */
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 5px; /* Минимальный отступ между элементами */
+  margin-left: -150px;
+}
+
+.step-item:hover {
+  transform: translateY(-3px);
+  margin-bottom: 20px; /* Увеличиваем отступ при наведении */
+  margin-top: 15px; /* Добавляем отступ сверху при наведении */
+}
+
+.step-content {
   position: relative;
-  width: 100%;
-  max-width: 340px;
-  z-index: 2;
 }
 
-/* Большая фоновая цифра */
-.step-bg-number {
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 200px;
-  font-weight: 900;
-  color: rgba(74, 156, 233, 0.199);
-  z-index: 10;
-  line-height: 1;
-  pointer-events: none;
-  opacity: 0.9;
-}
-
-/* Стиль одной карточки этапа */
-.step-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 35px 30px;
-  box-shadow: 0 15px 35px rgba(74, 157, 233, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  border: 1px solid rgba(122, 194, 245, 0.3);
-  z-index: 1;
-  height: 100%;
-}
-
-.step-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(74, 157, 233, 0.2),
-    inset 0 1px 1px rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.step-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-}
-
-/* Заголовок этапа */
 .step-title {
-  font-size: 1.4rem;
-  margin-bottom: 18px;
-  color: #092a3dcc;
+  font-size: 80px;
+  color: black;
+  margin-bottom: 0;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
   position: relative;
-  z-index: 2;
+  padding-bottom: 5px; /* Уменьшили отступ снизу */
+  transition: all 0.3s ease;
+  line-height: 0.5; /* Уменьшили межстрочный интервал */
 }
 
-/* Описание этапа */
+.step-title:hover {
+  transform: scale(1.02); /* Легкое увеличение текста при наведении */
+  margin-bottom: 10px; /* Добавляем отступ снизу при наведении */
+}
+
 .step-desc {
-  color: #4a6580;
-  line-height: 1.7;
-  font-size: 1.05rem;
-  font-weight: 400;
-  position: relative;
-  z-index: 2;
+  font-size: 1.1rem;
+  color: #3b82f6;
+  line-height: 1.6;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
-/* Декоративный водяной знак */
-
-/* Адаптивность для мобильных */
-@media (min-width: 992px) {
-  .steps-container {
-    justify-content: space-between;
-  }
-
-  .step-item {
-    flex: 1;
-    min-width: 280px;
-  }
-
-  .step-connector {
-    display: block;
-  }
+/* Показываем описание при наведении на заголовок */
+/* Показываем описание при наведении на заголовок */
+.step-title:hover + .step-desc,
+.step-desc:hover {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 40px; /* Увеличили отступ сверху */
+  margin-bottom: 20px; /* Добавили отступ снизу */
+  padding: 15px 0; /* Добавили внутренние отступы */
 }
 
-@media (max-width: 1024px) {
-  .steps-container {
-    gap: 25px;
-  }
-
-  .step-item {
-    max-width: 300px;
-  }
-
-  .step-bg-number {
-    font-size: 160px;
-    top: -30px;
-  }
-
-  .step-connector {
-    display: none;
-  }
+/* Альтернативный вариант - показывать описание при наведении на всю карточку */
+.step-item:hover .step-desc {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 30px; /* Увеличили отступ сверху */
+  margin-bottom: 15px; /* Добавили отступ снизу */
+  padding: 10px 0; /* Добавили внутренние отступы */
 }
 
+/* Анимации для плавного изменения расстояния */
+.step-item {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Убедимся, что соседние элементы тоже плавно двигаются */
+.steps-container > * {
+  transition: margin 0.4s ease;
+}
+.step-item:hover .step-title {
+  color: #3b82f6;
+}
+
+.step-item:hover .step-title::after {
+  width: 100%;
+}
+/* Для мобильных устройств */
 @media (max-width: 768px) {
-  .work-steps {
-    padding: 70px 20px;
+  .section-title {
+    font-size: 40px;
+    margin-bottom: 40px;
   }
 
   .step-item {
-    max-width: 100%;
+    padding: 15px 20px;
   }
 
-  .step-card {
-    padding: 30px 25px;
+  .step-title {
+    font-size: 30px;
   }
 
-  .work-steps .section-title {
-    font-size: 2rem;
-    margin-bottom: 70px;
-  }
-
-  .step-bg-number {
-    font-size: 140px;
-    top: -25px;
-  }
-
-  .work-steps .watermark {
-    font-size: 150px;
-    right: -30px;
-    top: -30px;
-  }
-
-  .step-connector {
-    display: none;
+  .step-item:hover {
+    margin-bottom: 15px;
+    margin-top: 10px;
   }
 }

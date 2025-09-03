@@ -1,53 +1,91 @@
+/* Контейнер для всего компонента с фоном */
+.zayavka-container {
+  display: flex;
+  position: relative;
+  width: 600px;
+  min-height: 400px; /* или нужная вам высота */
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Картинка как фон */
+.zayavka-fon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+/* Контент поверх фона */
+.zayavka-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Остальные стили остаются без изменений */
 .forma__right {
   width: 600px;
   height: 350px;
-  background-color: #e6f4fc;
   border-radius: 30px;
+  padding: 20px;
 }
+
 .forma__tile {
   font-size: 30px;
   margin-left: 20px;
-  margin-top: 40px;
   margin-bottom: 40px;
+  text-align: center;
+  color: white;
 }
 
-/*стили для инпутов*/
 .forma__text {
   display: flex;
   flex-wrap: wrap;
-  gap: 34px;
-
+  gap: 20px;
   justify-content: center;
 }
-/*нижняя часть формы*/
+
 .forma__bot {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
+
 .forma__text input {
   padding: 12px 15px;
-  margin-bottom: 15px;
   border: none;
   border-radius: 30px;
   font-size: 16px;
   transition: all 0.3s ease;
   height: 35px;
   text-align: center;
+  width: 200px;
 }
 
 .forma__text input:focus {
-  /* Стили при фокусе */
   border-color: #51b5ed;
   outline: none;
   box-shadow: 0 0 0 2px rgba(81, 181, 237, 0.2);
 }
 
 .forma__text input::placeholder {
-  /* Стили для placeholder */
   color: #999;
-  opacity: 1; /* Для Firefox */
+  opacity: 1;
 }
-/* Скрываем стандартный чекбокс */
+
+/* Стили для чекбокса и кнопки остаются без изменений */
 .checkbox-input {
   position: absolute;
   opacity: 0;
@@ -56,7 +94,6 @@
   width: 0;
 }
 
-/* Кастомный чекбокс */
 .checkbox-custom {
   position: relative;
   display: inline-block;
@@ -69,29 +106,24 @@
   margin-right: 10px;
 }
 
-/* Стиль при наведении */
 .checkbox-container:hover .checkbox-input ~ .checkbox-custom {
   background-color: #51b5ed;
 }
 
-/* Стиль когда чекбокс отмечен */
 .checkbox-input:checked ~ .checkbox-custom {
   background-color: #51b5ed;
 }
 
-/* Галочка (скрыта по умолчанию) */
 .checkbox-custom:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Показываем галочку когда отмечено */
 .checkbox-input:checked ~ .checkbox-custom:after {
   display: block;
 }
 
-/* Стиль галочки */
 .checkbox-custom:after {
   left: 6px;
   top: 2px;
@@ -102,24 +134,21 @@
   transform: rotate(45deg);
 }
 
-/* Стиль текста */
 .checkbox-container {
   display: flex;
   align-items: center;
   cursor: pointer;
   font-size: 14px;
-  margin-bottom: 15px;
-  margin-left: 84px;
 }
+
 .forma__bot p {
   text-align: center;
   width: 250px;
   font-size: 11px;
 }
+
 .forma__button {
   margin-top: 10px;
-  margin-right: 60px;
-  margin-left: -20px;
   width: 200px;
   height: 50px;
   border-radius: 15px;
@@ -141,4 +170,18 @@
 .forma__button:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(34, 149, 212, 0.4);
+}
+
+.form-message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.forma__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
 }

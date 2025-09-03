@@ -7,7 +7,7 @@ const Forma = () => {
     <div className="forma">
       <div className="forma__left">
         <p>
-          <b>Заполните форму , чтобы обсудить проект</b>
+          <b>Заполните форму, чтобы обсудить проект</b>
         </p>
       </div>
       <Zayavka />

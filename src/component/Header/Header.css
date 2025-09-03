@@ -7,24 +7,6 @@
   position: sticky;
   top: 0;
   z-index: 10001;
-  background: linear-gradient(
-      135deg,
-      rgba(224, 242, 255, 0.6) 0%,
-      rgba(199, 227, 255, 0.5) 25%,
-      rgba(163, 208, 247, 0.4) 50%,
-      rgba(138, 198, 255, 0.3) 75%,
-      rgba(240, 249, 255, 0.2) 100%
-    ),
-    radial-gradient(
-      circle at 30% 70%,
-      rgba(255, 255, 255, 0.8) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle at 70% 30%,
-      rgba(255, 255, 255, 0.6) 0%,
-      transparent 70%
-    );
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -32,16 +14,6 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.3);
   background-size: 200% 200%;
   animation: glassGradientMove 8s ease-in-out infinite;
-}
-
-@keyframes glassGradientMove {
-  0%,
-  100% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
 }
 
 .header__logo img {
@@ -76,12 +48,11 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #51b5ed, #0385ce);
   transition: width 0.3s ease;
 }
 
 .nav a:hover {
-  color: #0385ce;
+  color: #000000;
 }
 
 .nav a:hover::after {
@@ -94,13 +65,8 @@
   gap: 1.5rem;
 }
 
-.nav__nomer {
-  font-weight: 600;
-  white-space: nowrap;
-}
-
 .button {
-  background: linear-gradient(to bottom, #51b5ed, #0385ce);
+  background-color: #0071e3;
   color: white;
   font-size: 0.875rem;
   border: none;
@@ -113,8 +79,8 @@
 }
 
 .button:hover {
-  background: linear-gradient(to bottom, #0385ce, #51b5ed);
-  box-shadow: 0 4px 12px rgba(3, 133, 206, 0.3);
+  background: linear-gradient(to bottom, #0084ff, #0071e3);
+  box-shadow: 0 4px 12px rgba(0, 132, 255, 0.4);
   transform: translateY(-2px);
 }
 
@@ -129,34 +95,4 @@
     padding: 1rem 5vw;
     justify-content: center;
   }
-}
-.nav a {
-  color: #2b6cb0; /* Мягкий синий */
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: #1e4e8c; /* Чуть темнее при наведении */
-}
-
-.nav a::after {
-  background: linear-gradient(to right, #4299e1, #63b3ed);
-}
-
-.nav__nomer {
-  color: #2b6cb0;
-  font-weight: 600;
-}
-
-.button {
-  background: linear-gradient(to bottom, #4299e1, #3182ce);
-  color: white;
-}
-
-.button:hover {
-  background: linear-gradient(to bottom, #3182ce, #4299e1);
 }

@@ -7,7 +7,6 @@ import TypewriterText from "../../component/HomeComponent/TypewriterText/Typewri
 import ServicesCarousel from "../../component/HomeComponent/Test/Test"; // Ваша карусель
 import Service from "../../component/HomeComponent/Service/Service";
 import Etapi from "../../component/HomeComponent/Etapi/Etapi";
-import FAQ from "../../component/HomeComponent/FAQ/FAQ";
 import ContactCTA from "../../component/HomeComponent/ContactCTA/ContactCTA";
 
 const Home = () => {
@@ -62,7 +61,7 @@ const Home = () => {
           <img src="./1.svg" alt="" />
           <p>
             {animationStarted && (
-              <TypewriterText text="Опыт более 5 лет" delay={40} />
+              <TypewriterText text="Опыт разработки более 5 лет" delay={40} />
             )}
           </p>
         </div>
@@ -92,7 +91,7 @@ const Home = () => {
       </div>
       <ContactCTA />
       <Etapi />
-      <FAQ />
+      <Forma />
     </div>
   );
 };

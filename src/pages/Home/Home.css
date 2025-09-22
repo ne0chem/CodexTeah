@@ -1,8 +1,8 @@
 /*первый разедл ( главный)*/
 :root {
-  --text-primary: #24303b; /* Основной темный текст */
-  --text-secondary: #4a6580; /* Вторичный текст */
-  --text-accent: #2c6aa0; /* Акцентный цвет */
+  --text-primary: #000000; /* Основной темный текст */
+  --text-secondary: #000000; /* Вторичный текст */
+  --text-accent: #0385ce; /* Акцентный цвет */
   --text-light: #6b7b8f; /* Светлый текст */
   --text-white: #ffffff; /* Белый текст */
 }
@@ -20,25 +20,85 @@
 
 /* Хедер (уже правильно центрирован) */
 .heder {
-  width: 700px;
+  margin-left: 200px;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: 100px;
-  margin-bottom: 80px;
   text-align: center;
-  gap: 50px;
+}
+.header__right {
+  width: 550px;
+}
+.header__left {
+  position: relative;
+  display: inline-block; /* или flex, в зависимости от вашей верстки */
+  margin-right: 200px;
+  overflow: visible; /* Позволяет картинке выходить за границы */
+}
+
+.circles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 200px;
+  height: 200px;
+  background-color: #0385ce;
+  top: 0%; /* позиционируйте как нужно */
+  left: 42%; /* позиционируйте как нужно */
+  z-index: 1;
+}
+
+.circle2 {
+  width: 200px;
+  height: 200px;
+  background-color: #9fcbee;
+  top: 30%; /* центрируйте относительно картинки */
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  top: 30%; /* позиционируйте как нужно */
+  left: 50%; /* позиционируйте как нужно */
+  z-index: 1;
+}
+
+.img__title {
+  height: 400px;
+  top: -100%;
+  position: relative; /* важно для z-index */
+  z-index: 2; /* картинка поверх кругов */
+  display: block;
+  right: 10%;
+  transform: scale(1.2); /* Увеличивает на 20% */
+  transform-origin: left center; /* Увеличивается от левого края */
 }
 .heder h3 {
+  width: 450px;
   font-size: 50px;
   color: var(--text-primary);
+  text-align: left;
+  font-weight: bold;
 }
 .heder p {
+  margin-top: 40px;
   font-size: 27px;
   color: var(--text-secondary);
   line-height: 1.4;
+  text-align: left;
+  width: 500px;
 }
 .menu__button {
   display: flex;
@@ -47,8 +107,8 @@
 
 .button__left,
 .button__right {
-  width: 200px;
-  height: 40px;
+  width: 280px;
+  height: 45px;
   border-radius: 20px;
   font-weight: 600;
   font-size: 16px;
@@ -63,21 +123,20 @@
 
 /* Основная кнопка (синяя) */
 .button__left {
-  background-color: #2295d4;
+  background-color: var(--button--color);
   color: white;
   border: none;
-  box-shadow: 0 2px 5px rgba(34, 149, 212, 0.3);
 }
 
 .button__left:hover {
   background-color: #1b7cb4;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(34, 149, 212, 0.4);
+  box-shadow: 0 4px 8px var(--button--color);
 }
 
 .button__left:active {
   transform: translateY(0);
-  box-shadow: 0 2px 3px rgba(34, 149, 212, 0.4);
+  box-shadow: 0 2px 3px var(--button--color);
 }
 
 /* Контурная кнопка (белая с синей рамкой) */
@@ -90,10 +149,10 @@
 
 .button__right:hover {
   background-color: #f0f8ff;
-  color: #1b7cb4;
-  border-color: #1b7cb4;
+  color: var(--button--color);
+  border-color: var(--button--color);
   transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(34, 149, 212, 0.2);
+  box-shadow: 0 2px 5px var(--button--color);
 }
 
 .button__right:active {
@@ -146,8 +205,6 @@
   top: 100%;
 }
 .usligii__glanv {
-  margin-top: 50px;
-  margin-bottom: 50px;
   font-size: 40px;
   z-index: 10;
 }
@@ -158,6 +215,7 @@
   justify-content: center;
   width: 1500px;
   z-index: 10;
+  margin-bottom: 50px;
 }
 
 /* Добавьте в начало */

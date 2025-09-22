@@ -2,31 +2,22 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ServiceDetail from "./ServiceDetail/ServiceDetail";
 import ServiceList from "./ServiceList";
-import CategoryFilters from "./CategoryFilters";
 import { services, categoryNames } from "./ServiceDetail/servicesData";
 import "./ServicesPage.css";
 
 const ServicesPage = () => {
   const location = useLocation();
-  const [activeCategory, setActiveCategory] = useState("sites");
   const [selectedService, setSelectedService] = useState(null);
 
+  // Всегда показываем все услуги
   const filteredServices = useMemo(() => {
-    if (activeCategory === "all") {
-      return services;
-    }
-    return services.filter((service) => service.category === activeCategory);
-  }, [activeCategory]);
+    return services;
+  }, []);
 
   // Обработка перехода из карусели
   useEffect(() => {
     if (location.state) {
-      const { category, serviceId } = location.state;
-
-      // Устанавливаем категорию
-      if (category) {
-        setActiveCategory(category);
-      }
+      const { serviceId } = location.state;
 
       // Находим и выбираем услугу
       if (serviceId) {
@@ -44,50 +35,22 @@ const ServicesPage = () => {
     }
   }, [location.state]);
 
-  // Автоматически выбираем первую услугу при смене категории
+  // Автоматически выбираем первую услугу
   useEffect(() => {
     if (filteredServices.length > 0 && !selectedService) {
       setSelectedService(filteredServices[0]);
     }
   }, [filteredServices, selectedService]);
 
-  const handleCategoryChange = (category) => {
-    setActiveCategory(category);
-    setSelectedService(null);
-  };
-
   const handleServiceSelect = (service) => {
     setSelectedService(service);
-  };
-
-  // Функция для получения заголовка в зависимости от категории
-  const getMainTitle = () => {
-    switch (activeCategory) {
-      case "sites":
-        return "Разработка сайтов";
-      case "apps":
-        return "Разработка приложений";
-      case "design":
-        return "UI/UX Дизайн";
-      case "other":
-        return "Дополнительные услуги";
-      case "all":
-        return "Все наши услуги";
-      default:
-        return "Наши услуги";
-    }
   };
 
   return (
     <section className="services-section">
       <div className="container">
-        {/* Динамический заголовок */}
-        <h1 className="main-title">{getMainTitle()}</h1>
-
-        <CategoryFilters
-          activeCategory={activeCategory}
-          onCategoryChange={handleCategoryChange}
-        />
+        {/* Статический заголовок */}
+        <h1 className="main-title">Все наши услуги</h1>
 
         <ServiceList
           services={filteredServices}

@@ -5,10 +5,8 @@
   padding: 50px 40px;
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 81, 128, 0.1);
   position: relative;
   overflow: hidden;
-  margin-top: 230px;
 }
 
 .watermark {
@@ -17,7 +15,7 @@
   top: -50px;
   font-size: 240px;
   opacity: 0.03;
-  color: #2c3e50;
+  color: #000000;
   font-weight: 700;
   z-index: 0;
 }
@@ -31,22 +29,25 @@
 
 .section-header h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
+  font-size: 60px;
   font-weight: 700;
-  color: #24303b;
+  color: #000000;
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
+  cursor: default;
 }
 
 .section-intro {
   font-size: 1.2rem;
-  color: #4a6580;
+  color: #000000;
   max-width: 800px;
   margin: 0 auto 40px;
   text-align: center;
   line-height: 1.8;
   font-weight: 400;
+  margin-bottom: 100px;
+  cursor: default;
 }
 
 .features-grid {
@@ -62,7 +63,6 @@
   background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   padding: 30px;
-  box-shadow: 0 8px 20px rgba(74, 157, 233, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -90,10 +90,12 @@
 
 .feature-card h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #092a3dcc;
+  color: #000000cc;
+  cursor: default;
+  width: 400px;
 }
 
 .feature-card p {
@@ -101,22 +103,17 @@
   line-height: 1.7;
   font-weight: 400;
   flex-grow: 1;
+  cursor: default;
 }
 
 .cta-container {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(
-    135deg,
-    rgba(74, 157, 233, 0.9) 0%,
-    rgba(123, 194, 245, 0.9) 100%
-  );
   border-radius: 16px;
   color: white;
   margin-top: 20px;
   position: relative;
   z-index: 1;
-  box-shadow: 0 10px 25px rgba(74, 157, 233, 0.2);
   overflow: hidden;
 }
 

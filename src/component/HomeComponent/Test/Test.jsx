@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
@@ -12,8 +12,6 @@ const services = [
     title: "Верстка сайтов",
     price: "от 150 000 ₽",
     category: "sites",
-    description:
-      "Адаптивная кросс-браузерная верстка по вашему макету (Figma, PSD) с соблюдением всех современных стандартов (HTML5, CSS3, JavaScript)",
   },
   {
     id: 3,
@@ -21,8 +19,6 @@ const services = [
     title: "Корпоративные сайты",
     price: "от 250 000 ₽",
     category: "sites",
-    description:
-      "Разработка многостраничных сайтов для бизнеса с административной панелью, формами обратной связи и системой управления контентом",
   },
   {
     id: 4,
@@ -30,8 +26,6 @@ const services = [
     title: "Интернет-магазины",
     price: "от 400 000 ₽",
     category: "sites",
-    description:
-      "Полнофункциональные e-commerce решения на базе современных платформ с интеграцией платежных систем",
   },
   {
     id: 5,
@@ -39,8 +33,6 @@ const services = [
     title: "Мобильные приложения",
     price: "от 700 000 ₽",
     category: "apps",
-    description:
-      "Разработка нативных и кроссплатформенных приложений для Android с индивидуальным дизайном",
   },
   {
     id: 6,
@@ -48,8 +40,6 @@ const services = [
     title: "Веб-приложения",
     price: "от 1 000 000 ₽",
     category: "apps",
-    description:
-      "Создание сложных веб-приложений (SPA/PWA) с использованием React, Vue.js или Angular и backend-интеграциями",
   },
   {
     id: 7,
@@ -57,8 +47,6 @@ const services = [
     title: "UI/UX Дизайн",
     price: "от 170 000 ₽",
     category: "design",
-    description:
-      "Разработка пользовательских интерфейсов и прототипирование с учетом юзабилити и современных трендов",
   },
   {
     id: 8,
@@ -66,8 +54,6 @@ const services = [
     title: "Редизайн сайтов",
     price: "от 200 000 ₽",
     category: "design",
-    description:
-      "Современное обновление устаревших сайтов с улучшением UX и адаптацией под мобильные устройства",
   },
   {
     id: 10,
@@ -75,8 +61,6 @@ const services = [
     title: "Техническая поддержка",
     price: "от 50 000 ₽/мес",
     category: "other",
-    description:
-      "Постоянное сопровождение сайтов: обновления, доработки, исправление ошибок и консультации",
   },
   {
     id: 14,
@@ -84,8 +68,6 @@ const services = [
     title: "Автоматизация бизнеса",
     price: "от 400 000 ₽",
     category: "other",
-    description:
-      "Создание внутренних систем автоматизации бизнес-процессов и CRM-решений",
   },
   {
     id: 15,
@@ -93,16 +75,16 @@ const services = [
     title: "Хостинг и DevOps",
     price: "от 30 000 ₽",
     category: "other",
-    description:
-      "Настройка серверов, развертывание проектов и обеспечение бесперебойной работы сайтов",
   },
 ];
 
 const ServicesCarousel = () => {
   const navigate = useNavigate();
+  const swiperRef = useRef(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   const handleServiceClick = (service) => {
-    // Переходим на страницу услуг (используем /service вместо /services)
     navigate("/service", {
       state: {
         category: service.category,
@@ -111,13 +93,76 @@ const ServicesCarousel = () => {
     });
   };
 
+  const handlePrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const onSwiper = (swiper) => {
+    // Обновляем состояние кнопок при инициализации
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
+
+  const onSlideChange = (swiper) => {
+    // Обновляем состояние кнопок при смене слайда
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
+
   return (
     <div className="services-carousel-container">
       <div className="services-carousel-wrapper">
+        {/* Кнопки управления */}
+        <div className="carousel-controls">
+          <button
+            className={`carousel-button prev-button ${
+              isBeginning ? "disabled" : ""
+            }`}
+            onClick={handlePrev}
+            disabled={isBeginning}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+
+          <button
+            className={`carousel-button next-button ${isEnd ? "disabled" : ""}`}
+            onClick={handleNext}
+            disabled={isEnd}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
         <Swiper
+          ref={swiperRef}
           modules={[Autoplay]}
-          spaceBetween={40}
-          slidesPerView={1}
+          spaceBetween={30}
+          slidesPerView={3}
+          centeredSlides={true}
           loop={true}
           grabCursor={true}
           autoplay={{
@@ -125,33 +170,56 @@ const ServicesCarousel = () => {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
+          onSwiper={onSwiper}
+          onSlideChange={onSlideChange}
           breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 30 },
-            1024: { slidesPerView: 2, spaceBetween: 40 },
-            1280: { slidesPerView: 3, spaceBetween: 50 },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+              centeredSlides: true,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              centeredSlides: true,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              centeredSlides: true,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              centeredSlides: true,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+              centeredSlides: true,
+            },
           }}
         >
           {services.map((service) => (
             <SwiperSlide key={service.id}>
               <div className="service-card">
-                <div className="card-inner">
-                  <div className="card-front">
+                <div className="service-content">
+                  <div className="service-header">
                     <img
                       src={service.icon}
                       alt={service.title}
                       className="service-icon"
                     />
                     <h3 className="service-title">{service.title}</h3>
-                    <p className="service-price">{service.price}</p>
                   </div>
-                  <div className="card-back">
-                    <p className="service-description">{service.description}</p>
+                  <div className="service-footer">
                     <button
-                      className="service-button"
+                      className="Service__button__1"
                       onClick={() => handleServiceClick(service)}
                     >
-                      Подробнее
+                      Перейти
                     </button>
+                    <p className="service-price">{service.price}</p>
                   </div>
                 </div>
               </div>

@@ -1,354 +1,406 @@
+.services-carousel-container {
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
 .services-carousel-wrapper {
-  padding: 3rem 0;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
   position: relative;
 }
 
-/* Градиентный фон для всей карусели */
-.services-carousel-wrapper::before {
+.services-carousel-wrapper .swiper {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.services-carousel-wrapper .swiper-wrapper {
+  align-items: center;
+}
+
+.services-carousel-wrapper .swiper-slide {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.6;
+  transform: scale(0.85);
+  visibility: hidden;
+}
+
+.services-carousel-wrapper .swiper-slide-active,
+.services-carousel-wrapper .swiper-slide-prev,
+.services-carousel-wrapper .swiper-slide-next {
+  visibility: visible;
+}
+
+.services-carousel-wrapper .swiper-slide-active {
+  transform: scale(1.15);
+  opacity: 1;
+  z-index: 10;
+}
+
+.services-carousel-wrapper .swiper-slide-prev {
+  transform: scale(0.85) translateX(40px);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.services-carousel-wrapper .swiper-slide-next {
+  transform: scale(0.85) translateX(-40px);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.services-carousel-wrapper
+  .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(
+    .swiper-slide-next
+  ) {
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+}
+
+.service-card {
+  height: 270px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  color: rgb(7, 4, 4);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1), 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+  left: -100%;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(160deg, #e6f4fc 0%, rgba(255, 255, 255, 0) 70%);
-  z-index: -1;
-}
-.service-card {
-  background: white;
-  border-radius: 20px;
-  height: 340px;
-  box-shadow: 0 8px 25px rgba(34, 149, 212, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid #e6f4fc;
-  padding: 40px;
-  position: relative;
-  overflow: visible;
-  transform-style: preserve-3d;
-  z-index: 20;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(3, 133, 206, 0.05),
+    transparent
+  );
+  transition: left 0.6s ease;
 }
 
-/* Голубая подсветка при наведении */
-.service-card::after {
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.services-carousel-wrapper .swiper-slide-active .service-card:hover {
+  transform: translateY(-8px) scale(1.15);
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-price {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: black;
+
+  background-clip: text;
+}
+
+.Service__button__1 {
+  background: #0385ce;
+  color: white;
+  width: 140px;
+  height: 40px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: center;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.Service__button__1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.Service__button__1:hover::before {
+  left: 100%;
+}
+
+.Service__button__1:hover {
+  background: linear-gradient(135deg, #0270b3 0%, #015a91 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(3, 133, 206, 0.3);
+}
+
+.Service__button__1:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(3, 133, 206, 0.3);
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.carousel-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: all;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-button::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(173, 215, 238, 0.1) 0%,
-    rgba(6, 134, 206, 0.05) 100%
-  );
+  background: linear-gradient(135deg, #0385ce 0%, #0269a7 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 50%;
 }
 
-.service-card:hover::after {
+.carousel-button:hover:not(.disabled)::before {
   opacity: 1;
 }
 
-.service-card:hover {
-  box-shadow: 0 15px 35px rgba(6, 134, 206, 0.15);
-  border-color: #43a3db;
+.carousel-button:hover:not(.disabled) {
+  border-color: #0385ce;
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(3, 133, 206, 0.3);
 }
 
-.card-inner {
+.carousel-button:active:not(.disabled) {
+  transform: scale(1.05) translateY(0);
+  box-shadow: 0 4px 15px rgba(3, 133, 206, 0.3);
+}
+
+.carousel-button.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.carousel-button svg {
+  color: #333;
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
-.service-card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  background: white;
-  border-radius: 18px;
-}
-
-.service-icon {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 4px 8px rgba(6, 134, 206, 0.2));
-}
-
-.service-title {
-  font-size: 25px !important;
-  font-weight: 650;
-  margin-bottom: 1rem;
-  color: #0685cea1;
-  position: relative;
-  display: inline-block;
-  height: 250px;
-}
-
-/* Подчеркивание заголовка */
-.service-title::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  border-radius: 3px;
-}
-
-.service-price {
-  font-size: 1.25rem;
-  color: #24303b; /* Основной темный текст */
-  margin-bottom: 1rem;
-  font-weight: 600;
-  background: #e6f4fc; /* Светло-голубой фон как в услугах */
-  padding: 5px 15px;
-  border-radius: 20px;
-  display: inline-block;
-}
-
-.service-description {
-  color: #4a6580; /* Вторичный текст */
-  margin-bottom: 2rem;
-  font-size: 17px !important;
-  line-height: 1.6;
-  padding: 0 15px;
-}
-
-.service-button {
-  background: linear-gradient(135deg, #43a3db 0%, #0686ce 100%);
+.carousel-button:hover:not(.disabled) svg {
   color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(6, 134, 206, 0.3);
-  position: relative;
-  overflow: hidden;
 }
 
-/* Эффект при наведении на кнопку */
-.service-button {
-  background: linear-gradient(135deg, #2295d4 0%, #1b7cb4 100%);
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(34, 149, 212, 0.3);
-  position: relative;
-  overflow: hidden;
-  font-size: 16px;
+@media (max-width: 1280px) {
+  .service-card {
+    max-width: 380px;
+  }
+
+  .services-carousel-wrapper .swiper-slide-active {
+    transform: scale(1.12);
+  }
 }
 
-.service-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(34, 149, 212, 0.4);
-  background: linear-gradient(135deg, #1b7cb4 0%, #15608a 100%);
-}
-
-.service-button:hover::before {
-  left: 100%;
-}
-
-/* Адаптивность */
 @media (max-width: 1024px) {
   .service-card {
-    height: 320px;
-    padding: 30px;
+    max-width: 350px;
+    height: 250px;
+  }
+
+  .services-carousel-wrapper .swiper-slide-active {
+    transform: scale(1.1);
+  }
+
+  .services-carousel-wrapper .swiper-slide-prev {
+    transform: scale(0.85) translateX(30px);
+  }
+
+  .services-carousel-wrapper .swiper-slide-next {
+    transform: scale(0.85) translateX(-30px);
   }
 }
 
 @media (max-width: 768px) {
-  .services-carousel-wrapper {
-    padding: 2rem 0;
+  .services-carousel-wrapper .swiper {
+    padding: 60px 0;
   }
 
   .service-card {
-    height: 280px;
-    padding: 25px;
+    height: 200px;
+    padding: 1.5rem;
+    max-width: 300px;
+  }
+
+  .service-header {
+    gap: 0.8rem;
   }
 
   .service-title {
-    font-size: 1.3rem;
-  }
-
-  .service-price {
     font-size: 1.1rem;
   }
 
   .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .service-price {
+    font-size: 20px;
+  }
+
+  .services-carousel-wrapper .swiper-slide-active {
+    transform: scale(1.05);
+  }
+
+  .services-carousel-wrapper .swiper-slide-prev,
+  .services-carousel-wrapper .swiper-slide-next {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .carousel-controls {
+    padding: 0 10px;
+  }
+
+  .carousel-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-button svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .service-card {
-    height: 260px;
-    padding: 20px;
+    height: 180px;
+    padding: 1.2rem;
+    max-width: 280px;
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
   }
 
   .service-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .service-price {
-    font-size: 1rem;
+    font-size: 18px;
   }
-}
-.service-icon {
-  position: relative;
-}
-.service-card {
-  position: relative;
-  overflow: hidden;
-  /* остальные существующие стили */
-}
 
-/* Эффект загнутого уголка */
-.service-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(
-    45deg,
-    transparent 50%,
-    rgba(6, 134, 206, 0.1) 50%
-  );
-  transition: all 0.3s ease;
-  z-index: 2;
-}
-
-/* Эффект загнутого уголка - базовая часть */
-.service-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 30px 30px;
-  border-color: transparent transparent #f0f8ff transparent;
-  box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 2;
-  filter: drop-shadow(0 2px 3px rgba(6, 134, 206, 0.3));
-}
-
-/* Стрелка внутри уголка (теперь лучше видно) */
-.service-card::after {
-  content: "→";
-  position: absolute;
-  bottom: 3px;
-  right: 3px;
-  color: #0686ce;
-  font-size: 16px;
-  font-weight: bold;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.3s ease;
-  z-index: 3;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Анимации при наведении */
-.service-card:hover::before {
-  border-width: 0 0 40px 40px;
-}
-
-.service-card:hover::after {
-  opacity: 1;
-  transform: scale(1);
-  animation: bounceArrow 1.5s infinite;
-}
-
-/* Улучшенная анимация стрелки */
-@keyframes bounceArrow {
-  0%,
-  100% {
-    transform: translateX(0) scale(1);
-    opacity: 1;
+  .Service__button__1 {
+    width: 120px;
+    height: 35px;
+    font-size: 0.9rem;
   }
-  50% {
-    transform: translateX(3px) scale(1.1);
-    opacity: 0.9;
+
+  .services-carousel-wrapper .swiper-slide-active {
+    transform: scale(1.02);
   }
-}
 
-/* Дополнительный эффект "подсветки" уголка */
-.service-card:hover::before {
-  border-color: transparent transparent #e6f2ff transparent;
-}
-.service-card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 30px 30px;
-  border-color: transparent transparent #e6f4fc transparent;
-  box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 2;
-}
+  .carousel-button {
+    width: 45px;
+    height: 45px;
+  }
 
-.service-card::after {
-  content: "→";
-  position: absolute;
-  bottom: 3px;
-  right: 3px;
-  color: #2295d4;
-  font-size: 16px;
-  font-weight: bold;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.3s ease;
-  z-index: 3;
+  .carousel-button svg {
+    width: 18px;
+    height: 18px;
+  }
 }

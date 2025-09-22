@@ -2,35 +2,54 @@ import React from "react";
 import {
   getServiceDescriptionTitle,
   getDescriptionImage,
+  getServiceButtons,
 } from "../data/imageData";
 
-const ServiceDescription = ({ service }) => {
-  return (
-    <div className="service-description-with-image">
-      <div className="description-text">
-        <h2>{getServiceDescriptionTitle(service.title)}</h2>
-        <p>{service.description}</p>
-      </div>
+const ServiceDetail = ({ service }) => {
+  const serviceButtons = getServiceButtons(service.title);
 
-      <div className="description-image">
-        {/* Блок с информацией над картинкой */}
-        <div className="image-info-overlay">
-          <div className="info-row">
-            <span className="info-label">Скорость изготовления:</span>
+  return (
+    <div className="service-detail-container">
+      {/* Основной блок с описанием и изображением */}
+      <div className="service-description-with-image">
+        {/* Текстовый блок с заголовком, описанием и кнопками */}
+        <div className="description-text">
+          {/* Заголовок услуги перенесен сюда */}
+          <div className="service-detail-header">
+            <div className="service-detail-info">
+              <h1>{service.title}</h1>
+            </div>
           </div>
-          <div className="info-row">
-            <span className="info-value">{service.productionTime}</span>
-          </div>
+
+          <p>{service.description}</p>
+
+          {/* Блок с кнопками */}
+          {serviceButtons.length > 0 && (
+            <div className="service-buttons-container">
+              {serviceButtons.map((button) => (
+                <button
+                  key={button.id}
+                  className={`service-button ${button.className}`}
+                  disabled
+                >
+                  {button.text}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
-        <img
-          src={getDescriptionImage(service.title)}
-          alt={service.title}
-          className="service-content-image"
-        />
+        {/* Блок с изображением */}
+        <div className="description-image">
+          <img
+            src={getDescriptionImage(service.title)}
+            alt={service.title}
+            className="service-content-image"
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-export default ServiceDescription;
+export default ServiceDetail;

@@ -1,11 +1,10 @@
 /* Импортируем все стили */
 
 @import "./styles/base.css";
-@import "./styles/filters.css";
+
 @import "./styles/service-list.css";
 @import "./styles/service-detail.css";
-@import "./styles/technologies.css";
 
 @import "./styles/pricing.css";
-@import "./styles/portfolio.css";
+
 @import "./styles/responsive.css";

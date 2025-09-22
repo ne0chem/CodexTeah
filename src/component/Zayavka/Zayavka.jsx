@@ -29,7 +29,7 @@ const Zayavka = () => {
   return (
     <div className="forma__right">
       <p className="forma__tile">
-        <b>Начнем!</b>
+        <b>Оставьте заявку</b>, что бы <br></br>получить подробности
       </p>
       <div className="forma__text">
         <input

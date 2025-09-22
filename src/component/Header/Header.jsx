@@ -1,6 +1,21 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import Forma from "../Forma/Forma";
+import { useContext } from "react";
+import { ModalContext } from "../Modal/Modal";
 export default function Header() {
+  const { openModal: contextOpenModal } = useContext(ModalContext);
+
+  const handleOpenModal = () => {
+    // Используем либо пропс, либо контекст в зависимости от того, что передано
+    const openModalFunction = contextOpenModal;
+
+    if (openModalFunction && typeof openModalFunction === "function") {
+      openModalFunction(<Forma />);
+    } else {
+      console.error("openModal is not a function");
+    }
+  };
   return (
     <div className="header contaner">
       <div className="header__logo">
@@ -24,8 +39,9 @@ export default function Header() {
         </Link>
       </div>
       <div className="nav__right">
-        <p className="nav__nomer">+7 938 000-23-47</p>
-        <button className="button">ЗАКАЗАТЬ ЗВОНОК</button>
+        <button className="button" onClick={handleOpenModal}>
+          Оставить заявку
+        </button>
       </div>
     </div>
   );

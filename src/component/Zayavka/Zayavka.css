@@ -1,53 +1,93 @@
 .forma__right {
   width: 600px;
-  height: 350px;
-  background-color: #e6f4fc;
-  border-radius: 30px;
-}
-.forma__tile {
-  font-size: 30px;
-  margin-left: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  height: 400px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 20px;
+  margin-left: -100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
-/*стили для инпутов*/
+.forma__right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #dee2e6, transparent);
+}
+
+.forma__tile {
+  font-size: 32px;
+
+  margin: 50px 20px 40px;
+  text-align: center;
+  color: #08090a;
+  letter-spacing: -0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* Стили для инпутов */
 .forma__text {
   display: flex;
   flex-wrap: wrap;
-  gap: 34px;
-
+  gap: 20px;
   justify-content: center;
+  padding: 0 40px;
 }
-/*нижняя часть формы*/
+
+/* Нижняя часть формы */
 .forma__bot {
   display: flex;
-  gap: 20px;
-}
-.forma__text input {
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  height: 35px;
-  text-align: center;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0 40px;
 }
 
-.forma__text input:focus {
-  /* Стили при фокусе */
-  border-color: #51b5ed;
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(81, 181, 237, 0.2);
+.forma__text input {
+  padding: 16px 20px;
+  margin-bottom: 0;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  font-size: 17px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: 52px;
+  text-align: center;
+  background: #ffffff;
+  color: #2d3748;
+  width: 240px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .forma__text input::placeholder {
-  /* Стили для placeholder */
-  color: #999;
-  opacity: 1; /* Для Firefox */
+  color: #6c757d;
+  opacity: 1;
 }
-/* Скрываем стандартный чекбокс */
+
+.forma__text input:focus {
+  border-color: #0385ce;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(3, 133, 206, 0.15),
+    inset 0 1px 3px rgba(0, 0, 0, 0.03);
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.forma__text input:hover {
+  border-color: #adb5bd;
+  background: #f8f9fa;
+}
+
+/* Чекбокс в стиле Apple с вашим цветом */
 .checkbox-input {
   position: absolute;
   opacity: 0;
@@ -56,43 +96,34 @@
   width: 0;
 }
 
-/* Кастомный чекбокс */
 .checkbox-custom {
   position: relative;
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-color: #fff;
-  border: 2px solid #51b5ed;
+  background: #ffffff;
+  border: 2px solid #ced4da;
   border-radius: 4px;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 12px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
-/* Стиль при наведении */
-.checkbox-container:hover .checkbox-input ~ .checkbox-custom {
-  background-color: #51b5ed;
+.checkbox-container:hover .checkbox-custom {
+  background: #f8f9fa;
+  border-color: #adb5bd;
 }
 
-/* Стиль когда чекбокс отмечен */
 .checkbox-input:checked ~ .checkbox-custom {
-  background-color: #51b5ed;
+  background: #0385ce;
+  border-color: #0385ce;
 }
 
-/* Галочка (скрыта по умолчанию) */
 .checkbox-custom:after {
   content: "";
   position: absolute;
   display: none;
-}
-
-/* Показываем галочку когда отмечено */
-.checkbox-input:checked ~ .checkbox-custom:after {
-  display: block;
-}
-
-/* Стиль галочки */
-.checkbox-custom:after {
   left: 6px;
   top: 2px;
   width: 5px;
@@ -102,43 +133,120 @@
   transform: rotate(45deg);
 }
 
-/* Стиль текста */
+.checkbox-input:checked ~ .checkbox-custom:after {
+  display: block;
+}
+
 .checkbox-container {
   display: flex;
   align-items: center;
   cursor: pointer;
   font-size: 14px;
-  margin-bottom: 15px;
-  margin-left: 84px;
+  width: 250px;
+  color: #495057;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+.checkbox-container:hover {
+  color: #0385ce;
+}
+
 .forma__bot p {
   text-align: center;
   width: 250px;
-  font-size: 11px;
+  font-size: 12px;
+  color: #6c757d;
+  line-height: 1.4;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+/* Кнопка с вашим цветом #0385ce */
 .forma__button {
-  margin-top: 10px;
-  margin-right: 60px;
-  margin-left: -20px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
   width: 200px;
-  height: 50px;
-  border-radius: 15px;
-  color: white;
-  background-color: #2295d4b2;
+  height: 52px;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #0385ce;
   border: none;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(3, 133, 206, 0.25), 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .forma__button:hover {
-  background-color: #2295d4;
-  box-shadow: 0 4px 8px rgba(34, 149, 212, 0.4);
-  transform: translateY(-2px);
+  background: #0278bd;
+  box-shadow: 0 6px 20px rgba(3, 133, 206, 0.35), 0 2px 4px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .forma__button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(34, 149, 212, 0.4);
+  transform: translateY(0) scale(1);
+  box-shadow: 0 2px 10px rgba(3, 133, 206, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background: #026cad;
+}
+
+/* Эффект нажатия */
+.forma__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.forma__button:active::after {
+  width: 100px;
+  height: 100px;
+}
+
+/* Дополнительные улучшения для серой темы */
+.forma__right {
+  backdrop-filter: blur(10px);
+}
+
+.forma__text input {
+  background: #ffffff;
+}
+
+.checkbox-container {
+  font-size: 13px;
+  color: #495057;
+}
+
+.forma__bot p {
+  font-size: 11px;
+  color: #6c757d;
+}
+
+/* Градиентный акцент для премиум-вида */
+.forma__right::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(3, 133, 206, 0.03) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }

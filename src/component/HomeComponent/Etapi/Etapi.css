@@ -1,6 +1,7 @@
 .work-steps {
   padding: 80px 0;
   margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .container {
@@ -26,18 +27,16 @@
 
 .step-item {
   max-width: 1200px;
-  padding: 20px 30px; /* Уменьшили вертикальные отступы */
+  padding: 15px 15px;
   border-radius: 15px;
   transition: all 0.3s ease;
   cursor: pointer;
-  margin-bottom: 5px; /* Минимальный отступ между элементами */
+
   margin-left: -150px;
 }
 
 .step-item:hover {
   transform: translateY(-3px);
-  margin-bottom: 20px; /* Увеличиваем отступ при наведении */
-  margin-top: 15px; /* Добавляем отступ сверху при наведении */
 }
 
 .step-content {
@@ -45,7 +44,7 @@
 }
 
 .step-title {
-  font-size: 70px;
+  font-size: 85px;
   color: black;
   margin-bottom: 0;
   font-weight: 600;
@@ -58,7 +57,6 @@
 
 .step-title:hover {
   transform: scale(1.02); /* Легкое увеличение текста при наведении */
-  margin-bottom: 10px; /* Добавляем отступ снизу при наведении */
 }
 
 .step-desc {
@@ -78,8 +76,7 @@
 .step-desc:hover {
   max-height: 200px;
   opacity: 1;
-  margin-top: 40px; /* Увеличили отступ сверху */
-  margin-bottom: 20px; /* Добавили отступ снизу */
+
   padding: 15px 0; /* Добавили внутренние отступы */
 }
 
@@ -87,8 +84,7 @@
 .step-item:hover .step-desc {
   max-height: 200px;
   opacity: 1;
-  margin-top: 30px; /* Увеличили отступ сверху */
-  margin-bottom: 15px; /* Добавили отступ снизу */
+  margin-top: 10px;
   padding: 10px 0; /* Добавили внутренние отступы */
 }
 

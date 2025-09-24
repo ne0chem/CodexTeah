@@ -58,7 +58,7 @@ const ServicePricing = ({ service }) => {
                   >
                     <div className="feature-header">
                       <img
-                        src="/546.svg"
+                        src="/qqqq.svg"
                         alt="Включено"
                         className="icon checkmark-icon"
                       />
@@ -88,7 +88,7 @@ const ServicePricing = ({ service }) => {
                   >
                     <div className="feature-header">
                       <img
-                        src="/546.svg"
+                        src="/qqqq.svg"
                         alt="Включено"
                         className="icon checkmark-icon"
                       />
@@ -123,7 +123,7 @@ const ServicePricing = ({ service }) => {
                   >
                     <div className="option-header">
                       <img
-                        src="/546.svg"
+                        src="/qqqq.svg"
                         alt="Включено"
                         className="icon checkmark-icon"
                       />
@@ -155,7 +155,7 @@ const ServicePricing = ({ service }) => {
                   >
                     <div className="option-header">
                       <img
-                        src="/546.svg"
+                        src="/qqqq.svg"
                         alt="Включено"
                         className="icon checkmark-icon"
                       />

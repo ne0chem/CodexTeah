@@ -172,6 +172,10 @@
 .additional-options li {
   color: #040505;
 }
+.checkmark-icon {
+  width: 40px;
+  height: 40px;
+}
 
 /* Адаптивность */
 @media (min-width: 968px) {

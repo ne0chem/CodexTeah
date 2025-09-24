@@ -22,6 +22,14 @@ const ServiceDetail = ({ service }) => {
           </div>
 
           <p>{service.description}</p>
+          <ul className="service__info-list">
+            {service.info.map((item, index) => (
+              <li key={index} className="service__info-item">
+                <span className="service__check-icon">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
 
           {/* Блок с кнопками */}
           {serviceButtons.length > 0 && (

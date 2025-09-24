@@ -314,3 +314,25 @@
     gap: 12px;
   }
 }
+.service__info-list {
+  margin: 15px 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.service__info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.service__check-icon {
+  color: #b7bdbc; /* индиго */
+  font-weight: 300;
+  flex-shrink: 0;
+  content: "—"; /* длинное тире */
+  font-size: 1.1em;
+  margin-right: 5px;
+}

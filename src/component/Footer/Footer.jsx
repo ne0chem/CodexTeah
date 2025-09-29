@@ -19,7 +19,7 @@ export default function Footer() {
           Услуги
         </Link>
         <Link to="/portfolio" className="footer__port">
-          Портфолио
+          Наш продукт
         </Link>
         <Link to="/about" className="footer__company">
           О компании

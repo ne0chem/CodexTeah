@@ -12,6 +12,7 @@ import Footer from "./component/Footer/Footer";
 import Prava from "./component/prava/Prava";
 import CursorTrail from "./component/CursorTrail/CursorTrail";
 import SocSeti from "./component/SocSeti/SocSeti";
+import ScrollToTop from "./component/ScrollToTo";
 
 /* Страницы */
 import Home from "./pages/Home/Home";
@@ -24,6 +25,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ModalProvider>
     <Router>
+      <ScrollToTop />
       <CursorTrail />
       <SocSeti />
       <Header />

@@ -1,16 +1,28 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 5vw;
+  justify-content: center;
+  background-color: white; /* Белый фон на весь экран */
   position: sticky;
   top: 0;
   z-index: 10001;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
     inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  width: 100%;
+  max-width: 1500px; /* Максимальная ширина контента */
+  min-width: 1000px; /* Минимальная ширина контента */
+  margin: 0 auto;
+
+  /* Эффекты стекла только для контентной области */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   background-size: 200% 200%;
   animation: glassGradientMove 8s ease-in-out infinite;
 }
@@ -78,6 +90,7 @@
   width: 178px;
   height: 47px;
   font-size: 18px;
+  margin-right: 100px;
 }
 
 .button:hover {
@@ -95,6 +108,12 @@
 
   .header {
     padding: 1rem 5vw;
+    justify-content: center;
+  }
+
+  .header__container {
+    min-width: auto;
+    max-width: none;
     justify-content: center;
   }
 }

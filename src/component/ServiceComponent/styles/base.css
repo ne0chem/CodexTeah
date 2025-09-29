@@ -8,14 +8,13 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 0 20px;
+  margin-left: -80px;
 }
 
 h1 {
   text-align: left;
-  margin-left: 40px;
   margin-bottom: 50px;
   font-size: 80px;
   background: black;

@@ -2,12 +2,9 @@ import React from "react";
 import {
   getServiceDescriptionTitle,
   getDescriptionImage,
-  getServiceButtons,
 } from "../data/imageData";
 
 const ServiceDetail = ({ service }) => {
-  const serviceButtons = getServiceButtons(service.title);
-
   return (
     <div className="service-detail-container">
       {/* Основной блок с описанием и изображением */}
@@ -30,21 +27,6 @@ const ServiceDetail = ({ service }) => {
               </li>
             ))}
           </ul>
-
-          {/* Блок с кнопками */}
-          {serviceButtons.length > 0 && (
-            <div className="service-buttons-container">
-              {serviceButtons.map((button) => (
-                <button
-                  key={button.id}
-                  className={`service-button ${button.className}`}
-                  disabled
-                >
-                  {button.text}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
 
         {/* Блок с изображением */}

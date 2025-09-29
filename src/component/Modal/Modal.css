@@ -42,7 +42,7 @@
 /* Кнопка закрытия */
 .modal-close {
   position: absolute;
-  top: 40px;
+  top: -40px;
   right: 40px;
   font-size: 24px;
   background: none;

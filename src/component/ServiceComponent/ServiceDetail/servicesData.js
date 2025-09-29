@@ -3,7 +3,7 @@ export { default } from "./ServiceDetail";
 export const services = [
   {
     id: 16,
-    icon: "",
+    icon: "./odniSTR.svg",
     title: "Одностраничный сайт",
     price: "от 100 000 ₽",
     category: "landing",

@@ -213,12 +213,6 @@
   text-align: left;
 }
 @media (min-width: 1920px) {
-  .about {
-    margin-left: 18%; /* Больше отступ слева */
-    width: 75%;
-    max-width: 1800px; /* Увеличиваем максимальную ширину */
-  }
-
   .section__missia {
     margin-top: 80px; /* Увеличиваем верхний отступ */
     gap: 80px; /* Больше расстояние между блоками */

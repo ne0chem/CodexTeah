@@ -1,21 +1,10 @@
-/* Contacts.css */
 .contacti {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   min-height: 100vh;
-  padding: 40px 0;
+  /* БЕЗ padding и max-width - это теперь задача .container */
+}
 
-  margin-left: 120px;
-  max-width: 1500px;
-}
-@media (min-width: 1920px) {
-  .contacti {
-    margin-left: 18%; /* Больше отступ слева */
-    width: 75%;
-    max-width: 1800px; /* Увеличиваем максимальную ширину */
-  }
-}
 .contacti__title {
   display: flex;
   flex-direction: column;

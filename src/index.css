@@ -59,7 +59,11 @@ body {
 }
 .header .container,
 .contacti .container,
-.about .container {
+.about .container,
+.home-page .container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;

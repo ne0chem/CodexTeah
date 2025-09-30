@@ -1,6 +1,6 @@
 .ContactCTA {
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 320px; /* Увеличил высоту для лучшего баланса */
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
   color: #1d1d1f; /* Темно-серый текст */

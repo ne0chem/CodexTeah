@@ -10,12 +10,12 @@
 .container {
   max-width: 1500px;
   margin: 0 auto;
-  margin-left: -80px;
 }
 
 h1 {
   text-align: left;
   margin-bottom: 50px;
+  margin-left: -17px;
   font-size: 80px;
   background: black;
   -webkit-background-clip: text;

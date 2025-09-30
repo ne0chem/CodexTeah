@@ -33,79 +33,84 @@ const Home = () => {
 
   return (
     <div className="home-page ">
-      <div className="home-page__container">
-        <div className="heder">
-          <div className="header__right">
-            <h3>
-              {animationStarted && (
-                <TypewriterText text="ІТ-решения под ключ для вашего бизнеса" />
-              )}
-            </h3>
-            <p className="header__text">
-              {animationStarted && (
-                <TypewriterText
-                  text="Разработка веб-систем, мобильных приложений и решений для корпораций и госструктур"
-                  delay={20}
-                />
-              )}
-            </p>
-            <div className="menu__button">
-              <button className="button__left" onClick={handleOpenModal}>
-                Оставить заявку
-              </button>
-              <button
-                className="button__right"
-                onClick={handleNavigateToServices}
-              >
-                Посмотреть услуги
-              </button>
+      <div className="container">
+        <div className="home-page__container">
+          <div className="heder">
+            <div className="header__right">
+              <h3>
+                {animationStarted && (
+                  <TypewriterText text="ІТ-решения под ключ для вашего бизнеса" />
+                )}
+              </h3>
+              <p className="header__text">
+                {animationStarted && (
+                  <TypewriterText
+                    text="Разработка веб-систем, мобильных приложений и решений для корпораций и госструктур"
+                    delay={20}
+                  />
+                )}
+              </p>
+              <div className="menu__button">
+                <button className="button__left" onClick={handleOpenModal}>
+                  Оставить заявку
+                </button>
+                <button
+                  className="button__right"
+                  onClick={handleNavigateToServices}
+                >
+                  Посмотреть услуги
+                </button>
+              </div>
+            </div>
+            <div className="header__left">
+              <img className="img__title" src="./onePhoto.svg" alt="" />
             </div>
           </div>
-          <div className="header__left">
-            <img className="img__title" src="./onePhoto.svg" alt="" />
+
+          <div className="opit">
+            <div className="opit__left">
+              <img src="./1.svg" alt="" />
+              <p>
+                {animationStarted && (
+                  <TypewriterText
+                    text="Опыт разработки более 5 лет"
+                    delay={40}
+                  />
+                )}
+              </p>
+            </div>
+            <div className="opit__centr">
+              <img src="./2.svg" alt="" />
+              <p>
+                {animationStarted && (
+                  <TypewriterText text="Современные технологии" delay={40} />
+                )}
+              </p>
+            </div>
+            <div className="opit__right">
+              <img src="./3.svg" alt="" />
+              <p>
+                {animationStarted && (
+                  <TypewriterText text="Проекты под ключ" delay={40} />
+                )}
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="opit">
-          <div className="opit__left">
-            <img src="./1.svg" alt="" />
-            <p>
-              {animationStarted && (
-                <TypewriterText text="Опыт разработки более 5 лет" delay={40} />
-              )}
-            </p>
+          <Service />
+
+          <div className="usligii__glanv">
+            <b>Наши услуги</b>
           </div>
-          <div className="opit__centr">
-            <img src="./2.svg" alt="" />
-            <p>
-              {animationStarted && (
-                <TypewriterText text="Современные технологии" delay={40} />
-              )}
-            </p>
+
+          <div className="uslugi">
+            <ServicesCarousel />
           </div>
-          <div className="opit__right">
-            <img src="./3.svg" alt="" />
-            <p>
-              {animationStarted && (
-                <TypewriterText text="Проекты под ключ" delay={40} />
-              )}
-            </p>
-          </div>
+
+          <ContactCTA />
+          <Etapi />
+          <Zayavka />
         </div>
-
-        <Service />
-
-        <div className="usligii__glanv">
-          <b>Наши услуги</b>
-        </div>
-
-        <div className="uslugi">
-          <ServicesCarousel />
-        </div>
-
-        <ContactCTA />
-        <Etapi />
-        <Zayavka />
       </div>
     </div>
   );

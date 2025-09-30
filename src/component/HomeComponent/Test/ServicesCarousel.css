@@ -2,6 +2,7 @@
   padding: 2rem 0;
   position: relative;
   overflow: hidden;
+  margin-left: -40px;
 }
 
 .services-carousel-wrapper {

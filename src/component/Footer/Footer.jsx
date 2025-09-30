@@ -18,7 +18,7 @@ export default function Footer() {
         <Link to="/service" className="footer__yslugi">
           Услуги
         </Link>
-        <Link to="/portfolio" className="footer__port">
+        <Link to="/product" className="footer__port">
           Наш продукт
         </Link>
         <Link to="/about" className="footer__company">

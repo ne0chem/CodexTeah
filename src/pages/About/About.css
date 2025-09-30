@@ -3,10 +3,7 @@
   width: 1500px;
   height: 100pv;
 }
-.сontainer {
-  width: 100%;
-  height: 100%;
-}
+
 .section__about {
   display: flex;
   margin-top: 50px;

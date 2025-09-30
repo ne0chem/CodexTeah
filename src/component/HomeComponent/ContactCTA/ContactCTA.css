@@ -49,15 +49,10 @@
   gap: 12px;
   position: relative;
   margin-top: 10px;
-  margin-left: 140px;
 }
 
-.ContactCTA__button .button {
-  background: linear-gradient(
-    135deg,
-    #0071e3 0%,
-    #0056b3 100%
-  ); /* Синий градиент */
+.ContactCTA__button .button__ContactCTA {
+  background-color: #0385ce; /* Синий градиент */
   color: #ffffff;
   border: none;
   width: 220px;

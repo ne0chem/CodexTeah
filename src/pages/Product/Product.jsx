@@ -1,7 +1,7 @@
 import React from "react";
 import "./Portfolio.css";
 
-const Portfolio = () => {
+const Product = () => {
   return (
     <div className="home-page">
       <h1>Добро пожаловать в CodexTech</h1>
@@ -10,4 +10,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Product;

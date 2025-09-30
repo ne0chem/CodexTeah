@@ -28,7 +28,7 @@ const ContactCTA = ({ openModal: propOpenModal }) => {
             Свяжитесь с нами и наши специалисты с радостью помогут вам
           </div>
           <div className="ContactCTA__button">
-            <button className="button" onClick={handleOpenModal}>
+            <button className="button__ContactCTA" onClick={handleOpenModal}>
               Связаться с нами
             </button>
             <img className="button__img" src="./arrow.svg" alt="" />

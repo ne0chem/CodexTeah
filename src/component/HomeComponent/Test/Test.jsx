@@ -118,7 +118,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <div className="services-carousel-container">
+    <div className="services-carousel-container container">
       <div className="services-carousel-wrapper">
         {/* Кнопки управления */}
         <div className="carousel-controls">

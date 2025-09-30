@@ -33,7 +33,7 @@ a:active {
 
   &::before {
     content: "";
-    background: #fff;
+    background: #0385ce;
     z-index: 10;
     height: 32px;
     width: 8px;
@@ -45,7 +45,7 @@ a:active {
 
   &::after {
     content: "";
-    background: #fff;
+    background: #0385ce;
     z-index: 10;
     height: 8px;
     width: 32px;
@@ -67,7 +67,7 @@ a:active {
       & > i {
         animation: add-butt-icons 0.8s linear;
         transform: rotate(-45deg);
-        color: rgba(255, 255, 255, 1);
+        color: #0385ce;
       }
     }
   }
@@ -78,8 +78,8 @@ a:active {
   height: 50px;
   width: 50px;
   padding-top: 16px;
-  background-color: #0384ce57; /* Ваш цвет */
-  color: #fff;
+  background-color: #ececec;
+  color: #0385ce;
   text-align: center;
   transition: 0.1s;
 }

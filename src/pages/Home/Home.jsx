@@ -32,7 +32,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home-page">
+    <div className="home-page ">
       <div className="home-page__container">
         <div className="heder">
           <div className="header__right">

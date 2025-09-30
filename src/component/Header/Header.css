@@ -1,13 +1,11 @@
 .header {
-  display: flex;
-  justify-content: center;
-  background-color: white; /* Белый фон на весь экран */
+  background-color: white;
   position: sticky;
   top: 0;
   z-index: 10001;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
-    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .header__container {
@@ -15,16 +13,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 0;
-  width: 100%;
-  max-width: 1500px; /* Максимальная ширина контента */
-  min-width: 1000px; /* Минимальная ширина контента */
-  margin: 0 auto;
-
-  /* Эффекты стекла только для контентной области */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  background-size: 200% 200%;
-  animation: glassGradientMove 8s ease-in-out infinite;
 }
 
 .header__logo img {
@@ -90,7 +80,7 @@
   width: 178px;
   height: 47px;
   font-size: 18px;
-  margin-right: 100px;
+  margin-right: 0px;
 }
 
 .button:hover {

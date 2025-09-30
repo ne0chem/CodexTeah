@@ -119,117 +119,113 @@ const ServicesCarousel = () => {
 
   return (
     <div className="services-carousel-container ">
-      <div className="container">
-        <div className="services-carousel-wrapper">
-          {/* Кнопки управления */}
-          <div className="carousel-controls">
-            <button
-              className={`carousel-button prev-button ${
-                isBeginning ? "disabled" : ""
-              }`}
-              onClick={handlePrev}
-              disabled={isBeginning}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M15 18L9 12L15 6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-
-            <button
-              className={`carousel-button next-button ${
-                isEnd ? "disabled" : ""
-              }`}
-              onClick={handleNext}
-              disabled={isEnd}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <Swiper
-            ref={swiperRef}
-            modules={[Autoplay]}
-            spaceBetween={30}
-            slidesPerView={3}
-            centeredSlides={true}
-            loop={true}
-            grabCursor={true}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            onSwiper={onSwiper}
-            onSlideChange={onSlideChange}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                centeredSlides: true,
-              },
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                centeredSlides: true,
-              },
-              768: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                centeredSlides: true,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-                centeredSlides: true,
-              },
-              1280: {
-                slidesPerView: 3,
-                spaceBetween: 50,
-                centeredSlides: true,
-              },
-            }}
+      <div className="services-carousel-wrapper">
+        {/* Кнопки управления */}
+        <div className="carousel-controls">
+          <button
+            className={`carousel-button prev-button ${
+              isBeginning ? "disabled" : ""
+            }`}
+            onClick={handlePrev}
+            disabled={isBeginning}
           >
-            {services.map((service) => (
-              <SwiperSlide key={service.id}>
-                <div className="service-card">
-                  <div className="service-content">
-                    <div className="service-header">
-                      <img
-                        src={service.icon}
-                        alt={service.title}
-                        className="service-icon"
-                      />
-                      <h3 className="service-title">{service.title}</h3>
-                    </div>
-                    <div className="service-footer">
-                      <button
-                        className="Service__button__1"
-                        onClick={() => handleServiceClick(service)}
-                      >
-                        Перейти
-                      </button>
-                      <p className="service-price">{service.price}</p>
-                    </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+
+          <button
+            className={`carousel-button next-button ${isEnd ? "disabled" : ""}`}
+            onClick={handleNext}
+            disabled={isEnd}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <Swiper
+          ref={swiperRef}
+          modules={[Autoplay]}
+          spaceBetween={30}
+          slidesPerView={3}
+          centeredSlides={true}
+          loop={true}
+          grabCursor={true}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          onSwiper={onSwiper}
+          onSlideChange={onSlideChange}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+              centeredSlides: true,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              centeredSlides: true,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              centeredSlides: true,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              centeredSlides: true,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+              centeredSlides: true,
+            },
+          }}
+        >
+          {services.map((service) => (
+            <SwiperSlide key={service.id}>
+              <div className="service-card">
+                <div className="service-content">
+                  <div className="service-header">
+                    <img
+                      src={service.icon}
+                      alt={service.title}
+                      className="service-icon"
+                    />
+                    <h3 className="service-title">{service.title}</h3>
+                  </div>
+                  <div className="service-footer">
+                    <button
+                      className="Service__button__1"
+                      onClick={() => handleServiceClick(service)}
+                    >
+                      Перейти
+                    </button>
+                    <p className="service-price">{service.price}</p>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

@@ -69,3 +69,10 @@ body {
   margin: 0 auto;
   padding: 0 80px; /* УВЕЛИЧЬТЕ до 60px-80px */
 }
+.zayavka {
+  margin-top: 250px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  margin-left: 100px;
+}

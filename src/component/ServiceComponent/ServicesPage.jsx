@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import ServiceDetail from "./ServiceDetail/ServiceDetail";
 import ServiceList from "./ServiceList";
@@ -8,24 +8,12 @@ import "./ServicesPage.css";
 const ServicesPage = () => {
   const location = useLocation();
   const [selectedService, setSelectedService] = useState(null);
-  const [showAllServices, setShowAllServices] = useState(false);
-  const [visibleServicesCount, setVisibleServicesCount] = useState(10);
 
   // Создаем реф для элемента, к которому будем скроллить
   const servicesContentRef = useRef(null);
 
-  // Всегда показываем все услуги
-  const filteredServices = useMemo(() => {
-    return services;
-  }, []);
-
-  // Рассчитываем, нужно ли показывать кнопку "Показать еще"
-  const shouldShowToggle = filteredServices.length > visibleServicesCount;
-
-  // Услуги для отображения
-  const displayedServices = showAllServices
-    ? filteredServices
-    : filteredServices.slice(0, visibleServicesCount);
+  // Все услуги отображаются всегда
+  const displayedServices = services;
 
   // Обработка перехода из карусели
   useEffect(() => {
@@ -64,10 +52,6 @@ const ServicesPage = () => {
     scrollToServiceContent();
   };
 
-  const toggleShowAll = () => {
-    setShowAllServices(!showAllServices);
-  };
-
   return (
     <section className="services-section">
       <div className="container">
@@ -79,20 +63,6 @@ const ServicesPage = () => {
           selectedService={selectedService}
           onServiceSelect={handleServiceSelect}
         />
-
-        {/* Кнопка "Показать еще/Скрыть" */}
-        {shouldShowToggle && (
-          <div className="services-toggle-container">
-            <button className="services-toggle-btn" onClick={toggleShowAll}>
-              {showAllServices ? "Скрыть" : "Показать все услуги"}
-              <span
-                className={`toggle-arrow ${showAllServices ? "up" : "down"}`}
-              >
-                {showAllServices ? "▲" : "▼"}
-              </span>
-            </button>
-          </div>
-        )}
 
         {/* Добавляем ref к этому элементу */}
         <div

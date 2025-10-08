@@ -63,7 +63,8 @@ const Home = () => {
               </div>
             </div>
             <div className="header__left">
-              <img className="img__title" src="./onePhoto.svg" alt="" />
+              <div className="header__left-img"></div>
+              <img className="img__title" src="./glavn.svg" alt="" />
             </div>
           </div>
 

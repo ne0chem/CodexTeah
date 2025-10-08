@@ -43,8 +43,24 @@
 .header__right {
   flex: 1;
   max-width: 600px;
+  position: relative;
 }
 
+.header__left-img {
+  margin-top: 40px;
+  position: absolute;
+  width: 500px;
+  height: 480px;
+  background-color: #0385ce;
+  border-radius: 20px;
+  transform: rotate(15deg);
+}
+.header__left img {
+  margin-top: 40px;
+  position: absolute;
+  width: 480px;
+  height: 577px;
+}
 .header__left {
   flex: 1;
   display: flex;

@@ -48,7 +48,7 @@ const YandexMap = () => {
           Республика Татарстан, р-н Верхнеуслонский,<br/>
           г. Иннополис, ул. Университетская, д.5
         `,
-          balloonContentFooter: "<em>Ждем вас в гости!</em>",
+          balloonContentFooter: "<em></em>",
           hintContent: "Кликните для подробной информации",
         },
         {

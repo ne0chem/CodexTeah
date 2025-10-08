@@ -45,7 +45,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #fff;
+  background-color: rgb(226, 228, 230);
   display: flex;
   align-items: center;
   justify-content: center;

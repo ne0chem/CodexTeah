@@ -1,13 +1,6 @@
-<svg width="833" height="574" viewBox="0 0 833 574" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g filter="url(#filter0_f_252_116)">
-<rect x="50" y="-174" width="825" height="825" fill="url(#pattern0_252_116)" fill-opacity="0.6"/>
-</g>
+<svg width="509" height="509" viewBox="0 0 509 509" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="509" height="509" rx="30" fill="url(#pattern0_252_116)"/>
 <defs>
-<filter id="filter0_f_252_116" x="0" y="-224" width="925" height="925" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_252_116"/>
-</filter>
 <pattern id="pattern0_252_116" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_252_116" transform="scale(0.000976562)"/>
 </pattern>

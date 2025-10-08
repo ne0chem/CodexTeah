@@ -28,7 +28,7 @@
 
 .contacti__title-p {
   font-size: 25px;
-  color: #6c757d;
+  color: #000000;
   line-height: 1.6;
 }
 
@@ -47,7 +47,7 @@
 .contacti__left {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 30px;
 }
 
 .text {
@@ -60,7 +60,6 @@
 }
 
 .info {
-  padding-top: 20px;
   font-size: 18px;
   color: #2c3e50;
   line-height: 1.5;

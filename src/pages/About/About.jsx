@@ -18,7 +18,8 @@ const About = () => {
             </p>
           </div>
           <div className="missia__right">
-            <img src="./missia1.svg" alt="" />
+            <div className="missia__right-img"></div>
+            <img src="./about.svg" alt="" />
           </div>
         </div>
         <div className="section__cennosti">
@@ -147,7 +148,7 @@ const About = () => {
             <h3>Нам доверяют</h3>
             <div className="doverie__container">
               <div className="doverie__left">
-                <img src="./dov.svg" alt="" />
+                <img src="./about1.svg" alt="" />
               </div>
               <div className="doverie__right">
                 <p>

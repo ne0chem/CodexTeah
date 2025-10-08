@@ -1,0 +1,84 @@
+.product__title {
+  font-size: 64px;
+  margin-bottom: 62px;
+  margin-top: 62px;
+}
+
+.product {
+  margin-top: 62px;
+  display: flex;
+
+  justify-content: space-around;
+}
+.produt__left {
+  width: 700px;
+}
+.product__text ul,
+.product__text li {
+  font-size: 32px;
+}
+.product__right {
+  position: relative;
+}
+.produt__right-img {
+  position: absolute;
+  width: 370px;
+  height: 390px;
+  background-color: #0385ce;
+  border-radius: 20px;
+  top: 17%;
+  right: 0%;
+  transform: rotate(15deg);
+}
+.produt__img {
+  position: relative;
+  top: 20%;
+}
+/*контейнер наша цель */
+.coal {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.coal__title {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+.coal__subtitle {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/*контейнер преимущества*/
+.advantages {
+  margin-top: 62px;
+}
+.advantages__title {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+}
+.advantages__container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+.advantages__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid #0385ce;
+  background-color: white;
+  width: 400px;
+  height: 298px;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+.advantages__text {
+  font-size: 20px;
+  text-align: left;
+  width: 400px;
+  margin-left: 20px;
+}

@@ -23,7 +23,6 @@
   width: 100%;
   max-width: 1500px;
   min-width: 1400px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,10 +33,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Равномерное распределение */
+  justify-content: space-between;
   margin-top: 50px;
   box-sizing: border-box;
-  gap: 60px; /* Отступ между текстом и картинкой */
+  gap: 60px;
 }
 
 .header__right {
@@ -76,9 +75,9 @@
   position: relative;
   z-index: 2;
   display: block;
-  transform: scale(1); /* Убрал увеличение */
+  transform: scale(1);
   transform-origin: center;
-  object-fit: contain; /* Сохраняет пропорции */
+  object-fit: contain;
 }
 
 .heder h3 {
@@ -102,7 +101,7 @@
 
 .menu__button {
   display: flex;
-  gap: 30px; /* Уменьшил отступ между кнопками */
+  gap: 30px;
   margin-top: 50px;
 }
 
@@ -197,7 +196,6 @@
   z-index: 10;
   width: 100%;
   text-align: center;
-  /* margin: 80px 0 40px 0; */
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -256,59 +254,4 @@ h6 {
   line-height: 1.2;
 }
 
-/* Адаптивность */
-@media (max-width: 1480px) {
-  .home-page__container {
-    min-width: 1200px;
-    max-width: 1400px;
-  }
-
-  .heder h3 {
-    font-size: 42px;
-  }
-
-  .heder p {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 1240px) {
-  .home-page__container {
-    min-width: 1000px;
-    max-width: 1200px;
-  }
-
-  .heder {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .header__right,
-  .header__left {
-    justify-content: center;
-  }
-
-  .heder h3,
-  .heder p {
-    text-align: center;
-  }
-
-  .menu__button {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 1024px) {
-  .home-page__container {
-    min-width: auto;
-    max-width: none;
-    padding: 0 40px;
-  }
-
-  .opit {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-  }
-}
+/* АДАПТИВНЫЕ СТИЛИ */

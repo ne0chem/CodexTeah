@@ -64,3 +64,189 @@ h1 {
   margin-bottom: 15px;
   color: #333;
 }
+@media (max-width: 1200px) {
+  .services-section {
+    padding: 70px 0;
+    border-radius: 35px;
+  }
+  h1 {
+    font-size: 70px;
+    max-width: 700px;
+    padding: 18px;
+  }
+  .category-title {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+  }
+
+  .services-content {
+    padding: 35px;
+    margin-top: 18px;
+  }
+
+  .service-placeholder {
+    padding: 50px 18px;
+  }
+}
+/* Планшеты (992px и меньше) */
+@media (max-width: 992px) {
+  .services-section {
+    padding: 60px 0;
+    border-radius: 30px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 60px;
+    max-width: 600px;
+    padding: 15px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .category-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .services-content {
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 18px;
+  }
+
+  .service-placeholder {
+    padding: 45px 15px;
+  }
+
+  .service-placeholder h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .services-section {
+    padding: 50px 0;
+    border-radius: 25px;
+  }
+
+  h1 {
+    font-size: 50px;
+    max-width: 500px;
+    padding: 12px;
+  }
+
+  .category-title {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+
+  .services-content {
+    padding: 25px 20px;
+    margin-top: 12px;
+    border-radius: 16px;
+  }
+
+  .service-placeholder {
+    padding: 40px 15px;
+  }
+
+  .service-placeholder h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .services-section {
+    padding: 40px 0;
+    border-radius: 20px;
+    min-height: auto;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 40px;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .services-content {
+    padding: 20px 15px;
+    margin-top: 10px;
+    border-radius: 14px;
+  }
+
+  .service-placeholder {
+    padding: 35px 12px;
+  }
+
+  .service-placeholder h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .services-section {
+    padding: 30px 0;
+    border-radius: 16px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+    max-width: 320px;
+    padding: 8px;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .services-content {
+    padding: 15px 12px;
+    margin-top: 8px;
+    border-radius: 12px;
+  }
+
+  .service-placeholder {
+    padding: 30px 10px;
+  }
+
+  .service-placeholder h3 {
+    font-size: 1rem;
+  }
+}
+@media (min-height: 800px) and (min-width: 769px) {
+  .services-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .services-section {
+    padding: 30px 0;
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+}

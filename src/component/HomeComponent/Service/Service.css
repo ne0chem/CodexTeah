@@ -1,4 +1,4 @@
-/*услуги сервиса */
+/* услуги сервиса */
 .service-section {
   max-width: 1400px;
   margin: 60px auto;
@@ -71,6 +71,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .feature-card:hover {
@@ -95,7 +97,8 @@
   margin-bottom: 15px;
   color: #000000cc;
   cursor: default;
-  width: 400px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .feature-card p {
@@ -167,37 +170,6 @@
 
 .cta-button:active {
   transform: translateY(1px);
-}
-
-@media (max-width: 1024px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .service-section {
-    padding: 30px 20px;
-    margin: 40px auto;
-  }
-
-  .section-header h2 {
-    font-size: 2rem;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-container {
-    padding: 30px 20px;
-  }
-
-  .watermark {
-    font-size: 150px;
-    right: -30px;
-    top: -30px;
-  }
 }
 
 .feature-card {

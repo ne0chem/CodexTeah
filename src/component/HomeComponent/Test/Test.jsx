@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "./ServicesCarousel.css";
+import "./adaptiv.css";
 
 const services = [
   {

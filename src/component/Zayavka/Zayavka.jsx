@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Zayavka.css";
+import "./adapriv.css";
 import axios from "axios";
 
 // тут делаем работу с отправкой данных на бэк

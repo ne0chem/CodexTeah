@@ -1,0 +1,483 @@
+/* Большие планшеты и маленькие десктопы (1200px - 1025px) */
+@media (max-width: 1420px) {
+  .missia__right-img {
+    width: 400px;
+    height: 400px;
+  }
+  .missia__right img {
+    width: 400px;
+    height: 400px;
+  }
+  .missia__right {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .about__left__title,
+  .missia__left__title {
+    font-size: 70px;
+  }
+
+  .missia__left__title {
+    width: 450px;
+  }
+
+  .missia__left__text {
+    width: 500px;
+    font-size: 28px;
+  }
+
+  .missia__right-img,
+  .missia__right img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .cennosti__top__title,
+  .comanda h3,
+  .plusi__title,
+  .doverie h3 {
+    font-size: 56px;
+  }
+
+  .cennosti__top__text,
+  .plusi__text {
+    font-size: 24px;
+  }
+
+  .comanda p {
+    font-size: 28px;
+  }
+
+  .cennosti__item,
+  .plusi__item {
+    width: 100%;
+  }
+
+  .doverie__right p {
+    font-size: 28px;
+  }
+}
+
+/* Планшеты (1024px - 769px) */
+@media (max-width: 1024px) {
+  .section__about,
+  .section__missia {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about__left,
+  .missia__left {
+    margin-right: 0;
+    gap: 40px;
+  }
+
+  .about__left__title,
+  .missia__left__title {
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .missia__left__text {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .missia__right {
+    display: none;
+  }
+
+  .missia__right-img,
+  .missia__right img {
+    display: none;
+  }
+
+  .cennosti__top__title,
+  .comanda h3,
+  .plusi__title,
+  .doverie h3 {
+    font-size: 48px;
+  }
+
+  .cennosti__columns,
+  .plusi__columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .cennosti__column,
+  .plusi__column {
+    gap: 30px;
+  }
+
+  .cennosti__item,
+  .plusi__item {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .comanda p {
+    font-size: 24px;
+  }
+
+  .doverie__container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .doverie__right p {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+/* Большие мобильные (768px - 601px) */
+@media (max-width: 768px) {
+  .about__left__title,
+  .missia__left__title {
+    font-size: 48px;
+  }
+
+  .missia__left__text {
+    font-size: 20px;
+  }
+
+  .missia__right-img,
+  .missia__right img {
+    width: 350px;
+    height: 330px;
+  }
+
+  .cennosti__top,
+  .comanda,
+  .plusi,
+  .doverie {
+    margin-top: 60px;
+  }
+
+  .cennosti__top__title,
+  .comanda h3,
+  .plusi__title,
+  .doverie h3 {
+    font-size: 40px;
+  }
+
+  .cennosti__top__text,
+  .plusi__text,
+  .comanda p,
+  .doverie__right p {
+    font-size: 20px;
+  }
+
+  .cennosti__bot,
+  .plusi__container {
+    margin-top: 60px;
+  }
+
+  .cennosti__item,
+  .plusi__item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .cennosti__left img,
+  .plusi__icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cennosti__right h4,
+  .plusi__content h4 {
+    font-size: 22px;
+  }
+
+  .cennosti__right p,
+  .plusi__content p {
+    font-size: 18px;
+  }
+}
+
+/* Мобильные устройства (600px - 426px) */
+@media (max-width: 600px) {
+  .about__left__title,
+  .missia__left__title {
+    font-size: 40px;
+  }
+
+  .missia__left__text {
+    font-size: 18px;
+  }
+
+  .missia__right-img,
+  .missia__right img {
+    width: 300px;
+    height: 280px;
+  }
+
+  .cennosti__top__title,
+  .comanda h3,
+  .plusi__title,
+  .doverie h3 {
+    font-size: 36px;
+  }
+
+  .cennosti__top__text,
+  .plusi__text,
+  .comanda p,
+  .doverie__right p {
+    font-size: 18px;
+  }
+
+  .cennosti__top,
+  .comanda,
+  .plusi {
+    gap: 25px;
+  }
+
+  .cennosti__columns,
+  .plusi__columns {
+    gap: 25px;
+  }
+
+  .cennosti__column,
+  .plusi__column {
+    gap: 25px;
+  }
+
+  .cennosti__item,
+  .plusi__item {
+    gap: 12px;
+  }
+
+  .cennosti__left img,
+  .plusi__icon img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cennosti__right h4,
+  .plusi__content h4 {
+    font-size: 20px;
+  }
+
+  .cennosti__right p,
+  .plusi__content p {
+    font-size: 16px;
+  }
+}
+
+/* Средние мобильные (425px - 376px) */
+@media (max-width: 425px) {
+  .about__left__title,
+  .missia__left__title {
+    font-size: 36px;
+  }
+
+  .missia__left__text {
+    font-size: 16px;
+  }
+
+  .missia__right-img,
+  .missia__right img {
+    width: 280px;
+    height: 260px;
+  }
+
+  .cennosti__top__title,
+  .comanda h3,
+  .plusi__title,
+  .doverie h3 {
+    font-size: 32px;
+  }
+
+  .cennosti__top__text,
+  .plusi__text,
+  .comanda p,
+  .doverie__right p {
+    font-size: 16px;
+  }
+
+  .cennosti__top,
+  .comanda,
+  .plusi {
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .cennosti__bot,
+  .plusi__container {
+    margin-top: 50px;
+  }
+
+  .cennosti__columns,
+  .plusi__columns {
+    gap: 20px;
+  }
+
+  .cennosti__column,
+  .plusi__column {
+    gap: 20px;
+  }
+
+  .cennosti__left img,
+  .plusi__icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cennosti__right h4,
+  .plusi__content h4 {
+    font-size: 18px;
+  }
+
+  .cennosti__right p,
+  .plusi__content p {
+    font-size: 15px;
+  }
+}
+
+/* Маленькие мобильные (375px и меньше) */
+@media (max-width: 375px) {
+  .about__left__title,
+  .missia__left__title {
+    font-size: 32px;
+  }
+
+  .missia__left__text {
+    font-size: 15px;
+  }
+
+  .missia__right-img,
+  .missia__right img {
+    width: 260px;
+    height: 240px;
+  }
+
+  .cennosti__top__title,
+  .comanda h3,
+  .plusi__title,
+  .doverie h3 {
+    font-size: 28px;
+  }
+
+  .cennosti__top__text,
+  .plusi__text,
+  .comanda p,
+  .doverie__right p {
+    font-size: 15px;
+  }
+
+  .cennosti__left img,
+  .plusi__icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cennosti__right h4,
+  .plusi__content h4 {
+    font-size: 16px;
+  }
+
+  .cennosti__right p,
+  .plusi__content p {
+    font-size: 14px;
+  }
+}
+
+/* Очень маленькие мобильные (320px и меньше) */
+@media (max-width: 320px) {
+  .about__left__title,
+  .missia__left__title {
+    font-size: 28px;
+  }
+
+  .missia__left__text {
+    font-size: 14px;
+  }
+
+  .missia__right-img,
+  .missia__right img {
+    width: 240px;
+    height: 220px;
+  }
+
+  .cennosti__top__title,
+  .comanda h3,
+  .plusi__title,
+  .doverie h3 {
+    font-size: 26px;
+  }
+
+  .cennosti__top__text,
+  .plusi__text,
+  .comanda p,
+  .doverie__right p {
+    font-size: 14px;
+  }
+}
+
+/* Большие экраны (более 1920px) */
+@media (min-width: 1920px) {
+  .section__missia {
+    margin-top: 80px;
+    gap: 80px;
+  }
+
+  .missia__left {
+    gap: 100px;
+  }
+
+  .cennosti__top,
+  .comanda,
+  .plusi,
+  .doverie {
+    margin-top: 100px;
+  }
+
+  .cennosti__bot,
+  .plusi__container {
+    margin-top: 100px;
+  }
+
+  .cennosti__columns,
+  .plusi__columns {
+    gap: 60px;
+  }
+
+  .cennosti__column,
+  .plusi__column {
+    gap: 70px;
+  }
+
+  .cennosti__item,
+  .plusi__item {
+    gap: 30px;
+  }
+}
+
+/* Landscape ориентация для планшетов и мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+  @media (max-width: 1024px) {
+    .section__about,
+    .section__missia {
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    .missia__right {
+      height: auto;
+    }
+
+    .missia__right-img,
+    .missia__right img {
+      width: 250px;
+      height: 230px;
+    }
+  }
+}

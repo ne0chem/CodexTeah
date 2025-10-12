@@ -1,8 +1,9 @@
 import "./Service.css";
+import "./adaptiv.css";
 
 const Service = () => {
   return (
-    <section class="service-section ">
+    <section class="service-section">
       <div class="section-header">
         <h2>Сервис - наша сильная сторона</h2>
       </div>

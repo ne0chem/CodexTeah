@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import "./adaptiv.css";
 import Forma from "../../component/Forma/Forma";
 import Zayavka from "../../component/Zayavka/Zayavka";
 

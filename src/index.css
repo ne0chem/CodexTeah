@@ -74,5 +74,126 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
-  margin-left: 100px;
+}
+@media (max-width: 1200px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0 60px;
+  }
+}
+
+/* Планшеты (1024px - 769px) */
+@media (max-width: 1024px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0 50px;
+  }
+}
+
+/* Большие мобильные (768px - 601px) */
+@media (max-width: 768px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0 40px;
+  }
+}
+
+/* Мобильные устройства (600px - 426px) */
+@media (max-width: 600px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0 30px;
+  }
+}
+
+/* Средние мобильные (425px - 376px) */
+@media (max-width: 425px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0 25px;
+  }
+}
+
+/* Маленькие мобильные (375px и меньше) */
+@media (max-width: 375px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0 20px;
+  }
+}
+
+/* Очень маленькие мобильные (320px и меньше) */
+@media (max-width: 320px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0 15px;
+  }
+}
+
+/* Большие экраны (более 1500px) */
+@media (min-width: 1501px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    max-width: 1500px;
+    /* padding остается 80px */
+  }
+}
+
+/* Очень большие экраны (более 1920px) */
+@media (min-width: 1921px) {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    max-width: 1600px;
+    padding: 0 100px;
+  }
+}
+
+/* Landscape ориентация для планшетов и мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+  @media (max-width: 1024px) {
+    .header .container,
+    .contacti .container,
+    .about .container,
+    .home-page .container {
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header .container,
+    .contacti .container,
+    .about .container,
+    .home-page .container {
+      padding: 0 30px;
+    }
+  }
+}
+
+/* PRINT стили */
+@media print {
+  .header .container,
+  .contacti .container,
+  .about .container,
+  .home-page .container {
+    padding: 0;
+    max-width: none;
+  }
 }

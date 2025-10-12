@@ -1,14 +1,14 @@
 .ContactCTA {
   position: relative;
   width: 100%;
-  height: 320px; /* Увеличил высоту для лучшего баланса */
+  height: 320px;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
-  color: #1d1d1f; /* Темно-серый текст */
+  color: #1d1d1f;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 24px; /* Более мягкие скругления */
+  border-radius: 24px;
   margin-top: 40px;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .ContactCTA__button .button__ContactCTA {
-  background-color: #0385ce; /* Синий градиент */
+  background-color: #0385ce;
   color: #ffffff;
   border: none;
   width: 220px;
@@ -61,7 +61,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 12px; /* Скругленные углы */
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
   text-decoration: none;
   display: flex;
@@ -70,13 +70,13 @@
   gap: 8px;
 }
 
-.ContactCTA__button .button:hover {
+.ContactCTA__button .button__ContactCTA:hover {
   background: linear-gradient(135deg, #0056b3 0%, #004499 100%);
   box-shadow: 0 6px 16px rgba(0, 113, 227, 0.4);
   transform: translateY(-1px);
 }
 
-.ContactCTA__button .button:active {
+.ContactCTA__button .button__ContactCTA:active {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(0, 113, 227, 0.3);
 }
@@ -84,15 +84,14 @@
 .button__img {
   width: 20px;
   height: 20px;
-  filter: brightness(0) invert(1); /* Белая иконка */
+  filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
 
-.ContactCTA__button .button:hover .button__img {
+.ContactCTA__button .button__ContactCTA:hover .button__img {
   transform: translateX(3px);
 }
 
-/* Дополнительный декоративный элемент */
 .ContactCTA::before {
   content: "";
   position: absolute;
@@ -108,18 +107,44 @@
   border-radius: 50%;
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
+/* АДАПТИВНЫЕ СТИЛИ */
+
+/* Большие планшеты (1200px - 1025px) */
+@media (max-width: 1200px) {
   .ContactCTA {
-    height: auto;
-    min-height: 280px;
-    margin: 40px 20px 0;
+    height: 300px;
+    margin-top: 35px;
+    border-radius: 22px;
+  }
+
+  .ContactCTA__content {
+    padding: 45px 35px;
+    gap: 22px;
+    max-width: 600px;
+  }
+
+  .ContactCTA__title {
+    font-size: 2.5rem;
+  }
+
+  .ContactCTA__subTitle {
+    font-size: 1.2rem;
+    max-width: 480px;
+  }
+}
+
+/* Планшеты (1024px - 901px) */
+@media (max-width: 1024px) {
+  .ContactCTA {
+    height: 280px;
+    margin-top: 30px;
     border-radius: 20px;
   }
 
   .ContactCTA__content {
-    padding: 40px 24px;
+    padding: 40px 30px;
     gap: 20px;
+    max-width: 550px;
   }
 
   .ContactCTA__title {
@@ -127,28 +152,304 @@
   }
 
   .ContactCTA__subTitle {
-    font-size: 1.1rem;
-    padding: 0 10px;
+    font-size: 1.15rem;
+    max-width: 450px;
   }
 
-  .ContactCTA__button .button {
+  .ContactCTA__button .button__ContactCTA {
     width: 200px;
-    padding: 14px 28px;
-    font-size: 1rem;
+    padding: 15px 28px;
+    font-size: 1.05rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Средние планшеты (900px - 769px) */
+@media (max-width: 900px) {
+  .ContactCTA {
+    height: 260px;
+    border-radius: 18px;
+  }
+
+  .ContactCTA__content {
+    padding: 35px 25px;
+    gap: 18px;
+  }
+
   .ContactCTA__title {
     font-size: 2rem;
   }
 
   .ContactCTA__subTitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    max-width: 420px;
   }
 
-  .ContactCTA__button .button {
+  .ContactCTA__button .button__ContactCTA {
+    width: 190px;
+    padding: 14px 26px;
+    font-size: 1rem;
+  }
+}
+
+/* Большие мобильные (768px - 601px) */
+@media (max-width: 768px) {
+  .ContactCTA {
+    height: 240px;
+    margin-top: 25px;
+    border-radius: 16px;
+  }
+
+  .ContactCTA__content {
+    padding: 30px 20px;
+    gap: 16px;
+    max-width: 500px;
+  }
+
+  .ContactCTA__title {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+  }
+
+  .ContactCTA__subTitle {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    max-width: 380px;
+    line-height: 1.5;
+  }
+
+  .ContactCTA__button {
+    margin-top: 8px;
+  }
+
+  .ContactCTA__button .button__ContactCTA {
     width: 180px;
-    padding: 12px 24px;
+    padding: 13px 24px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .button__img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Убираем декоративный элемент на мобильных */
+  .ContactCTA::before {
+    display: none;
+  }
+}
+
+/* Мобильные устройства (600px - 426px) */
+@media (max-width: 600px) {
+  .ContactCTA {
+    height: 220px;
+    margin-top: 20px;
+    border-radius: 14px;
+  }
+
+  .ContactCTA__content {
+    padding: 25px 18px;
+    gap: 14px;
+  }
+
+  .ContactCTA__title {
+    font-size: 1.6rem;
+  }
+
+  .ContactCTA__subTitle {
+    font-size: 0.95rem;
+    max-width: 340px;
+  }
+
+  .ContactCTA__button .button__ContactCTA {
+    width: 170px;
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+
+  .button__img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Средние мобильные (425px - 376px) */
+@media (max-width: 425px) {
+  .ContactCTA {
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 12px;
+  }
+
+  .ContactCTA__content {
+    padding: 20px 15px;
+    gap: 12px;
+  }
+
+  .ContactCTA__title {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+  }
+
+  .ContactCTA__subTitle {
+    font-size: 0.9rem;
+    max-width: 300px;
+    margin-bottom: 6px;
+  }
+
+  .ContactCTA__button {
+    margin-top: 6px;
+    gap: 10px;
+  }
+
+  .ContactCTA__button .button__ContactCTA {
+    width: 160px;
+    padding: 11px 20px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+
+  .button__img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Маленькие мобильные (375px и меньше) */
+@media (max-width: 375px) {
+  .ContactCTA {
+    height: 190px;
+  }
+
+  .ContactCTA__content {
+    padding: 18px 12px;
+    gap: 10px;
+  }
+
+  .ContactCTA__title {
+    font-size: 1.3rem;
+  }
+
+  .ContactCTA__subTitle {
+    font-size: 0.85rem;
+    max-width: 280px;
+  }
+
+  .ContactCTA__button .button__ContactCTA {
+    width: 150px;
+    padding: 10px 18px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Очень маленькие мобильные (320px и меньше) */
+@media (max-width: 320px) {
+  .ContactCTA {
+    height: 180px;
+    margin-top: 12px;
+  }
+
+  .ContactCTA__content {
+    padding: 15px 10px;
+  }
+
+  .ContactCTA__title {
+    font-size: 1.2rem;
+  }
+
+  .ContactCTA__subTitle {
+    font-size: 0.8rem;
+    max-width: 260px;
+  }
+
+  .ContactCTA__button .button__ContactCTA {
+    width: 140px;
+    padding: 9px 16px;
+  }
+
+  .button__img {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Landscape ориентация для мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+  @media (max-width: 768px) {
+    .ContactCTA {
+      height: 180px;
+      margin-top: 15px;
+    }
+
+    .ContactCTA__content {
+      padding: 20px 15px;
+      gap: 12px;
+    }
+
+    .ContactCTA__title {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .ContactCTA__subTitle {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+/* Большие экраны (более 1500px) */
+@media (min-width: 1500px) {
+  .ContactCTA {
+    height: 350px;
+    margin-top: 50px;
+    border-radius: 28px;
+  }
+
+  .ContactCTA__content {
+    padding: 60px 50px;
+    gap: 28px;
+    max-width: 750px;
+  }
+
+  .ContactCTA__title {
+    font-size: 3rem;
+  }
+
+  .ContactCTA__subTitle {
+    font-size: 1.35rem;
+    max-width: 550px;
+  }
+
+  .ContactCTA__button .button__ContactCTA {
+    width: 240px;
+    padding: 18px 36px;
+    font-size: 1.2rem;
+  }
+
+  .button__img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Отключение анимаций на мобильных для производительности */
+@media (max-width: 768px) {
+  .ContactCTA__button .button__ContactCTA {
+    transition: none;
+  }
+
+  .ContactCTA__button .button__ContactCTA:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+    background-color: #0385ce;
+  }
+
+  .button__img {
+    transition: none;
+  }
+
+  .ContactCTA__button .button__ContactCTA:hover .button__img {
+    transform: none;
   }
 }

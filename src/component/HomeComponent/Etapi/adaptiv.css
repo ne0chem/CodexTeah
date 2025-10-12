@@ -1,0 +1,325 @@
+/* Планшеты (1024px - 769px) */
+@media (max-width: 1024px) {
+  .etapi-container {
+    margin: 60px auto 100px;
+    padding: 0 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .etapi-container h3 {
+    font-size: clamp(2.5rem, 5vw, 3.25rem);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .etapi-steps {
+    gap: clamp(40px, 8vw, 80px);
+    margin: 60px 0 30px;
+  }
+
+  .etapi-steps::before {
+    top: 50px;
+    left: 12%;
+    right: 12%;
+  }
+
+  .etapi-step {
+    min-height: 240px;
+    padding: 0 15px;
+  }
+
+  .etapi-step-icon {
+    width: clamp(80px, 10vw, 100px);
+    height: clamp(80px, 10vw, 100px);
+    margin-bottom: 20px;
+  }
+
+  .etapi-step-icon img {
+    width: clamp(35px, 4vw, 40px);
+    height: clamp(35px, 4vw, 40px);
+  }
+
+  .etapi-step-content {
+    max-width: 200px;
+  }
+
+  .etapi-step-title {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.3;
+  }
+
+  .etapi-step-description {
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.4;
+  }
+}
+
+/* Планшеты и большие мобильные (768px - 601px) */
+@media (max-width: 768px) {
+  .etapi-container {
+    margin: 50px auto 80px;
+    padding: 0 25px;
+    width: 100%;
+  }
+
+  .etapi-container h3 {
+    font-size: clamp(2rem, 6vw, 2.625rem);
+    margin-bottom: 25px;
+  }
+
+  .etapi-steps {
+    flex-direction: column;
+    gap: clamp(30px, 6vw, 50px);
+    margin: 40px 0 20px;
+  }
+
+  /* Убираем горизонтальную линию */
+  .etapi-steps::before {
+    display: none;
+  }
+
+  .etapi-step {
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: auto;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .etapi-step-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    margin: 0 20px 0 0;
+    flex-shrink: 0;
+  }
+
+  .etapi-step-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .etapi-step-content {
+    max-width: none;
+    text-align: left;
+    align-items: flex-start;
+    padding-top: 8px;
+    flex: 1;
+  }
+
+  .etapi-step-title {
+    font-size: 1.125rem;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .etapi-step-description {
+    font-size: 0.875rem;
+    text-align: left;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  /* Альтернативное расположение для четных шагов */
+  .etapi-step:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .etapi-step:nth-child(even) .etapi-step-icon {
+    margin: 0 0 0 20px;
+  }
+
+  .etapi-step:nth-child(even) .etapi-step-content {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+/* Мобильные устройства (600px - 481px) */
+@media (max-width: 600px) {
+  .etapi-container {
+    margin: 40px auto 60px;
+    padding: 0 20px;
+  }
+
+  .etapi-container h3 {
+    font-size: clamp(1.75rem, 5vw, 2rem);
+  }
+
+  .etapi-steps {
+    gap: 35px;
+  }
+
+  .etapi-step {
+    max-width: 100%;
+  }
+
+  .etapi-step-icon {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    margin: 0 15px 0 0;
+  }
+
+  .etapi-step:nth-child(even) .etapi-step-icon {
+    margin: 0 0 0 15px;
+  }
+
+  .etapi-step-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .etapi-step-title {
+    font-size: 1.0625rem;
+  }
+
+  .etapi-step-description {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Маленькие мобильные (480px и меньше) */
+@media (max-width: 480px) {
+  .etapi-container {
+    margin: 35px auto 50px;
+    padding: 0 15px;
+  }
+
+  .etapi-steps {
+    gap: 30px;
+    margin: 30px 0 15px;
+  }
+
+  /* Убираем альтернативное расположение на маленьких экранах */
+  .etapi-step,
+  .etapi-step:nth-child(even) {
+    flex-direction: row;
+  }
+
+  .etapi-step-icon,
+  .etapi-step:nth-child(even) .etapi-step-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    margin: 0 12px 0 0;
+  }
+
+  .etapi-step-content,
+  .etapi-step:nth-child(even) .etapi-step-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .etapi-step-title,
+  .etapi-step:nth-child(even) .etapi-step-title {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  .etapi-step-description,
+  .etapi-step:nth-child(even) .etapi-step-description {
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .etapi-step-icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Очень маленькие мобильные (360px и меньше) */
+@media (max-width: 360px) {
+  .etapi-container {
+    margin: 30px auto 40px;
+    padding: 0 12px;
+  }
+
+  .etapi-container h3 {
+    font-size: 1.625rem;
+  }
+
+  .etapi-steps {
+    gap: 25px;
+  }
+
+  .etapi-step-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    margin: 0 10px 0 0;
+  }
+
+  .etapi-step-icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .etapi-step-title {
+    font-size: 0.9375rem;
+  }
+
+  .etapi-step-description {
+    font-size: 0.6875rem;
+  }
+}
+
+/* Landscape ориентация для мобильных и планшетов */
+@media (max-height: 500px) and (orientation: landscape) {
+  .etapi-container {
+    margin: 30px auto 50px;
+  }
+
+  @media (max-width: 1024px) {
+    .etapi-steps {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .etapi-step {
+      flex: 0 1 calc(50% - 20px);
+      flex-direction: column;
+      text-align: center;
+      min-height: 200px;
+    }
+
+    .etapi-step-icon {
+      margin: 0 auto 15px !important;
+    }
+
+    .etapi-step-content {
+      align-items: center !important;
+      text-align: center !important;
+    }
+
+    .etapi-step-title,
+    .etapi-step-description {
+      text-align: center !important;
+    }
+
+    /* Восстанавливаем горизонтальную линию */
+    .etapi-steps::before {
+      display: block;
+      top: 40px;
+      left: 10%;
+      right: 10%;
+    }
+  }
+}
+
+/* Большие экраны (более 1440px) */
+@media (min-width: 1440px) {
+  .etapi-container {
+    max-width: 1400px;
+  }
+}

@@ -229,40 +229,5 @@
   color: black;
   text-align: left;
 }
-@media (min-width: 1920px) {
-  .section__missia {
-    margin-top: 80px; /* Увеличиваем верхний отступ */
-    gap: 80px; /* Больше расстояние между блоками */
-  }
 
-  .missia__left {
-    gap: 100px; /* Увеличиваем расстояние внутри блока */
-  }
-
-  .cennosti__top,
-  .comanda,
-  .plusi,
-  .doverie {
-    margin-top: 100px; /* Больше отступы между секциями */
-  }
-
-  .cennosti__bot,
-  .plusi__container {
-    margin-top: 100px; /* Увеличиваем внутренние отступы */
-  }
-
-  .cennosti__columns,
-  .plusi__columns {
-    gap: 60px; /* Больше расстояние между колонками */
-  }
-
-  .cennosti__column,
-  .plusi__column {
-    gap: 70px; /* Больше расстояние между элементами */
-  }
-
-  .cennosti__item,
-  .plusi__item {
-    gap: 30px; /* Больше расстояние между иконкой и текстом */
-  }
-}
+/* АДАПТИВНЫЕ СТИЛИ */

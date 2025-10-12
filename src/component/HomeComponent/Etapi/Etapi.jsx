@@ -1,5 +1,6 @@
 import React from "react";
 import "./Etapi.css";
+import "./adaptiv.css";
 
 const Etapi = () => {
   return (

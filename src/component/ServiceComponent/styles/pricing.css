@@ -7,7 +7,8 @@
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
-  margin-left: -70px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .service-pricing::before {
@@ -32,41 +33,53 @@
   gap: 40px;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .price-highlight {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 32px;
   border-radius: 20px;
-  text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/*для СТОИМОСТЬ РАЗРАБОТКИ ОТ*/
+/* Контейнер для текста слева */
+.price-text-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* для СТОИМОСТЬ РАЗРАБОТКИ ОТ */
 .price-label {
-  width: 270px;
   display: block;
-  font-size: 35px; /* Убрал дублирование font-size */
+  font-size: 35px;
   color: #000000;
   font-weight: 500;
   letter-spacing: 0.5px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   background-clip: text;
   text-align: left;
+  max-width: none;
+  width: auto;
 }
-/*для цены*/
+
+/* для цены */
 .price-amount {
-  display: block;
   font-weight: 800;
   letter-spacing: -2px;
-  margin: 8px 0;
   color: #000000;
   background-clip: text;
   line-height: 1;
-  margin-left: 350px;
-  font-size: 70px; /* Увеличил с 40px до 60px */
+  font-size: 70px;
+  text-align: right;
+  flex-shrink: 0;
 }
 
 /* Контейнер для блоков с информацией - ДВА СТОЛБЦА */
@@ -74,17 +87,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  width: 100%;
 }
 
-/*блоки  с инфой*/
+/* блоки с инфой */
 .included-features,
 .additional-options {
   padding: 28px;
   border-radius: 18px;
   backdrop-filter: blur(10px);
   background-color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
-/*заголовок блоков с инфой*/
+
+/* заголовок блоков с инфой */
 .included-features h3,
 .additional-options h3 {
   color: #1f2937;
@@ -96,14 +113,16 @@
   gap: 10px;
 }
 
-/*блок с тем что вкл в стоимость*/
+/* блок с тем что вкл в стоимость */
 .included-features ul,
 .additional-options ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
-/*список для вкл в стоимость */
+
+/* список для вкл в стоимость */
 .included-features li,
 .additional-options li {
   padding: 16px 0;
@@ -112,8 +131,11 @@
   border-bottom: 1px solid rgba(229, 231, 235, 0.8);
   transition: all 0.2s ease;
   cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
 }
-/*стили для блока при клике*/
+
+/* стили для блока при клике */
 .included-features li:last-child,
 .additional-options li:last-child {
   border-bottom: none;
@@ -139,13 +161,15 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
 }
 
-/*текст в списках*/
+/* текст в списках */
 .feature-text,
 .option-text {
   flex: 1;
   font-weight: 500;
+  min-width: 0; /* Для правильного обрезания текста */
 }
 
 .expand-icon {
@@ -153,89 +177,55 @@
   font-weight: bold;
   font-size: 1.2rem;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
-/*текст деталей*/
+
+/* текст деталей */
 .feature-details,
 .option-details {
   margin-top: 12px;
-  padding: 12px 0 0 32px;
+  padding: 12px 0 0 0;
   color: #000000e7;
-
   font-size: 0.95rem;
   line-height: 1.5;
   border-top: 1px solid rgba(229, 231, 235, 0.6);
+  width: 100%;
+  margin-left: 44px; /* Выравнивание с учетом иконки */
 }
-/*стили для списка*/
+
+/* стили для списка */
 .included-features li {
   color: #040505;
 }
-/*цвет списков*/
+
+/* цвет списков */
 .additional-options li {
   color: #040505;
 }
+
 .checkmark-icon {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
 }
 
-/* Адаптивность */
-@media (min-width: 968px) {
-  .pricing-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
+/* Контейнер для двух колонок */
+.two-columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
 }
 
-@media (max-width: 968px) {
-  .pricing-content {
-    gap: 32px;
-  }
-
-  .service-pricing {
-    padding: 32px 24px;
-    margin: 40px 0;
-  }
-
-  .price-amount {
-    font-size: 3rem;
-  }
-
-  .price-currency {
-    font-size: 1.5rem;
-  }
-
-  /* На мобильных - один столбец */
-  .features-container {
-    grid-template-columns: 1fr;
-  }
+/* Колонки */
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-@media (max-width: 768px) {
-  .features-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .service-pricing {
-    padding: 24px 16px;
-    border-radius: 20px;
-  }
-
-  .price-highlight {
-    padding: 24px;
-  }
-
-  .included-features,
-  .additional-options {
-    padding: 20px;
-  }
-
-  .feature-details,
-  .option-details {
-    padding-left: 20px;
-  }
+.column ul {
+  width: 100%;
 }
 
 /* Анимации */
@@ -264,32 +254,321 @@
 .option-details {
   animation: fadeIn 0.3s ease-out;
 }
-/* Контейнер для двух колонок */
-.two-columns-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-/* Колонки */
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Адаптивность для мобильных */
-@media (max-width: 968px) {
-  .two-columns-container {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .column {
-    margin-bottom: 16px;
-  }
-}
 
 /* Убираем нижнюю границу у последнего элемента в колонке */
 .column ul li:last-child {
   border-bottom: none;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Большие планшеты (1200px и меньше) */
+@media (max-width: 1200px) {
+  .service-pricing {
+    padding: 35px;
+    margin: 50px 0;
+  }
+
+  .price-highlight {
+    padding: 28px;
+  }
+
+  .price-label {
+    font-size: 32px;
+  }
+
+  .price-amount {
+    font-size: 65px;
+  }
+
+  .features-container {
+    gap: 20px;
+  }
+
+  .included-features,
+  .additional-options {
+    padding: 25px;
+  }
+}
+
+/* Планшеты (992px и меньше) */
+@media (max-width: 992px) {
+  .service-pricing {
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 20px;
+  }
+
+  .pricing-content {
+    gap: 32px;
+  }
+
+  .price-highlight {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .price-label {
+    font-size: 28px;
+  }
+
+  .price-amount {
+    font-size: 55px;
+  }
+
+  .features-container {
+    gap: 16px;
+  }
+
+  .included-features,
+  .additional-options {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .included-features h3,
+  .additional-options h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .included-features li,
+  .additional-options li {
+    padding: 14px 0;
+    font-size: 0.95rem;
+  }
+
+  .checkmark-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-details,
+  .option-details {
+    margin-left: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Планшеты (768px и меньше) */
+@media (max-width: 768px) {
+  .service-pricing {
+    padding: 25px;
+    margin: 35px 0;
+    border-radius: 18px;
+  }
+
+  .service-pricing::before {
+    width: 250px;
+    height: 250px;
+    right: -15%;
+  }
+
+  .pricing-content {
+    gap: 28px;
+  }
+
+  .price-highlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .price-text-container {
+    width: 100%;
+  }
+
+  .price-label {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .price-amount {
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .included-features,
+  .additional-options {
+    padding: 20px;
+  }
+
+  .included-features h3,
+  .additional-options h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .included-features li,
+  .additional-options li {
+    padding: 12px 0;
+    font-size: 0.92rem;
+  }
+
+  .feature-header,
+  .option-header {
+    gap: 10px;
+  }
+
+  .checkmark-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .expand-icon {
+    font-size: 1.1rem;
+  }
+
+  .feature-details,
+  .option-details {
+    margin-left: 38px;
+    font-size: 0.88rem;
+  }
+
+  .two-columns-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* Мобильные устройства (576px и меньше) */
+@media (max-width: 576px) {
+  .service-pricing {
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 16px;
+  }
+
+  .service-pricing::before {
+    width: 200px;
+    height: 200px;
+    top: -30%;
+    right: -10%;
+  }
+
+  .pricing-content {
+    gap: 24px;
+  }
+
+  .price-highlight {
+    padding: 20px;
+    border-radius: 14px;
+    gap: 16px;
+  }
+
+  .price-label {
+    font-size: 22px;
+  }
+
+  .price-amount {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .included-features,
+  .additional-options {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .included-features h3,
+  .additional-options h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .included-features li,
+  .additional-options li {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+
+  .included-features li.expanded,
+  .additional-options li.expanded {
+    padding: 14px;
+    margin: 6px 0;
+  }
+
+  .checkmark-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-header,
+  .option-header {
+    gap: 8px;
+  }
+
+  .expand-icon {
+    font-size: 1rem;
+  }
+
+  .feature-details,
+  .option-details {
+    margin-left: 32px;
+    font-size: 0.85rem;
+    padding-top: 10px;
+  }
+}
+
+/* Очень маленькие мобильные устройства (400px и меньше) */
+@media (max-width: 400px) {
+  .service-pricing {
+    padding: 16px;
+    margin: 25px 0;
+    border-radius: 14px;
+  }
+
+  .pricing-content {
+    gap: 20px;
+  }
+
+  .price-highlight {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .price-label {
+    font-size: 20px;
+  }
+
+  .price-amount {
+    font-size: 38px;
+  }
+
+  .included-features,
+  .additional-options {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .included-features h3,
+  .additional-options h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .included-features li,
+  .additional-options li {
+    padding: 8px 0;
+    font-size: 0.85rem;
+  }
+
+  .checkmark-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-details,
+  .option-details {
+    margin-left: 28px;
+    font-size: 0.82rem;
+  }
 }

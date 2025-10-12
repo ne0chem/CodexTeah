@@ -12,42 +12,53 @@ export default function Footer() {
       </div>
       <div className="footer__centr">
         <h3 className="footer__nav">Навигация</h3>
-        <Link to="/" className="footer__glavnaya">
-          Главная
-        </Link>
-        <Link to="/service" className="footer__yslugi">
-          Услуги
-        </Link>
-        <Link to="/product" className="footer__port">
-          Наш продукт
-        </Link>
-        <Link to="/about" className="footer__company">
-          О компании
-        </Link>
+        <div className="footer__nav-links">
+          <div className="footer__nav-column-left">
+            <Link to="/" className="footer__glavnaya">
+              Главная
+            </Link>
+            <Link to="/service" className="footer__yslugi">
+              Услуги
+            </Link>
+          </div>
+          <div className="footer__nav-column-right">
+            <Link to="/product" className="footer__port">
+              Наш продукт
+            </Link>
+            <Link to="/about" className="footer__company">
+              О компании
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="footer__right">
         <div className="footer__contakt">
           <h4>Контакты</h4>
         </div>
-        <div className="footer__nomer">
-          <img src="./tlf.png" alt="" />
-          <p>+7 938 000-23-47</p>
-        </div>
-        <div className="footer__email">
-          <img src="./inet.png" alt="" />
-
-          <p>zalaev@codekstech.ru</p>
-        </div>
-        <div className="footer__email1">
-          <img src="/email.svg" alt="" />
-          <p>zalaev@codekstech.ru</p>
-        </div>
-        <div className="footer__adres">
-          <img src="./location.svg" alt="" />
-          <p>
-            Республика Татарстан, р-н Верхнеуслонский, г. Иннополис, ул.
-            Университетская, д.5
-          </p>
+        <div className="footer__contacts-container">
+          <div className="footer__contacts-column-left">
+            <div className="footer__nomer">
+              <img src="./tlf.png" alt="Телефон" />
+              <p>+7 938 000-23-47</p>
+            </div>
+            <div className="footer__email">
+              <img src="./inet.png" alt="Интернет" />
+              <p>zalaev@codekstech.ru</p>
+            </div>
+          </div>
+          <div className="footer__contacts-column-right">
+            <div className="footer__email1">
+              <img src="/email.svg" alt="Email" />
+              <p>zalaev@codekstech.ru</p>
+            </div>
+            <div className="footer__adres">
+              <img src="./location.svg" alt="Адрес" />
+              <p>
+                Республика Татарстан, р-н Верхнеуслонский, г. Иннополис, ул.
+                Университетская, д.5
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

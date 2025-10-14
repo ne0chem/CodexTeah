@@ -172,6 +172,8 @@
   .comanda p,
   .doverie__right p {
     font-size: 20px;
+    text-align: left;
+    padding: 10px 10px;
   }
 
   .cennosti__bot,
@@ -181,7 +183,6 @@
 
   .cennosti__item,
   .plusi__item {
-    flex-direction: column;
     text-align: center;
     gap: 15px;
   }
@@ -191,7 +192,9 @@
     width: 80px;
     height: 80px;
   }
-
+  .cennosti__right {
+    text-align: left;
+  }
   .cennosti__right h4,
   .plusi__content h4 {
     font-size: 22px;

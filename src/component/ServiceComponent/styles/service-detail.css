@@ -419,6 +419,11 @@ body {
 
 /* Адаптив для мобильных (480px и меньше) */
 @media (max-width: 480px) {
+  .description-text li {
+    margin-bottom: 8px;
+    padding-left: 0;
+    width: 280px;
+  }
   .service-detail-container {
     width: 350px;
     overflow: hidden; /* Убедимся */

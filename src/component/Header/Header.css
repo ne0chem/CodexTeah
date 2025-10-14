@@ -127,32 +127,35 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Мобильное меню */
+/* Мобильное меню - боковое */
 .mobile-menu {
   display: none;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: -100%; /* Скрыто за пределами экрана */
+  width: 320px; /* Фиксированная ширина */
   height: 100vh;
   background-color: rgb(255, 255, 255);
   z-index: 10000;
-  padding: 100px 5vw 2rem;
+  padding: 100px 2rem 2rem;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   overflow-y: auto;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
 }
 
 .mobile-menu.active {
   display: flex;
+  right: 0; /* Показываем меню */
 }
 
 .mobile-nav {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
@@ -172,7 +175,8 @@
 
 .mobile-menu .button {
   margin-top: 1rem;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
 }
 
 /* Кнопка закрытия мобильного меню */
@@ -196,6 +200,25 @@
 
 .mobile-menu__close:hover {
   color: #000000;
+}
+
+/* Затемнение фона при открытом меню */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  display: block;
+  opacity: 1;
 }
 
 /* Адаптивность для больших экранов */
@@ -271,7 +294,13 @@
     padding: 1rem 5vw;
   }
   .button {
-    margin-left: -70px;
+    margin-left: 10px;
+  }
+
+  /* Адаптивность мобильного меню */
+  .mobile-menu {
+    width: 280px;
+    padding: 90px 1.5rem 2rem;
   }
 }
 
@@ -280,7 +309,7 @@
     padding: 0.75rem 5vw;
   }
   .button {
-    margin-left: -70px;
+    margin-left: 10px;
   }
   .header__logo img {
     height: 2rem;
@@ -292,7 +321,8 @@
   }
 
   .mobile-menu .button {
-    width: 180px;
+    width: 100%;
+    max-width: 180px;
     height: 44px;
     font-size: 16px;
   }
@@ -301,6 +331,10 @@
     top: 20px;
     right: 20px;
     font-size: 1.8rem;
+  }
+
+  .mobile-menu {
+    width: 260px;
   }
 }
 
@@ -324,7 +358,8 @@
   }
 
   .mobile-menu {
-    padding: 80px 4vw 2rem;
+    width: 200px;
+    padding: 80px 1rem 2rem;
   }
 
   .mobile-nav a {
@@ -332,11 +367,14 @@
   }
 
   .mobile-menu .button {
-    width: 160px;
+    width: 100%;
+    max-width: 160px;
     height: 40px;
     font-size: 14px;
   }
-
+  .button {
+    margin-left: 2px;
+  }
   .mobile-menu__close {
     top: 15px;
     right: 15px;

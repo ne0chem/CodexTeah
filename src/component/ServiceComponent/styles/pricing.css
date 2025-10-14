@@ -1,4 +1,4 @@
-/* Современные стили для блока стоимости */
+/* стили стоимость разработки от и в стоимость вхожит и доп услуги */
 .service-pricing {
   border-radius: 24px;
   padding: 40px;
@@ -345,7 +345,7 @@
 
   .feature-details,
   .option-details {
-    margin-left: 40px;
+    margin-left: 0px;
     font-size: 0.9rem;
   }
 }
@@ -428,7 +428,6 @@
 
   .feature-details,
   .option-details {
-    margin-left: 38px;
     font-size: 0.88rem;
   }
 
@@ -512,7 +511,6 @@
 
   .feature-details,
   .option-details {
-    margin-left: 32px;
     font-size: 0.85rem;
     padding-top: 10px;
   }
@@ -568,7 +566,7 @@
 
   .feature-details,
   .option-details {
-    margin-left: 28px;
+    margin-left: -0px;
     font-size: 0.82rem;
   }
 }

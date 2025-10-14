@@ -68,6 +68,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin-left: 20px;
 }
 
 .ContactCTA__button .button__ContactCTA:hover {
@@ -432,7 +433,11 @@
     height: 22px;
   }
 }
-
+@media (max-width: 1024px) {
+  .ContactCTA__button .button__ContactCTA {
+    margin-left: 20px;
+  }
+}
 /* Отключение анимаций на мобильных для производительности */
 @media (max-width: 768px) {
   .ContactCTA__button .button__ContactCTA {

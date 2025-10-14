@@ -252,65 +252,8 @@ a:active {
 }
 
 /* Альтернативный вариант для очень маленьких экранов */
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .add-butt-wrapper {
-    height: 60px;
-    width: 60px;
-    bottom: 15px;
-    right: 15px;
-    border-radius: 12px;
-  }
-
-  .add-butt {
-    height: 30px;
-    width: 30px;
-    padding-top: 8px;
-  }
-
-  .main-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .icon-img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .add-butt-wrapper::before {
-    height: 18px;
-    width: 4px;
-  }
-
-  .add-butt-wrapper::after {
-    height: 4px;
-    width: 18px;
-  }
-}
-
-/* Дополнительный вариант - компактное расположение для мобильных */
-@media (max-width: 360px) {
-  .add-butt-wrapper {
-    transform: scale(0.9);
-  }
-
-  .add-butt-wrapper:hover {
-    transform: scale(0.9) rotate(45deg);
-  }
-}
-
-/* Анимация появления для лучшего UX */
-.add-butt-wrapper {
-  animation: fadeInUp 0.5s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    display: none;
   }
 }

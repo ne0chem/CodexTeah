@@ -1,4 +1,56 @@
-/* Планшеты (1024px - 769px) */
+@media (max-width: 1250px) {
+  .etapi-container {
+    margin: 70px auto 110px;
+    padding: 0 40px;
+    max-width: 100%;
+  }
+
+  .etapi-container h3 {
+    font-size: clamp(2.75rem, 4.5vw, 3.5rem);
+    margin-bottom: 35px;
+  }
+
+  .etapi-steps {
+    gap: clamp(50px, 7vw, 70px);
+    margin: 70px 0 40px;
+  }
+
+  .etapi-steps::before {
+    top: 55px;
+    left: 10%;
+    right: 10%;
+  }
+
+  .etapi-step {
+    min-height: 260px;
+    padding: 0 20px;
+  }
+
+  .etapi-step-icon {
+    width: clamp(90px, 9vw, 110px);
+    height: clamp(90px, 9vw, 110px);
+    margin-bottom: 25px;
+  }
+
+  .etapi-step-icon img {
+    width: clamp(38px, 3.8vw, 45px);
+    height: clamp(38px, 3.8vw, 45px);
+  }
+
+  .etapi-step-content {
+    max-width: 220px;
+  }
+
+  .etapi-step-title {
+    font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  }
+
+  .etapi-step-description {
+    font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  }
+}
+
+/* Планшеты (1024px - 777px) */
 @media (max-width: 1024px) {
   .etapi-container {
     margin: 60px auto 100px;
@@ -52,6 +104,73 @@
   .etapi-step-description {
     font-size: clamp(0.875rem, 1.2vw, 1rem);
     line-height: 1.4;
+  }
+}
+@media (max-width: 1024px) {
+  .etapi-steps::before {
+    top: 50px;
+    left: 60px; /* фиксированные отступы */
+    right: 60px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 905px) {
+  .etapi-steps::before {
+    left: 40px;
+    right: 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 826px) {
+  .etapi-steps::before {
+    left: 20px;
+    right: 20px;
+    width: 110%;
+  }
+}
+/* Переходный диапазон (776px - 769px) */
+@media (max-width: 776px) {
+  .etapi-container {
+    margin: 55px auto 90px;
+    padding: 0 28px;
+  }
+
+  .etapi-container h3 {
+    font-size: clamp(2.25rem, 5.5vw, 2.75rem);
+  }
+
+  .etapi-steps {
+    gap: clamp(35px, 7vw, 60px);
+    margin: 50px 0 25px;
+  }
+
+  .etapi-step {
+    min-height: 220px;
+    padding: 0 12px;
+  }
+
+  .etapi-step-icon {
+    width: clamp(75px, 9vw, 90px);
+    height: clamp(75px, 9vw, 90px);
+  }
+
+  .etapi-step-icon img {
+    width: clamp(32px, 3.5vw, 38px);
+    height: clamp(32px, 3.5vw, 38px);
+  }
+
+  .etapi-step-content {
+    max-width: 180px;
+  }
+
+  .etapi-step-title {
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  }
+
+  .etapi-step-description {
+    font-size: clamp(0.85rem, 1.1vw, 0.95rem);
   }
 }
 

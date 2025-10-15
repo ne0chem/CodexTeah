@@ -436,6 +436,7 @@
 @media (max-width: 1024px) {
   .ContactCTA__button .button__ContactCTA {
     margin-left: 20px;
+    width: 220px;
   }
 }
 /* Отключение анимаций на мобильных для производительности */

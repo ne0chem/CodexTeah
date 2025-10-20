@@ -21,11 +21,11 @@ import ScrollToTop from "./component/ScrollToTo";
 
 /* Страницы */
 import Home from "./pages/Home/Home";
-import Service from "./pages/Service/Service"; // Ваша страница услуг
-import Product from "./pages/Product/Product"; // Ваша страница продуктов
+import Service from "./pages/Service/Service";
+import Product from "./pages/Product/Product";
 import About from "./pages/About/About";
-
 import Contacts from "./pages/Contacts/Contacts";
+import PrivacyPolicy from "./component/PrivacyPolicy/PrivacyPolicy"; // Добавляем импорт
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -42,6 +42,8 @@ root.render(
         <Route path="/portfolio" element={<Navigate to="/product" replace />} />
         <Route path="/product" element={<Product />} key="product" />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />{" "}
+        {/* Добавляем маршрут */}
       </Routes>
       <Footer />
       <Prava />

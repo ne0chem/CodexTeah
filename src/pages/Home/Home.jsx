@@ -82,7 +82,9 @@ const Home = () => {
 
           <ContactCTA />
           <Etapi />
-          <Zayavka />
+          <div className="zayavka">
+            <Zayavka />
+          </div>
         </div>
       </div>
     </div>

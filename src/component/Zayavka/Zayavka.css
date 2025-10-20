@@ -3,13 +3,12 @@
   height: 400px;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   border-radius: 20px;
-  margin-left: -100px;
+
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid #e9ecef;
   position: relative;
   overflow: hidden;
-  margin-bottom: 60px;
-  margin-top: -80px;
+  margin-bottom: 50px;
 }
 
 .forma__right::before {

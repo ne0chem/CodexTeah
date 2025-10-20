@@ -162,20 +162,17 @@
     gap: 3rem;
     align-items: center;
   }
-
-  .footer__left,
-  .footer__centr,
+  .footer__left {
+    display: none;
+  }
+  .footer__centr {
+    display: none;
+  }
   .footer__right {
     max-width: 100%;
     margin-top: 0;
     align-items: center;
     text-align: center;
-    width: 100%;
-  }
-
-  .footer__centr {
-    display: flex;
-    flex-direction: column;
     width: 100%;
   }
 

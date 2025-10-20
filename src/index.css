@@ -8,7 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body {
+  padding-top: 60px; /* Высота header */
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -67,7 +69,7 @@ body {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 80px; /* УВЕЛИЧЬТЕ до 60px-80px */
+  padding: 0 80px;
 }
 .zayavka {
   margin-top: 250px;

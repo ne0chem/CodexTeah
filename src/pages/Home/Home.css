@@ -196,7 +196,7 @@
   z-index: 10;
   width: 100%;
   text-align: center;
-  padding: 0 20px;
+
   box-sizing: border-box;
 }
 
@@ -207,7 +207,6 @@
   justify-content: center;
   width: 100%;
   z-index: 10;
-  margin-bottom: 50px;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -253,5 +252,7 @@ h6 {
   font-weight: 600;
   line-height: 1.2;
 }
-
+.zayavka {
+  margin-top: 0px !important;
+}
 /* АДАПТИВНЫЕ СТИЛИ */

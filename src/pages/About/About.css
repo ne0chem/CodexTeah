@@ -2,19 +2,6 @@
   height: 100pv;
 }
 
-.section__about {
-  display: flex;
-  margin-top: 50px;
-}
-.about__left {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-  margin-right: 50px;
-}
-.about__left__title {
-  font-size: 80px;
-}
 .section__missia {
   margin-top: 50px;
   display: flex;
@@ -26,31 +13,33 @@
   margin-right: 50px;
 }
 .missia__left__title {
-  font-size: 80px;
-  width: 500px;
+  font-size: 60px;
+  /* width: 600px; */
 }
 .missia__left__text {
   width: 600px;
-  font-size: 32px;
+  font-size: 24px;
   color: black;
 }
 .missia__right {
   position: relative;
 }
 .missia__right-img {
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-left: 100px;
   position: absolute;
-  width: 600px;
-  height: 580px;
+  width: 400px;
+  height: 400px;
   background-color: #0385ce;
   border-radius: 20px;
   transform: rotate(15deg);
 }
 .missia__right img {
-  margin-top: 40px;
   position: absolute;
-  width: 577px;
-  height: 577px;
+  margin-top: 30px;
+  margin-left: 100px;
+  width: 400px;
+  height: 400px;
 }
 /*наши ценности*/
 .cennosti__top {
@@ -60,10 +49,10 @@
   gap: 40px;
 }
 .cennosti__top__title {
-  font-size: 64px;
+  font-size: 60px;
 }
 .cennosti__top__text {
-  font-size: 27px;
+  font-size: 24px;
   color: black;
   max-width: 1200px;
 }
@@ -118,15 +107,15 @@
 .comanda {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
-  gap: 40px;
+  margin-top: 60px;
+  gap: 50px;
 }
 
 .comanda h3 {
-  font-size: 64px;
+  font-size: 60px;
 }
 .comanda p {
-  font-size: 32px;
+  font-size: 24px;
   max-width: 1200px;
   color: #000000;
 }
@@ -136,15 +125,15 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  gap: 40px;
+  gap: 50px;
 }
 
 .plusi__title {
-  font-size: 64px;
+  font-size: 60px;
 }
 
 .plusi__text {
-  font-size: 27px;
+  font-size: 24px;
   color: black;
   max-width: 1200px;
 }
@@ -179,13 +168,13 @@
 }
 
 .plusi__icon img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .plusi__content h4 {
   margin: 0 0 10px 0;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -195,39 +184,47 @@
   line-height: 1.4;
 }
 .doverie {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .doverie h3 {
-  font-size: 64px;
+  font-size: 60px;
 }
 .doverie__container {
   display: flex;
-  margin-top: 80px;
-  gap: 40px;
-  align-items: center;
+  margin-top: 50px;
+  gap: 120px;
   justify-content: space-between;
 }
 
 .doverie__left {
   flex-shrink: 0;
-}
-
-.doverie__left img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .doverie__right {
   flex: 1;
+  display: flex;
+  align-items: center; /* Выравниваем текст по центру */
 }
-
+.doverie__left img {
+  max-width: 90%;
+  height: 550px;
+  display: block;
+}
 .doverie__right p {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  margin-top: -12px;
   font-size: 32px;
   line-height: 1.6;
   color: black;
   text-align: left;
+  height: 500px;
+  width: 500px;
 }
-
+.zayavka-container {
+  margin-top: 100px !important;
+}
 /* АДАПТИВНЫЕ СТИЛИ */

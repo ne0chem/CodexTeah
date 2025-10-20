@@ -8,13 +8,6 @@ import "./adaptiv.css";
 
 const services = [
   {
-    id: 1,
-    icon: "/y1.svg",
-    title: "Верстка сайтов",
-    price: "от 150 000 ₽",
-    category: "sites",
-  },
-  {
     id: 3,
     icon: "/y2.svg",
     title: "Корпоративные сайты",

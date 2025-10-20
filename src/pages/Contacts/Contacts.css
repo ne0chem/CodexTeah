@@ -5,7 +5,10 @@
   margin-top: 50px;
   /* БЕЗ padding и max-width - это теперь задача .container */
 }
-
+.qqq {
+  display: flex;
+  justify-content: center;
+}
 .contacti__title {
   display: flex;
   flex-direction: column;
@@ -116,6 +119,9 @@
 
   .contacti__title-p {
     font-size: 22px;
+  }
+  .qqq {
+    margin-top: 80px;
   }
 }
 

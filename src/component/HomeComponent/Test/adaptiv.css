@@ -398,6 +398,11 @@
 
 /* Средние мобильные (425px - 376px) */
 @media (max-width: 425px) {
+  .services-carousel-container {
+    border: 1px solid red;
+    width: 180% !important;
+    display: none;
+  }
   .service-section {
     margin: 25px 10px;
     padding: 22px 15px;

@@ -530,7 +530,23 @@
     line-height: 1.2;
   }
   .qwe {
-    border: 1px solid red;
+    margin-top: -30px;
+    margin-left: -20px;
+    width: 120%;
+  }
+}
+
+/* Мобильные (350px и меньше) */
+@media (max-width: 350px) {
+  .opit {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .opit__left,
+  .opit__centr,
+  .opit__right {
+    max-width: 110px;
   }
 }
 

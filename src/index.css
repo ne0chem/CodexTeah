@@ -71,11 +71,46 @@ body {
   margin: 0 auto;
   padding: 0 80px;
 }
-.zayavka {
-  margin-top: 250px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 80px;
+#zayavka-unique-container {
+  /* Сбрасываем все возможные стили */
+  all: unset !important;
+
+  /* Принудительные стили */
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 50px auto 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+
+  /* Гарантия поверх всего */
+  z-index: 1000 !important;
+}
+
+/* Дополнительная защита от перекрытия */
+#zayavka-unique-container * {
+  position: relative !important;
+  z-index: 1001 !important;
+}
+/* Мобильные устройства (450px и меньше) - ОДИНАКОВАЯ ШИРИНА */
+/* Для всех мобильных до 450px */
+/* Мобильные устройства (450px и меньше) - ОДИНАКОВАЯ ШИРИНА */
+/* Для мобильных немного уменьшим */
+@media (max-width: 450px) {
+  #zayavka-unique-container {
+    width: 400px !important;
+    min-width: 350px !important;
+    margin: 0px auto !important;
+    margin-left: -30px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  #zayavka-unique-container {
+    width: 320px !important;
+    min-width: 320px !important;
+  }
 }
 @media (max-width: 1200px) {
   .header .container,

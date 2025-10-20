@@ -479,6 +479,9 @@
   .advantages__text {
     font-size: 14px;
   }
+  .qwee {
+    margin-top: 60px !important;
+  }
 }
 
 /* Маленькие мобильные (375px и меньше) */

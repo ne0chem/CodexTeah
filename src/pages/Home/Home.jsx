@@ -82,8 +82,10 @@ const Home = () => {
 
           <ContactCTA />
           <Etapi />
-          <div className="zayavka">
-            <Zayavka />
+          <div id="zayavka-unique-container ">
+            <div className="qwe">
+              <Zayavka />
+            </div>
           </div>
         </div>
       </div>

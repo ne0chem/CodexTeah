@@ -8,7 +8,11 @@ const Service = () => {
     <div className="home-page">
       <ServicesPage />
 
-      <Zayavka />
+      <div id="zayavka-unique-container">
+        <div className="qwer">
+          <Zayavka />
+        </div>
+      </div>
     </div>
   );
 };

@@ -53,7 +53,7 @@
 /* Большие мобильные (768px - 601px) */
 @media (max-width: 768px) {
   .forma__right {
-    width: min(500px, 85%);
+    width: min(500px, 90%); /* Увеличил с 85% до 90% для единообразия */
     min-height: 420px;
     margin: -40px auto 40px;
     padding-bottom: 30px;
@@ -66,7 +66,6 @@
 
   .forma__text {
     flex-direction: column;
-
     align-items: center;
     gap: 15px;
     padding: 0 25px;
@@ -74,10 +73,10 @@
 
   .forma__text input {
     width: 100%;
-    max-width: 300px;
-    height: 46px;
-    font-size: 0.9375rem;
-    padding: 13px 16px;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
+    height: 48px; /* Выровнял высоту с планшетной версией */
+    font-size: 1rem; /* Выровнял размер шрифта */
+    padding: 14px 18px; /* Выровнял отступы */
   }
 
   .forma__bot {
@@ -89,22 +88,22 @@
 
   .forma__button {
     width: 100%;
-    max-width: 300px;
-    height: 46px;
-    font-size: 0.9375rem;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
+    height: 48px; /* Выровнял высоту */
+    font-size: 1rem; /* Выровнял размер шрифта */
     order: -1;
   }
 
   .checkbox-container {
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
     font-size: 0.8125rem;
     justify-content: center;
   }
 
   .forma__bot p {
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
     font-size: 0.6875rem;
     text-align: center;
   }
@@ -118,7 +117,7 @@
 /* Мобильные устройства (600px - 481px) */
 @media (max-width: 600px) {
   .forma__right {
-    width: min(450px, 90%);
+    width: min(450px, 90%); /* Сохранил 90% для единообразия */
     min-height: 400px;
     margin: -30px auto 35px;
     padding-bottom: 25px;
@@ -130,31 +129,34 @@
   }
 
   .forma__text {
-    padding: 0 20px;
-    gap: 12px;
+    padding: 0 25px; /* Выровнял с предыдущим брейкпоинтом */
+    gap: 15px; /* Выровнял отступы */
   }
 
   .forma__text input {
-    height: 44px;
-    font-size: 0.875rem;
-    padding: 12px 15px;
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    padding: 14px 18px; /* Сохранил отступы */
     border-radius: 10px;
+    max-width: 300px; /* Добавил ограничение */
   }
 
   .forma__bot {
-    padding: 0 20px;
-    gap: 15px;
-    margin-top: 20px;
+    padding: 0 25px; /* Выровнял с предыдущим брейкпоинтом */
+    gap: 20px; /* Выровнял отступы */
+    margin-top: 25px; /* Выровнял отступ */
   }
 
   .forma__button {
-    height: 44px;
-    font-size: 0.875rem;
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
     border-radius: 10px;
+    max-width: 300px; /* Добавил ограничение */
   }
 
   .checkbox-container {
-    font-size: 0.75rem;
+    font-size: 0.8125rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
   }
 
   .checkbox-custom {
@@ -171,14 +173,15 @@
   }
 
   .forma__bot p {
-    font-size: 0.625rem;
+    font-size: 0.6875rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
   }
 }
 
 /* Маленькие мобильные (480px и меньше) */
 @media (max-width: 480px) {
   .forma__right {
-    width: calc(100% - 40px);
+    width: min(400px, 90%); /* Изменил на min() для единообразия */
     min-height: 380px;
     margin: -20px auto 30px;
     padding-bottom: 20px;
@@ -187,37 +190,41 @@
 
   .forma__tile {
     font-size: 1.25rem;
-    margin: 25px 15px 18px;
+    margin: 25px 20px 18px; /* Выровнял горизонтальные отступы */
   }
 
   .forma__text {
-    padding: 0 15px;
-    gap: 10px;
+    padding: 0 20px; /* Увеличил отступы для единообразия */
+    gap: 15px; /* Сохранил отступы */
   }
 
   .forma__text input {
-    height: 42px;
-    font-size: 0.8125rem;
-    padding: 11px 14px;
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    padding: 14px 18px; /* Сохранил отступы */
+    max-width: 300px; /* Добавил ограничение */
   }
 
   .forma__bot {
-    padding: 0 15px;
-    gap: 12px;
-    margin-top: 18px;
+    padding: 0 20px; /* Увеличил отступы */
+    gap: 20px; /* Сохранил отступы */
+    margin-top: 25px; /* Сохранил отступ */
   }
 
   .forma__button {
-    height: 42px;
-    font-size: 0.8125rem;
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
   }
 
   .checkbox-container {
-    font-size: 0.6875rem;
+    font-size: 0.8125rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
   }
 
   .forma__bot p {
-    font-size: 0.5625rem;
+    font-size: 0.6875rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
     line-height: 1.4;
   }
 
@@ -234,7 +241,7 @@
 /* Очень маленькие мобильные (375px и меньше) */
 @media (max-width: 375px) {
   .forma__right {
-    width: calc(100% - 30px);
+    width: min(350px, 90%); /* Изменил на min() для единообразия */
     min-height: 360px;
     margin: -15px auto 25px;
     padding-bottom: 18px;
@@ -243,50 +250,54 @@
 
   .forma__tile {
     font-size: 1.125rem;
-    margin: 22px 12px 16px;
+    margin: 22px 20px 16px; /* Выровнял горизонтальные отступы */
   }
 
   .forma__text {
-    padding: 0 12px;
-    gap: 8px;
+    padding: 0 20px; /* Сохранил отступы */
+    gap: 15px; /* Сохранил отступы */
   }
 
   .forma__text input {
-    height: 40px;
-    font-size: 0.75rem;
-    padding: 10px 12px;
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    padding: 14px 18px; /* Сохранил отступы */
+    max-width: 300px; /* Сохранил ограничение */
   }
 
   .forma__bot {
-    padding: 0 12px;
-    gap: 10px;
-    margin-top: 16px;
+    padding: 0 20px; /* Сохранил отступы */
+    gap: 20px; /* Сохранил отступы */
+    margin-top: 25px; /* Сохранил отступ */
   }
 
   .forma__button {
-    height: 40px;
-    font-size: 0.75rem;
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Сохранил ограничение */
   }
 
   .checkbox-container {
-    font-size: 0.625rem;
+    font-size: 0.8125rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Сохранил ограничение */
   }
 
   .checkbox-custom {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
+    width: 18px; /* Сохранил размер */
+    height: 18px; /* Сохранил размер */
+    margin-right: 10px; /* Сохранил отступ */
   }
 
   .checkbox-custom:after {
-    left: 4px;
-    top: 0;
-    width: 3px;
-    height: 7px;
+    left: 5px; /* Сохранил позицию */
+    top: 1px; /* Сохранил позицию */
+    width: 4px; /* Сохранил размер */
+    height: 8px; /* Сохранил размер */
   }
 
   .forma__bot p {
-    font-size: 0.5rem;
+    font-size: 0.6875rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Сохранил ограничение */
   }
 }
 
@@ -295,29 +306,32 @@
   .forma__right {
     min-height: 320px;
     margin: -15px auto 20px;
+    width: min(500px, 90%); /* Добавил ограничение ширины */
   }
 
   .forma__tile {
-    margin: 20px 15px 15px;
+    margin: 20px 20px 15px; /* Выровнял отступы */
     font-size: 1.125rem;
   }
 
   .forma__text {
-    gap: 8px;
+    gap: 15px; /* Сохранил отступы */
   }
 
   .forma__text input {
-    height: 38px;
-    padding: 8px 12px;
+    height: 48px; /* Сохранил высоту */
+    padding: 14px 18px; /* Сохранил отступы */
+    max-width: 300px; /* Добавил ограничение */
   }
 
   .forma__bot {
-    margin-top: 15px;
-    gap: 12px;
+    margin-top: 20px; /* Немного уменьшил отступ */
+    gap: 15px; /* Немного уменьшил отступы */
   }
 
   .forma__button {
-    height: 38px;
+    height: 48px; /* Сохранил высоту */
+    max-width: 300px; /* Добавил ограничение */
   }
 
   @media (max-width: 768px) {
@@ -329,7 +343,7 @@
 
     .forma__text input {
       width: calc(50% - 10px);
-      max-width: none;
+      max-width: none; /* Убрал ограничение для landscape */
     }
   }
 }

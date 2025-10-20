@@ -38,8 +38,10 @@ const Contacts = () => {
             </div>
           </div>
         </div>
-        <div className="zayavka-container">
-          <Zayavka />
+        <div id="zayavka-unique-container">
+          <div className="qqq">
+            <Zayavka />
+          </div>
         </div>
       </div>
     </div>

@@ -280,10 +280,8 @@
     height: 50px !important;
     max-height: 0px !important; /* Добавляем ограничение */
   }
-  .zayavka-container {
-    position: relative;
-    top: -80px !important; /* Поднимаем выше */
-    margin-top: 0 !important;
+  .qwqw {
+    margin-top: -30px !important;
   }
 }
 
@@ -317,11 +315,6 @@
   .cennosti__right p,
   .plusi__content p {
     font-size: 14px;
-  }
-  .zayavka-container {
-    position: relative;
-    top: -60px !important; /* Поднимаем выше */
-    margin-top: 0 !important;
   }
 }
 

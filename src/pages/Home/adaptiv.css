@@ -529,6 +529,9 @@
     font-size: 11px;
     line-height: 1.2;
   }
+  .qwe {
+    border: 1px solid red;
+  }
 }
 
 /* Очень маленькие мобильные (350px и меньше) */

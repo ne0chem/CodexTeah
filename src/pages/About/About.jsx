@@ -162,8 +162,10 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="zayavka-container">
-            <Zayavka />
+          <div id="zayavka-unique-container">
+            <div className="qwqw">
+              <Zayavka />
+            </div>
           </div>
         </div>
       </div>

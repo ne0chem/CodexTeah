@@ -99,8 +99,10 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <div className="zayavka">
-          <Zayavka />
+        <div id="zayavka-unique-container">
+          <div className="qwee">
+            <Zayavka />
+          </div>
         </div>
       </div>
     </div>

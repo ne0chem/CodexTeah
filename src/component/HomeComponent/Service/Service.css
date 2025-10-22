@@ -110,6 +110,7 @@
   font-weight: 400;
   flex-grow: 1;
   cursor: default;
+  text-align: justify;
 }
 
 .feature-card {

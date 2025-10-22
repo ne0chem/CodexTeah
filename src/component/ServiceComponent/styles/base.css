@@ -2,7 +2,6 @@
 
 /* Базовые стили страницы */
 .services-section {
-  padding: 50px 0;
   min-height: 100vh;
   border-radius: 40px;
 }
@@ -21,6 +20,7 @@ h1 {
   background-clip: text;
   color: transparent;
   padding: 20px;
+  margin-top: -75px;
   position: relative;
   display: inline-block;
   width: 800px;
@@ -28,10 +28,11 @@ h1 {
 
 .category-title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 75px;
   color: #333;
   font-size: 2rem;
   animation: fadeIn 0.5s ease;
+  border: 1px solid rgb(0, 255, 234);
 }
 
 @keyframes fadeIn {

@@ -55,8 +55,7 @@ const ServicesPage = () => {
   return (
     <section className="services-section">
       <div className="container">
-        {/* Статический заголовок */}
-        <h1 className="main-title">Все наши услуги</h1>
+        {!selectedService && <h1 className="main-title">Все наши услуги</h1>}
 
         <ServiceList
           services={displayedServices}

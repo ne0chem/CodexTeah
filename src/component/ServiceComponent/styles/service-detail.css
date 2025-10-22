@@ -38,6 +38,7 @@ body {
   min-height: 500px;
   position: relative;
   overflow: hidden;
+  margin-top: 40px;
 }
 
 .description-text {
@@ -47,7 +48,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: white;
   backdrop-filter: blur(2px);
   border-radius: 30px 0 0 30px;
@@ -56,7 +57,8 @@ body {
 .service-detail-header h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-bottom: 75px;
   color: #1d1d1f;
   line-height: 1.2;
   letter-spacing: -0.3px;
@@ -72,7 +74,7 @@ body {
 .description-text p {
   font-size: 1.15rem;
   color: #050505;
-  margin-bottom: 35px;
+  margin-bottom: 75px;
   line-height: 1.6;
   max-width: 90%;
   font-weight: 400;

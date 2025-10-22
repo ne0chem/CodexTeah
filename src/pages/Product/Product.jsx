@@ -1,13 +1,47 @@
 import React from "react";
+import { useState, useEffect, useContext } from "react";
 import "./Portfolio.css";
 import Zayavka from "../../component/Zayavka/Zayavka";
-
+import useWow from "../../animation/Wow";
 const Product = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            // Останавливаем наблюдение после активации
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll(
+      ".fade-in-left, .fade-in-right, .fade-in, .fade-in-down, .fade-in-up, .bounce-in"
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
   return (
     <div className="home-page">
       <div className="container">
-        <h3 className="product__title">Наш продукт</h3>
-        <div className="product">
+        <h3
+          className="product__title wow fade-in-down"
+          data-wow-duration="1s"
+          data-wow-delay="1s"
+        >
+          Наш продукт
+        </h3>
+        <div
+          className="product wow fade-in-down"
+          data-wow-duration="1s"
+          data-wow-delay="1s"
+        >
           <div className="produt__left">
             <div className="produt__left-top">
               <div className="product__text">
@@ -29,7 +63,12 @@ const Product = () => {
             <img src="./pr2.svg" alt="" className="produt__img" />
           </div>
         </div>
-        <div className="coal">
+        <div
+          className="coal
+        wow fade-in-left"
+          data-wow-duration="1s"
+          data-wow-delay="1s"
+        >
           <h3 className="coal__title">Главная цель</h3>
           <p className="coal__subtitle">
             Ускорить и упростить учёт имущества, обеспечив контроль за
@@ -37,12 +76,25 @@ const Product = () => {
             инвентаризации с применением RFID-технологий.
           </p>
         </div>
-        <div className="advantages">
-          <h3 className="advantages__title">
+        <div
+          className="advantages
+        wow fade-in-up"
+          data-wow-duration="1s"
+          data-wow-delay="1s"
+        >
+          <h3 className="advantages__title ">
             Преимущества системы «Имметрикс»
           </h3>
-          <div className="advantages__container">
-            <div className="advantages__cards">
+          <div
+            className="advantages__container
+            wow fade-in-right"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
+            <div
+              className="advantages__cards
+            "
+            >
               <img className="advantages__img" src="./prodict1.svg" alt="" />
               <p className="advantages__text">
                 Быстрая и точная RFID-инвентаризация.Удобные инструменты для
@@ -100,7 +152,11 @@ const Product = () => {
           </div>
         </div>
         <div id="zayavka-unique-container">
-          <div className="qwee">
+          <div
+            className="qwee wow bounce-in delay-400"
+            data-wow-duration="10s"
+            data-wow-delay="1s"
+          >
             <Zayavka />
           </div>
         </div>

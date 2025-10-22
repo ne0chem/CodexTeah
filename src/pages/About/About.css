@@ -3,7 +3,7 @@
 }
 
 .section__missia {
-  margin-top: 50px;
+  margin-top: 75px;
   display: flex;
 }
 .missia__left {
@@ -45,11 +45,13 @@
 .cennosti__top {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 75px;
   gap: 40px;
 }
 .cennosti__top__title {
   font-size: 60px;
+
+  margin-bottom: 30px;
 }
 .cennosti__top__text {
   font-size: 24px;
@@ -58,13 +60,14 @@
 }
 .cennosti__bot {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 75px;
 }
 
 .cennosti__columns {
   display: flex;
   gap: 40px; /* Расстояние между колонками */
   justify-content: space-between;
+  text-align: justify;
 }
 
 .cennosti__column {
@@ -107,8 +110,8 @@
 .comanda {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
-  gap: 50px;
+  margin-top: 75px;
+  gap: 75px;
 }
 
 .comanda h3 {
@@ -124,23 +127,25 @@
 .plusi {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 75px;
   gap: 50px;
 }
 
 .plusi__title {
   font-size: 60px;
+  margin-bottom: 45px;
 }
 
 .plusi__text {
   font-size: 24px;
   color: black;
   max-width: 1200px;
+
+  text-align: justify;
 }
 
 .plusi__container {
   width: 100%;
-  margin-top: 40px;
 }
 
 .plusi__columns {
@@ -184,14 +189,14 @@
   line-height: 1.4;
 }
 .doverie {
-  margin-top: 50px;
+  margin-top: 75px;
 }
 .doverie h3 {
   font-size: 60px;
 }
 .doverie__container {
   display: flex;
-  margin-top: 50px;
+  margin-top: 75px;
   gap: 120px;
   justify-content: space-between;
 }
@@ -223,12 +228,14 @@
   text-align: left;
   height: 500px;
   width: 500px;
+  margin-left: -50px;
+  text-align: justify;
 }
-.zayavka-container {
-  margin-top: 100px !important;
-}
+
 /* АДАПТИВНЫЕ СТИЛИ */
 .qwqw {
   display: flex;
   justify-content: center;
+  margin-top: 75px;
+  margin-bottom: 10px;
 }

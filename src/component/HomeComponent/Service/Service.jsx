@@ -3,7 +3,11 @@ import "./adaptiv.css";
 
 const Service = () => {
   return (
-    <section class="service-section">
+    <section
+      class="service-section wow slide-in-up"
+      data-wow-duration="1s"
+      data-wow-delay="1.5s"
+    >
       <div class="section-header">
         <h2>Сервис - наша сильная сторона</h2>
       </div>
@@ -15,7 +19,7 @@ const Service = () => {
         для вашего бизнеса.
       </p>
 
-      <div class="features-grid">
+      <div class="features-grid fade-in-right delay-200">
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-users"></i>

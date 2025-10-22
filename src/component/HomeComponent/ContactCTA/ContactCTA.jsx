@@ -20,7 +20,12 @@ const ContactCTA = ({ openModal: propOpenModal }) => {
   };
 
   return (
-    <section className="ContactCTA">
+    <section
+      className="ContactCTA 
+    wow slide-in-right"
+      data-wow-duration="1s"
+      data-wow-delay="1s"
+    >
       <div className="ContactCTA">
         <div className="ContactCTA__content">
           <div className="ContactCTA__title">Остались вопросы?</div>

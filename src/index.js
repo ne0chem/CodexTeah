@@ -11,6 +11,8 @@ import { ModalProvider } from "./component/Modal/Modal";
 /* Стили */
 import "./index.css";
 
+/*анимации*/
+import WOW from "wowjs";
 /* Компоненты */
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";

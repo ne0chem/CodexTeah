@@ -4,7 +4,12 @@ import "./adaptiv.css";
 
 const Etapi = () => {
   return (
-    <div className="etapi-container">
+    <div
+      className="etapi-container 
+    wow fade-in-up"
+      data-wow-duration="1s"
+      data-wow-delay="1s"
+    >
       <h3>Этапы работ</h3>
       <div className="etapi-steps">
         <div className="etapi-step">

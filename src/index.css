@@ -236,3 +236,274 @@ body {
     max-width: none;
   }
 }
+/* В ваш CSS файл */
+/* FADE анимации */
+.fade-in {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.animated {
+  opacity: 1;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-up.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-down.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-left.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-right.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* SLIDE анимации */
+.slide-in-up {
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-up.animated {
+  transform: translateY(0);
+}
+
+.slide-in-down {
+  transform: translateY(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-down.animated {
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-left.animated {
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-right.animated {
+  transform: translateX(0);
+}
+
+/* ZOOM анимации */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.8s ease-out;
+}
+
+.zoom-in.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.zoom-in-up {
+  opacity: 0;
+  transform: scale(0.5) translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.zoom-in-up.animated {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.zoom-in-down {
+  opacity: 0;
+  transform: scale(0.5) translateY(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.zoom-in-down.animated {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* BOUNCE анимации */
+.bounce-in {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.bounce-in.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.bounce-in-up {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.bounce-in-up.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bounce-in-down {
+  opacity: 0;
+  transform: translateY(-300px);
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.bounce-in-down.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FLIP анимации */
+.flip-in-x {
+  opacity: 0;
+  transform: perspective(400px) rotateX(90deg);
+  transition: all 0.8s ease-out;
+}
+
+.flip-in-x.animated {
+  opacity: 1;
+  transform: perspective(400px) rotateX(0);
+}
+
+.flip-in-y {
+  opacity: 0;
+  transform: perspective(400px) rotateY(90deg);
+  transition: all 0.8s ease-out;
+}
+
+.flip-in-y.animated {
+  opacity: 1;
+  transform: perspective(400px) rotateY(0);
+}
+
+/* ROTATE анимации */
+.rotate-in {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0.5);
+  transition: all 0.8s ease-out;
+}
+
+.rotate-in.animated {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.rotate-in-up {
+  opacity: 0;
+  transform: rotate(-45deg) translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.rotate-in-up.animated {
+  opacity: 1;
+  transform: rotate(0) translateY(0);
+}
+
+/* SPECIAL анимации */
+.swing-in {
+  opacity: 0;
+  transform: rotate(-10deg) translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.swing-in.animated {
+  opacity: 1;
+  transform: rotate(0) translateY(0);
+}
+
+.wobble-in {
+  opacity: 0;
+  transform: translateX(-100px) rotate(-10deg);
+  transition: all 0.8s ease-out;
+}
+
+.wobble-in.animated {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+}
+
+/* Задержки */
+.delay-100 {
+  transition-delay: 0.1s;
+}
+.delay-200 {
+  transition-delay: 0.2s;
+}
+.delay-300 {
+  transition-delay: 0.3s;
+}
+.delay-400 {
+  transition-delay: 0.4s;
+}
+.delay-500 {
+  transition-delay: 0.5s;
+}
+.delay-600 {
+  transition-delay: 0.6s;
+}
+.delay-700 {
+  transition-delay: 0.7s;
+}
+.delay-800 {
+  transition-delay: 0.8s;
+}
+
+/* Длительности */
+.duration-300 {
+  transition-duration: 0.3s;
+}
+.duration-500 {
+  transition-duration: 0.5s;
+}
+.duration-700 {
+  transition-duration: 0.7s;
+}
+.duration-1000 {
+  transition-duration: 1s;
+}
+.duration-1500 {
+  transition-duration: 1.5s;
+}

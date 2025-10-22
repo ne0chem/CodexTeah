@@ -2,14 +2,16 @@
   padding: 2rem 0;
   position: relative;
   overflow: hidden;
-  margin-left: -40px;
+  /* margin-left: -40px; */
 }
 
 .services-carousel-wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+
   position: relative;
+
+  margin-top: -40px;
 }
 
 .services-carousel-wrapper .swiper {

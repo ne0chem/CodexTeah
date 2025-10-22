@@ -34,9 +34,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 75px;
   box-sizing: border-box;
-  gap: 60px;
+  /* gap: 60px; */
 }
 
 .header__right {
@@ -89,11 +89,11 @@
   margin: 0;
   line-height: 1.2;
 
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .heder p {
-  margin-bottom: 50px;
+  margin-bottom: 75px;
   font-size: 27px;
   color: var(--text-secondary);
   line-height: 1.4;
@@ -104,7 +104,7 @@
 .menu__button {
   display: flex;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 .button__left,
@@ -172,11 +172,10 @@
   display: flex;
   width: 80%;
   justify-content: space-between;
-  margin-top: 100px;
   padding: 0 20px;
   box-sizing: border-box;
 
-  margin-top: 50px;
+  margin-top: 75px;
 }
 /*Позвать Юлю и посмотреть вместе */
 .opit__centr,
@@ -205,7 +204,7 @@
   z-index: 10;
   width: 100%;
   text-align: center;
-  margin-top: -50px;
+  margin-top: -0px;
   box-sizing: border-box;
 }
 
@@ -270,6 +269,5 @@ h6 {
 }
 /* АДАПТИВНЫЕ СТИЛИ */
 .qwe {
-  margin-top: -60px;
-  margin-bottom: 20px;
+  margin-top: -10px;
 }

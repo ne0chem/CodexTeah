@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   getStartingPrice,
   getIncludedFeatures,
@@ -8,6 +8,29 @@ import {
 } from "../data/pricingData";
 
 const ServicePricing = ({ service }) => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            // Останавливаем наблюдение после активации
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll(
+      ".fade-in-left, .fade-in-right, .fade-in, .fade-in-down, .fade-in-up, .bounce-in"
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
   const [expandedOption, setExpandedOption] = useState(null);
   const [expandedFeature, setExpandedFeature] = useState(null);
 
@@ -37,17 +60,39 @@ const ServicePricing = ({ service }) => {
     <div className="service-pricing">
       <div className="pricing-content">
         {/* Блок с ценой */}
-        <div className="price-highlight">
-          <span className="price-label">Стоимость разработки, от</span>
-          <span className="price-amount">
+        <div
+          className="price-highlight wow fade-in-down"
+          data-wow-duration="1s"
+          data-wow-delay="3s"
+        >
+          <span
+            className="price-label wow fade-in-left"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
+            Стоимость разработки, от
+          </span>
+          <span
+            className="price-amount wow fade-in-right"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             {getStartingPrice(service.category)}
           </span>
         </div>
 
         {/* Блок "В стоимость включено" с двумя колонками */}
-        <div className="included-features">
+        <div
+          className="included-features wow fade-in-right"
+          data-wow-duration="1s"
+          data-wow-delay="1s"
+        >
           <h3>В стоимость включено:</h3>
-          <div className="two-columns-container">
+          <div
+            className="two-columns-container wow fade-in-up"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             <div className="column">
               <ul>
                 {featuresColumn1.map((feature, index) => (
@@ -76,7 +121,11 @@ const ServicePricing = ({ service }) => {
                 ))}
               </ul>
             </div>
-            <div className="column">
+            <div
+              className="column wow fade-in-up"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
               <ul>
                 {featuresColumn2.map((feature, index) => (
                   <li
@@ -110,10 +159,22 @@ const ServicePricing = ({ service }) => {
         </div>
 
         {/* Блок "Дополнительные опции" с двумя колонками */}
-        <div className="additional-options">
+        <div
+          className="additional-options wow fade-in-right"
+          data-wow-duration="1s"
+          data-wow-delay="1s"
+        >
           <h3>Дополнительные опции:</h3>
-          <div className="two-columns-container">
-            <div className="column">
+          <div
+            className="two-columns-container wow fade-in-up"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
+            <div
+              className="column wow fade-in-up"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
               <ul>
                 {optionsColumn1.map((option, index) => (
                   <li
@@ -141,7 +202,11 @@ const ServicePricing = ({ service }) => {
                 ))}
               </ul>
             </div>
-            <div className="column">
+            <div
+              className="column wow fade-in-up"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
               <ul>
                 {optionsColumn2.map((option, index) => (
                   <li

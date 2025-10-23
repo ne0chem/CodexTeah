@@ -1,15 +1,43 @@
 import React from "react";
+import { useState, useEffect, useContext } from "react";
 import "./About.css";
 import "./adaptiv.css";
 import Forma from "../../component/Forma/Forma";
 import Zayavka from "../../component/Zayavka/Zayavka";
 
 const About = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            // Останавливаем наблюдение после активации
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll(
+      ".fade-in-left, .fade-in-right, .fade-in, .fade-in-down, .fade-in-up, .bounce-in"
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
   return (
     <div className="about ">
       <div className="container">
         <div className="section__missia">
-          <div className="missia__left">
+          <div
+            className="missia__left wow fade-in-down"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             <h3 className="missia__left__title">Миссия и ценности</h3>
             <p className="missia__left__text">
               Наша миссия — внедрять передовые технологии для роста бизнесса
@@ -18,13 +46,21 @@ const About = () => {
               пользователю.
             </p>
           </div>
-          <div className="missia__right">
+          <div
+            className="missia__right wow fade-in-right"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             <div className="missia__right-img"></div>
             <img src="./about.svg" alt="" />
           </div>
         </div>
-        <div className="section__cennosti">
-          <div className="cennosti__top">
+        <div className="section__cennosti ">
+          <div
+            className="cennosti__top wow fade-in-up"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             <h3 className="cennosti__top__title">Наши ценности</h3>
             <p className="cennosti__top__text">
               CodexTech стремится войти в число самых перспективных молодых
@@ -32,7 +68,11 @@ const About = () => {
               быть доступны и эффективны.
             </p>
           </div>
-          <div className="cennosti__bot">
+          <div
+            className="cennosti__bot wow fade-in-left"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             <div className="cennosti__columns">
               <div className="cennosti__column">
                 <div className="cennosti__item">
@@ -80,7 +120,11 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="comanda">
+          <div
+            className="comanda wow fade-in-up"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             <h3>Наша команда</h3>
             <p>
               Сегодня команда CodexTech — это разработчики, дизайнеры и
@@ -91,8 +135,18 @@ const About = () => {
             </p>
           </div>
           <div className="plusi">
-            <h3 className="plusi__title">Наши преимущества</h3>
-            <div className="plusi__container">
+            <h3
+              className="plusi__title wow fade-in-down"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
+              Наши преимущества
+            </h3>
+            <div
+              className="plusi__container wow fade-in-up"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
               <div className="plusi__columns">
                 <div className="plusi__column">
                   <div className="plusi__item">
@@ -146,12 +200,26 @@ const About = () => {
             </div>
           </div>
           <div className="doverie">
-            <h3>Нам доверяют</h3>
+            <h3
+              className="wow fade-in-left"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
+              Нам доверяют
+            </h3>
             <div className="doverie__container">
-              <div className="doverie__left">
+              <div
+                className="doverie__left wow fade-in-left"
+                data-wow-duration="1s"
+                data-wow-delay="1s"
+              >
                 <img src="./about1.svg" alt="" />
               </div>
-              <div className="doverie__right">
+              <div
+                className="doverie__right wow fade-in-left"
+                data-wow-duration="1s"
+                data-wow-delay="1s"
+              >
                 <p>
                   Наш продукт — система инвентаризации имущества для театра с
                   использованием ТСД и RFID-меток. Решение позволяет вести учёт
@@ -163,7 +231,11 @@ const About = () => {
             </div>
           </div>
           <div id="zayavka-unique-container">
-            <div className="qwqw">
+            <div
+              className="qwqw wow bounce-in delay-400"
+              data-wow-duration="10s"
+              data-wow-delay="1s"
+            >
               <Zayavka />
             </div>
           </div>

@@ -46,7 +46,7 @@
 }
 
 .header__left-img {
-  margin-top: 40px;
+  margin-top: -40px;
   position: absolute;
   width: 400px;
   height: 400px;
@@ -55,7 +55,7 @@
   transform: rotate(15deg);
 }
 .header__left img {
-  margin-top: 40px;
+  margin-top: -40px;
   position: absolute;
   width: 400px;
   height: 400px;
@@ -192,10 +192,10 @@
 .opit__left {
   display: flex;
   gap: 20px;
-  width: 180px;
+  width: 220px;
   text-align: center;
-  text-align: justify;
-  text-align-last: justify;
+  /* text-align: justify;
+  text-align-last: justify; */
 }
 
 /* Секция услуг */

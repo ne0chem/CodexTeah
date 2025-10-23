@@ -6,6 +6,29 @@ import { services, categoryNames } from "./ServiceDetail/servicesData";
 import "./ServicesPage.css";
 
 const ServicesPage = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            // Останавливаем наблюдение после активации
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll(
+      ".fade-in-left, .fade-in-right, .fade-in, .fade-in-down, .fade-in-up, .bounce-in"
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
   const location = useLocation();
   const [selectedService, setSelectedService] = useState(null);
 
@@ -55,7 +78,15 @@ const ServicesPage = () => {
   return (
     <section className="services-section">
       <div className="container">
-        {!selectedService && <h1 className="main-title">Все наши услуги</h1>}
+        {!selectedService && (
+          <h1
+            className="main-title wow fade-in-down"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
+            Все наши услуги
+          </h1>
+        )}
 
         <ServiceList
           services={displayedServices}

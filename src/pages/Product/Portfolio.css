@@ -29,18 +29,21 @@
   height: 400px;
   background-color: #0385ce;
   border-radius: 20px;
-  top: -20px;
-  right: 20%;
+  top: -32%;
+  right: 25%;
   transform: rotate(15deg);
 }
 .produt__img {
   position: relative;
-  right: 20%;
+  right: 25%;
   height: 400px;
   width: 400px;
-  top: -5%;
+  top: -32%;
 }
-
+.produt__img img {
+  width: 400px;
+  height: 400px;
+}
 /*контейнер наша цель */
 .coal {
   margin-top: -100px;
@@ -590,13 +593,13 @@
   }
 
   .produt__right-img {
-    width: 420px;
-    height: 440px;
+    width: 400px;
+    height: 400px;
   }
 
   .produt__img {
-    width: 420px;
-    height: 440px;
+    width: 400px;
+    height: 400px;
   }
 
   .coal__title,
@@ -634,16 +637,6 @@
 
     .product__right {
       order: 0;
-    }
-
-    .produt__right-img {
-      width: 200px;
-      height: 220px;
-    }
-
-    .produt__img {
-      width: 200px;
-      height: 220px;
     }
 
     .advantages__cards {

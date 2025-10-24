@@ -183,28 +183,6 @@ body {
   }
 }
 
-/* Большие экраны (более 1500px) */
-@media (min-width: 1501px) {
-  .header .container,
-  .contacti .container,
-  .about .container,
-  .home-page .container {
-    max-width: 1500px;
-    /* padding остается 80px */
-  }
-}
-
-/* Очень большие экраны (более 1920px) */
-@media (min-width: 1921px) {
-  .header .container,
-  .contacti .container,
-  .about .container,
-  .home-page .container {
-    max-width: 1600px;
-    padding: 0 100px;
-  }
-}
-
 /* Landscape ориентация для планшетов и мобильных */
 @media (max-height: 500px) and (orientation: landscape) {
   @media (max-width: 1024px) {

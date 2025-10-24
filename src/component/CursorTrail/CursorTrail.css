@@ -5,6 +5,5 @@
   z-index: 9999;
   mix-blend-mode: screen;
   will-change: transform;
-  box-shadow: 0 0 3px rgba(173, 215, 238, 0.7), 0 0 6px rgba(94, 178, 225, 0.5);
   transition: transform 0.05s ease-out, opacity 0.1s linear;
 }

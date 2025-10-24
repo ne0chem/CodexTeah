@@ -24,7 +24,7 @@ const YandexMap = () => {
 
     const initMap = () => {
       // Точные координаты Иннополиса, Университетская, 5
-      const innopolisCoords = [55.752156, 48.744522];
+      const innopolisCoords = [55.752389, 48.74937];
 
       const map = new window.ymaps.Map(
         mapRef.current,

@@ -116,7 +116,7 @@ export const services = [
   },
   {
     id: 10,
-    icon: "/y10.svg",
+    icon: "/icons8.svg",
     title: "Техническая поддержка",
     price: "от 50 000 ₽/мес",
     category: "support",

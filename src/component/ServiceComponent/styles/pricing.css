@@ -94,12 +94,13 @@
 .included-features,
 .additional-options {
   padding: 28px;
-  margin-top: -20px;
-  margin-bottom: 75px;
+  margin-top: -45px;
+  margin-bottom: 50px;
   border-radius: 18px;
+  margin-left: 20px;
   backdrop-filter: blur(10px);
   background-color: white;
-  width: 100%;
+  width: 97%;
   box-sizing: border-box;
 }
 .additional-options {

@@ -15,14 +15,19 @@
 .missia__left__title {
   font-size: 60px;
   /* width: 600px; */
+
+  line-height: 45px;
 }
 .missia__left__text {
   width: 600px;
   font-size: 24px;
   color: black;
+  line-height: 30px;
 }
 .missia__right {
   position: relative;
+
+  margin-left: 100px;
 }
 .missia__right-img {
   margin-top: 30px;
@@ -45,22 +50,22 @@
 .cennosti__top {
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
-  gap: 40px;
 }
 .cennosti__top__title {
   font-size: 60px;
-
-  margin-bottom: 30px;
+  line-height: 45px;
+  margin-bottom: 75px;
+  margin-top: -25px;
 }
 .cennosti__top__text {
   font-size: 24px;
   color: black;
   max-width: 1200px;
+  line-height: 30px;
 }
 .cennosti__bot {
   width: 100%;
-  margin-top: 75px;
+  margin-top: 75px !important;
 }
 
 .cennosti__columns {
@@ -110,42 +115,47 @@
 .comanda {
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
   gap: 75px;
 }
 
 .comanda h3 {
   font-size: 60px;
+  line-height: 45px;
+
+  margin-top: -20px;
 }
 .comanda p {
   font-size: 24px;
-  max-width: 1200px;
+  max-width: 1400px;
   color: #000000;
+  line-height: 30px;
+  text-align: justify;
 }
 
 /*наши преимущества*/
 .plusi {
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
-  gap: 50px;
+  margin-top: 75px !important;
 }
 
 .plusi__title {
   font-size: 60px;
-  margin-bottom: 45px;
+  line-height: 45px;
 }
 
 .plusi__text {
   font-size: 24px;
   color: black;
   max-width: 1200px;
-
+  line-height: 30px;
   text-align: justify;
 }
 
 .plusi__container {
   width: 100%;
+
+  margin-top: 75px !important;
 }
 
 .plusi__columns {
@@ -189,14 +199,17 @@
   line-height: 1.4;
 }
 .doverie {
-  margin-top: 75px;
+  margin-top: 50px;
+
+  margin-top: 70px !important;
 }
 .doverie h3 {
   font-size: 60px;
+  line-height: 45px;
 }
 .doverie__container {
   display: flex;
-  margin-top: 75px;
+  margin-top: 50px;
   gap: 120px;
   justify-content: space-between;
 }
@@ -226,8 +239,8 @@
   line-height: 1.6;
   color: black;
   text-align: left;
-  height: 500px;
-  width: 500px;
+  /* height: 500px;
+  width: 500px; */
   margin-left: -50px;
   text-align: justify;
 }
@@ -236,6 +249,7 @@
 .qwqw {
   display: flex;
   justify-content: center;
-  margin-top: 75px;
-  margin-bottom: 10px;
+  width: 120%;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }

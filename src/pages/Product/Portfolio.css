@@ -1,23 +1,29 @@
 .product__title {
   font-size: 60px;
   margin-top: 75px;
+  line-height: 45px;
 }
 .qwee {
   display: flex;
   justify-content: center;
-  margin-left: 180px;
+
+  width: 120%;
+  height: 480px;
 }
 .product {
   margin-top: 75px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .produt__left {
   width: 700px;
+
+  text-align: justify;
+  line-height: 30px;
 }
 .product__text ul,
 .product__text li {
-  font-size: 24px !important;
+  font-size: 24px;
   max-width: 700px;
 }
 .product__right {
@@ -25,20 +31,20 @@
 }
 .produt__right-img {
   position: absolute;
-  width: 200px;
+  width: 400px;
   height: 400px;
   background-color: #0385ce;
   border-radius: 20px;
-  top: -32%;
-  right: 25%;
+  top: -20%;
+  right: 11%;
   transform: rotate(15deg);
 }
 .produt__img {
   position: relative;
-  right: 25%;
+  right: 10%;
   height: 400px;
   width: 400px;
-  top: -32%;
+  top: -20%;
 }
 .produt__img img {
   width: 400px;
@@ -46,28 +52,29 @@
 }
 /*контейнер наша цель */
 .coal {
-  margin-top: -100px;
   display: flex;
   flex-direction: column;
-  gap: 35px;
 }
 .coal__title {
-  font-size: 60px !important;
-  margin-bottom: 50px;
+  margin-top: -90px;
+  font-size: 60px;
+  margin-bottom: 75px;
+  line-height: 45px;
 }
 .coal__subtitle {
-  font-size: 24px !important;
-  margin-bottom: 50px;
-  width: 800px;
+  font-size: 24px;
+  text-align: justify;
+  width: 100%;
+  line-height: 30px;
+  margin-bottom: 75px;
 }
 
 /*контейнер преимущества*/
 .advantages__title {
-  font-size: 60px !important;
+  font-size: 60px;
   display: flex;
   justify-content: left;
-
-  margin-top: 20px;
+  line-height: 45px;
 }
 .advantages__container {
   justify-content: center;
@@ -107,72 +114,6 @@
   text-align: justify;
 }
 
-/* АДАПТИВНЫЕ СТИЛИ */
-@media (max-width: 1500px) {
-  .produt__right-img {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background-color: #0385ce;
-    border-radius: 20px;
-    top: -50px;
-    right: 20%;
-    transform: rotate(15deg);
-  }
-  .produt__img {
-    position: relative;
-    right: 20%;
-    top: -50px;
-    height: 400px;
-    width: 400px;
-  }
-}
-@media (max-width: 1400px) {
-  .produt__right-img {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background-color: #0385ce;
-    border-radius: 20px;
-    top: -50px;
-    right: 20%;
-    transform: rotate(15deg);
-  }
-  .produt__img {
-    position: relative;
-    right: 20%;
-    top: -50px;
-    height: 350px;
-    width: 350px;
-  }
-}
-@media (max-width: 1300px) {
-  .produt__right-img {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    background-color: #0385ce;
-    border-radius: 20px;
-    top: -50px;
-    right: 20%;
-    transform: rotate(15deg);
-  }
-  .produt__img {
-    position: relative;
-    right: 20%;
-    top: -50px;
-    height: 320px;
-    width: 320px;
-  }
-  .product__text ul,
-  .product__text li {
-    font-size: 24px !important;
-    max-width: 600px;
-  }
-  .coal {
-    margin-top: 50px;
-  }
-}
 /* Большие планшеты (1200px - 1025px) */
 @media (max-width: 1200px) {
   .product__title {
@@ -574,51 +515,6 @@
 
   .advantages__text {
     font-size: 12px;
-  }
-}
-
-/* Большие экраны (более 1500px) */
-@media (min-width: 1500px) {
-  .product__title {
-    font-size: 72px;
-  }
-
-  .produt__left {
-    width: 800px;
-  }
-
-  .product__text ul,
-  .product__text li {
-    font-size: 28px;
-  }
-
-  .produt__right-img {
-    width: 400px;
-    height: 400px;
-  }
-
-  .produt__img {
-    width: 400px;
-    height: 400px;
-  }
-
-  .coal__title,
-  .advantages__title {
-    font-size: 56px;
-  }
-
-  .coal__subtitle {
-    font-size: 28px;
-    width: 900px;
-  }
-
-  .advantages__cards {
-    width: 450px;
-    min-height: 320px;
-  }
-
-  .advantages__text {
-    font-size: 22px;
   }
 }
 

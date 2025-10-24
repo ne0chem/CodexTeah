@@ -463,13 +463,6 @@
   }
 }
 
-/* Большие экраны (более 1500px) */
-@media (min-width: 1500px) {
-  .service-section {
-    max-width: 1400px;
-  }
-}
-
 /* Отключение сложных анимаций на мобильных для производительности */
 @media (max-width: 768px) {
   .feature-card:hover {

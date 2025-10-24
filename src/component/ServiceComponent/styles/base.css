@@ -2,13 +2,14 @@
 
 /* Базовые стили страницы */
 .services-section {
-  min-height: 100vh;
   border-radius: 40px;
+  height: auto;
 }
 
 .container {
   max-width: 1500px;
   margin: 0 auto;
+  height: auto;
 }
 
 h1 {
@@ -20,10 +21,11 @@ h1 {
   background-clip: text;
   color: transparent;
   padding: 20px;
-  margin-top: -75px;
+  line-height: 45px;
   position: relative;
   display: inline-block;
   width: 800px;
+  margin-top: 50px;
 }
 
 .category-title {

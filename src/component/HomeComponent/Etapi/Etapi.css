@@ -2,10 +2,10 @@
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .etapi-container h3 {
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
 }
 .etapi-steps {
@@ -16,7 +16,7 @@
   margin: 80px 0 40px 0;
   gap: 150px;
 
-  margin-top: 75px;
+  margin-top: 65px;
 }
 
 /* Общая соединительная линия - цвет как у бордера картинок */

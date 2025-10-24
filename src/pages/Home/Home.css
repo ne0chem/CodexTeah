@@ -53,12 +53,14 @@
   background-color: #0385ce;
   border-radius: 20px;
   transform: rotate(15deg);
+  right: 13%;
 }
 .header__left img {
   margin-top: -40px;
   position: absolute;
   width: 400px;
   height: 400px;
+  right: 13%;
 }
 .header__left {
   flex: 1;
@@ -87,9 +89,27 @@
   text-align: left;
   font-weight: bold;
   margin: 0;
-  line-height: 1.2;
+  line-height: 50px;
+  text-align: justify;
+  margin-bottom: 70px;
+}
 
+.heder h3 span {
+  color: var(--text-secondary);
+}
+
+.heder p {
   margin-bottom: 75px;
+  font-size: 27px;
+  color: var(--text-secondary);
+  line-height: 30px;
+  text-align: justify !important;
+  width: 90% !important;
+}
+
+.menu__button {
+  display: flex;
+  gap: 30px;
 }
 
 .heder p {
@@ -200,12 +220,15 @@
 
 /* Секция услуг */
 .usligii__glanv {
-  font-size: 40px;
+  font-size: 60px;
   z-index: 10;
   width: 100%;
   text-align: center;
   margin-top: -0px;
   box-sizing: border-box;
+  line-height: 45px;
+  margin-top: 75px;
+  text-align: center;
 }
 
 .uslugi {
@@ -269,5 +292,6 @@ h6 {
 }
 /* АДАПТИВНЫЕ СТИЛИ */
 .qwe {
-  margin-top: -10px;
+  margin-top: -20px;
+  height: 480px;
 }

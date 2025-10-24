@@ -3,12 +3,14 @@
   flex-direction: column;
   min-height: 100vh;
   margin-top: 75px;
-  /* БЕЗ padding и max-width - это теперь задача .container */
 }
 .qqq {
   display: flex;
   justify-content: center;
-  margin-top: 85px;
+  margin-top: 75px;
+  width: 120%;
+  padding: 0;
+  height: 480px;
 }
 .contacti__title {
   display: flex;
@@ -17,23 +19,24 @@
   margin-bottom: 75px;
 }
 
-.contacti__title-img {
-  width: 100px;
-  height: 100px;
-}
+/*  */
 
 .contacti__title-text {
   font-size: 60px;
   font-weight: 600;
   color: #030303;
   margin-bottom: 75px;
+
+  line-height: 45px;
 }
 
 .contacti__title-p {
   font-size: 24px;
   color: #000000;
   line-height: 1.6;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+
+  line-height: 30px;
 }
 
 .contacti__box {
@@ -313,10 +316,9 @@
     }
   }
 }
-
-@media (min-width: 1500px) {
-  .contacti__box {
-    max-width: 1400px;
+@media (min-width: 1700px) {
+  .qqq {
+    margin-top: 90px;
   }
 }
 @media (max-width: 1025px) {

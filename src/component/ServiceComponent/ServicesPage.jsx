@@ -12,7 +12,6 @@ const ServicesPage = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animated");
-            // Останавливаем наблюдение после активации
             observer.unobserve(entry.target);
           }
         });
@@ -29,64 +28,47 @@ const ServicesPage = () => {
       elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+
   const location = useLocation();
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState(services[0]); // Первая услуга по умолчанию
 
-  // Создаем реф для элемента, к которому будем скроллить
   const servicesContentRef = useRef(null);
-
-  // Все услуги отображаются всегда
   const displayedServices = services;
 
   // Обработка перехода из карусели
   useEffect(() => {
-    if (location.state) {
-      const { serviceId } = location.state;
-
-      // Находим и выбираем услугу
-      if (serviceId) {
-        const service = services.find((s) => s.id === serviceId);
-        if (service) {
-          setTimeout(() => {
-            setSelectedService(service);
-            // Прокрутка к деталям услуги
-            scrollToServiceContent();
-          }, 100);
-        }
+    if (location.state?.serviceId) {
+      const service = services.find((s) => s.id === location.state.serviceId);
+      if (service) {
+        setTimeout(() => {
+          setSelectedService(service);
+          scrollToServiceContent();
+        }, 100);
       }
     }
   }, [location.state]);
 
-  // Функция для прокрутки к контенту услуги
   const scrollToServiceContent = () => {
     setTimeout(() => {
       if (servicesContentRef.current) {
         servicesContentRef.current.scrollIntoView({
           behavior: "smooth",
-          block: "start", // Прокручивает к верху элемента
+          block: "start",
         });
       }
-    }, 150); // Небольшая задержка для гарантии, что контент обновился
+    }, 150);
   };
 
   const handleServiceSelect = (service) => {
     setSelectedService(service);
-    // Прокручиваем к контенту услуги после выбора
     scrollToServiceContent();
   };
 
   return (
     <section className="services-section">
       <div className="container">
-        {!selectedService && (
-          <h1
-            className="main-title wow fade-in-down"
-            data-wow-duration="1s"
-            data-wow-delay="1s"
-          >
-            Все наши услуги
-          </h1>
-        )}
+        {/* Заголовок всегда отображается */}
+        <h1 className="main-title wow fade-in-down">Все наши услуги</h1>
 
         <ServiceList
           services={displayedServices}
@@ -94,17 +76,15 @@ const ServicesPage = () => {
           onServiceSelect={handleServiceSelect}
         />
 
-        {/* Добавляем ref к этому элементу */}
+        {/* Всегда показываем детали услуги */}
         <div
           id="services-content"
-          className="services-content"
-          ref={servicesContentRef} // Добавляем реф здесь
+          className="services-content active"
+          ref={servicesContentRef}
         >
-          {selectedService ? (
+          <div className="service-detail-container">
             <ServiceDetail service={selectedService} />
-          ) : (
-            <div className="service-placeholder"></div>
-          )}
+          </div>
         </div>
       </div>
     </section>

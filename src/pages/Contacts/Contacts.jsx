@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import "./Contacts.css";
 import Zayavka from "../../component/Zayavka/Zayavka";
 import LeafletMap from "../../component/Map/LeafletMap";
-
+import ModalOK from "../../component/Modal/ModalOK/ModalOK";
 import useWow from "../../animation/Wow";
 
 const Contacts = () => {

@@ -4,9 +4,8 @@
 @media (max-width: 1024px) {
   .forma__right {
     width: min(550px, 90%);
-    height: auto;
+    height: 400px;
     min-height: 380px;
-    margin: -60px auto 50px;
     padding: 0;
   }
 
@@ -54,9 +53,7 @@
 @media (max-width: 768px) {
   .forma__right {
     width: min(500px, 90%); /* Увеличил с 85% до 90% для единообразия */
-    min-height: 420px;
-    margin: -40px auto 40px;
-    padding-bottom: 30px;
+    min-height: 520px;
   }
 
   .forma__tile {
@@ -118,9 +115,7 @@
 @media (max-width: 600px) {
   .forma__right {
     width: min(450px, 90%); /* Сохранил 90% для единообразия */
-    min-height: 400px;
-    margin: -30px auto 35px;
-    padding-bottom: 25px;
+    min-height: 500px;
   }
 
   .forma__tile {
@@ -181,10 +176,9 @@
 /* Маленькие мобильные (480px и меньше) */
 @media (max-width: 480px) {
   .forma__right {
-    width: min(400px, 90%); /* Изменил на min() для единообразия */
-    min-height: 380px;
-    margin: -20px auto 30px;
-    padding-bottom: 20px;
+    width: 450px; /* Изменил на min() для единообразия */
+    min-height: 500px;
+    margin-left: 30px;
     border-radius: 16px;
   }
 

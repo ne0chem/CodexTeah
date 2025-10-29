@@ -8,7 +8,7 @@ body {
 .service-detail-container {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
   overflow: hidden;
 }
 
@@ -73,10 +73,11 @@ body {
 .description-text p {
   font-size: 1.15rem;
   color: #050505;
-  line-height: 1.6;
-  max-width: 90%;
+  line-height: 28px;
+  max-width: 100%;
   font-weight: 400;
   letter-spacing: -0.1px;
+  text-align: justify;
 }
 
 /* Убираем точки у списков */
@@ -84,6 +85,8 @@ body {
 .description-text ol {
   list-style: none;
   padding-left: 0;
+  font-size: 18px;
+  text-align: justify;
 }
 
 .description-text li {

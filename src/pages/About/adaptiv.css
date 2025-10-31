@@ -1,5 +1,15 @@
 /* Большие планшеты и маленькие десктопы (1200px - 1025px) */
 
+@media (max-width: 1700px) {
+  .cennosti__top__title {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 1450px) {
+  .missia__right {
+    margin-left: -80px;
+  }
+}
 @media (max-width: 1200px) {
   .cennosti__top__title,
   .comanda h3,
@@ -7,26 +17,54 @@
   .doverie h3 {
     font-size: 56px;
   }
-
+  .missia__left__text {
+    margin-top: -10px;
+  }
+  .cennosti__top__title {
+    margin-top: 60px;
+  }
   .cennosti__top__text,
   .plusi__text {
     font-size: 24px;
+    margin-top: -15px;
+  }
+  .cennosti__bot {
+    margin-top: 60px !important;
+    margin-bottom: 60px;
   }
 
   .comanda p {
     font-size: 28px;
+    margin-top: -20px;
+  }
+  .plusi h3 {
+    margin-top: -10px;
   }
 
   .cennosti__item,
   .plusi__item {
     width: 100%;
-  }
 
+    margin-top: -10px;
+  }
+  .doverie h3 {
+    margin-top: -10px;
+  }
   .doverie__right p {
     font-size: 28px;
   }
+  .missia__right {
+    margin-left: 20px;
+  }
+  .qwqw {
+    margin-top: 60px;
+  }
 }
-
+@media (max-width: 1125px) {
+  .missia__right {
+    margin-left: -10px;
+  }
+}
 /* Планшеты (1024px - 769px) */
 @media (max-width: 1024px) {
   .cennosti__top__title,
@@ -120,6 +158,41 @@
   .zayavka-container {
     margin-top: -220px !important;
   }
+  .missia__left__title {
+    margin-top: -10px;
+  }
+  .cennosti__top__title {
+    margin-top: 40px;
+  }
+  .cennosti__top__text {
+    margin-top: -40px;
+  }
+  .cennosti__bot {
+    margin-top: 50px !important;
+    border: 1px solid red;
+    margin-bottom: 60px;
+  }
+  .comanda p {
+    margin-top: -30px;
+  }
+  .plusi__title {
+    margin-top: -30px !important;
+    border: 1px solid red;
+  }
+  .plusi__container {
+    border: 1px solid red;
+    margin-top: 60px !important;
+  }
+  .doverie h3 {
+    margin-bottom: 90px;
+  }
+  .doverie__right {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  .qwqw {
+    margin-top: 50px;
+  }
 }
 
 /* Мобильные устройства (600px - 426px) */
@@ -180,6 +253,23 @@
   .doverie__right {
     margin-top: -50px;
   }
+  .missia__left__title {
+    margin-top: -20px !important;
+  }
+  .cennosti__top__text {
+    margin-top: -70px;
+  }
+  .comanda h3 {
+    margin-top: -10px;
+    margin-bottom: 40px;
+  }
+  .plusi__container {
+    margin-top: 25px !important;
+    border: 1px solid black;
+  }
+  .qwqw {
+    margin-left: -10%;
+  }
 }
 @media (max-width: 570px) {
   .doverie__left {
@@ -211,12 +301,23 @@
     margin-top: -200px !important;
   }
 }
+@media (max-width: 480px) {
+  .missia__left__title {
+    margin-top: -40px !important;
+  }
+  .qwqw {
+    margin-left: -15%;
+  }
+}
 @media (max-width: 450px) {
   .doverie__left {
     margin-top: -140px;
   }
   .doverie__right {
     margin-top: -100px;
+  }
+  .qwqw {
+    margin-top: 230px !important;
   }
 }
 /* Средние мобильные (425px - 376px) */
@@ -279,9 +380,6 @@
     margin-top: 120px;
     height: 50px !important;
     max-height: 0px !important; /* Добавляем ограничение */
-  }
-  .qwqw {
-    margin-top: -30px !important;
   }
 }
 

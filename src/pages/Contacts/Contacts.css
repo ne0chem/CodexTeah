@@ -104,6 +104,7 @@
   .contacti__box {
     gap: 40px;
     padding: 35px;
+    margin-top: -20px;
   }
 
   .contacti__right {
@@ -117,9 +118,11 @@
 
   .contacti__title-p {
     font-size: 22px;
+    margin-top: -25px;
   }
   .qqq {
-    margin-top: 80px;
+    margin-top: 65px;
+    margin-bottom: -15px;
   }
 }
 
@@ -142,6 +145,7 @@
 
   .contacti__title-text {
     font-size: 36px;
+    margin-top: -10px;
   }
 
   .contacti__title-p {
@@ -159,9 +163,6 @@
 }
 
 @media (max-width: 768px) {
-  .contacti {
-    margin-top: 30px;
-  }
   .qqq {
     margin-bottom: 120px;
   }
@@ -180,6 +181,7 @@
 
   .contacti__title-p {
     font-size: 18px;
+    margin-bottom: 40px;
   }
 
   .contacti__box {
@@ -194,13 +196,12 @@
   .contacti__right {
     height: 300px;
   }
+  .qqq {
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 600px) {
-  .contacti__title {
-    margin-bottom: 30px;
-  }
-
   .contacti__title-img {
     width: 70px;
     height: 70px;
@@ -209,6 +210,7 @@
 
   .contacti__title-text {
     font-size: 28px;
+    margin-top: -20px;
   }
 
   .contacti__title-p {
@@ -240,16 +242,20 @@
     height: 250px;
     border-radius: 6px;
   }
+  .qqq {
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 425px) {
   .contacti__title-text {
     font-size: 24px;
+    margin-top: -40px;
   }
 
   .contacti__title-p {
     font-size: 15px;
-    margin-top: -20px;
+    margin-top: -30px;
   }
 
   .contacti__box {
@@ -271,6 +277,9 @@
 
   .contacti__right {
     height: 200px;
+  }
+  .qqq {
+    margin-left: -25px;
   }
 }
 
@@ -294,6 +303,15 @@
 
   .contacti__right {
     height: 180px;
+    margin-bottom: 0px;
+  }
+  .contacti__box {
+    margin-bottom: 20px;
+  }
+  .qqq {
+    margin-left: 20px;
+    margin-top: 80px;
+    margin-bottom: 70px;
   }
 }
 
@@ -330,10 +348,5 @@
 @media (max-width: 1025px) {
   .zayavka-container {
     margin-top: 100px !important;
-  }
-}
-@media (max-width: 425px) {
-  .qqq {
-    margin-top: 70px !important;
   }
 }

@@ -176,7 +176,7 @@
 /* Маленькие мобильные (480px и меньше) */
 @media (max-width: 480px) {
   .forma__right {
-    width: 450px; /* Изменил на min() для единообразия */
+    width: 480px;
     min-height: 500px;
     margin-left: 30px;
     border-radius: 16px;
@@ -235,8 +235,8 @@
 /* Очень маленькие мобильные (375px и меньше) */
 @media (max-width: 375px) {
   .forma__right {
-    width: min(350px, 90%); /* Изменил на min() для единообразия */
-    min-height: 360px;
+    width: 350px; /* Изменил на min() для единообразия */
+    min-height: 500px;
     margin: -15px auto 25px;
     padding-bottom: 18px;
     border-radius: 14px;

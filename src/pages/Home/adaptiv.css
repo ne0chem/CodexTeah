@@ -12,18 +12,6 @@
     font-size: 24px;
   }
 }
-@media (max-width: 1440px) {
-  .header__left-img {
-    width: 300px;
-    height: 300px;
-  }
-  .img__title {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-}
-
 @media (max-width: 1240px) {
   .home-page__container {
     min-width: 1000px;
@@ -47,6 +35,15 @@
   .menu__button {
     justify-content: center;
   }
+  .header__left-img,
+  .header__left img {
+    width: 350px;
+    height: 350px;
+  }
+  .usligii__glanv {
+    margin-top: -80px;
+    margin-bottom: -10px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -65,12 +62,19 @@
     width: 400px;
     z-index: 800;
   }
+  .header__text {
+    margin-top: -20px;
+  }
 }
-
+@media (max-width: 1000px) {
+  .header__left-img,
+  .header__left img {
+    right: 0;
+  }
+}
 /* Средние планшеты (900px - 769px) */
 @media (max-width: 900px) {
   .home-page__container {
-    padding: 0 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,19 +85,20 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 40px;
   }
 
   .heder h3 {
     font-size: 38px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: -10px;
+    margin-top: -10px;
   }
 
   .heder p {
     font-size: 20px;
     line-height: 1.5;
     max-width: 600px;
+    margin-top: 50px;
   }
 
   .header__right {
@@ -121,6 +126,10 @@
     object-fit: cover;
     border-radius: 20px;
   }
+  .menu__button {
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
 }
 
 /* Большие мобильные (768px - 601px) */
@@ -136,6 +145,9 @@
 
   .heder h3 {
     font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 45px;
+    text-align: left;
   }
 
   .heder p {
@@ -143,25 +155,17 @@
     margin-top: 20px;
   }
 
-  .header__left {
-    height: 300px;
-  }
-
+  .header__left img,
   .header__left-img {
-    width: 250px;
-    height: 230px;
-
-    margin-top: -40px;
-  }
-
-  .header__left img {
     width: 230px;
     height: 230px;
     margin-top: -40px;
+    right: 10%;
   }
 
   .menu__button {
-    margin-top: 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 
   .button__left,
@@ -185,16 +189,52 @@
     max-width: 300px;
     justify-content: center;
   }
+  .usligii__glanv {
+    margin-top: -40px;
+    margin-bottom: 25px;
+  }
 }
 
+@media (max-width: 740px) {
+  .header__left-img,
+  .header__left img {
+    position: absolute;
+    right: 0;
+  }
+  .heder {
+    gap: 0;
+    margin-left: 0;
+  }
+  .header__right h3 {
+    text-align: left;
+    align-items: left;
+  }
+}
+@media (max-width: 700px) {
+  .header__left-img,
+  .header__left img {
+    position: absolute;
+    right: 0;
+  }
+
+  .header__right h3 {
+    text-align: left;
+    align-items: left;
+  }
+  .header__right p {
+    text-align: left !important;
+    align-items: left !important;
+  }
+}
 /* Мобильные устройства (600px - 426px) */
-@media (max-width: 650px) {
+@media (max-width: 670px) {
   .home-page__container {
     padding: 0 20px;
   }
 
   .heder h3 {
     font-size: 30px;
+    width: 250px;
   }
 
   .heder p {
@@ -207,13 +247,13 @@
   }
 
   .header__left-img {
-    width: 200px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
 
   .header__left img {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
   .menu__button {
     margin-left: 20%;
@@ -226,18 +266,30 @@
 
   .usligii__glanv {
     font-size: 26px;
+    margin-top: -60px;
+    margin-bottom: 10px;
   }
 
   .uslugi {
     gap: 30px;
-    margin-bottom: 35px;
   }
 
   .logo {
     width: 200px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 650px) {
+  .header__left-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .header__left img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 570px) {
   .heder h3 {
     font-size: 24px;
   }
@@ -257,16 +309,25 @@
     margin-left: 10%;
     width: 350px;
   }
+  .usligii__glanv {
+    margin-top: -40px;
+  }
 }
 @media (max-width: 490px) {
   .heder h3 {
     font-size: 22px;
+    width: 400px;
+    margin-top: 20px;
   }
 
   .header__left img,
   .header__left-img {
     width: 150px;
     height: 150px;
+    margin-top: 30px;
+  }
+  .header__text {
+    text-align: justify !important;
   }
 }
 
@@ -282,7 +343,6 @@
   }
   .header__text {
     width: 200px;
-    text-align: left;
   }
   .header__left img,
   .header__left-img {
@@ -299,6 +359,8 @@
     align-items: center;
     gap: 20px;
     height: 100px; /* Фиксированная высота для контейнера */
+    margin-top: -40px;
+    margin-bottom: 10px;
   }
   .button__left {
     position: static;
@@ -316,6 +378,10 @@
     margin-top: -100px;
     width: 120px;
     height: 120px;
+  }
+  .usligii__glanv {
+    margin-bottom: 10px;
+    margin-top: -20px;
   }
 }
 
@@ -496,6 +562,9 @@
   .opit__right p {
     font-size: 12px;
   }
+  .qwe {
+    margin-bottom: 80px;
+  }
 }
 
 /* Маленькие мобильные (400px - 350px) */
@@ -528,11 +597,6 @@
   .opit__right p {
     font-size: 11px;
     line-height: 1.2;
-  }
-  .qwe {
-    margin-top: -30px;
-    margin-left: -20px;
-    width: 120%;
   }
 }
 

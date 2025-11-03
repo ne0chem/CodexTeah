@@ -169,7 +169,6 @@
   }
   .cennosti__bot {
     margin-top: 50px !important;
-    border: 1px solid red;
     margin-bottom: 60px;
   }
   .comanda p {
@@ -177,10 +176,8 @@
   }
   .plusi__title {
     margin-top: -30px !important;
-    border: 1px solid red;
   }
   .plusi__container {
-    border: 1px solid red;
     margin-top: 60px !important;
   }
   .doverie h3 {
@@ -265,7 +262,6 @@
   }
   .plusi__container {
     margin-top: 25px !important;
-    border: 1px solid black;
   }
   .qwqw {
     margin-left: -10%;

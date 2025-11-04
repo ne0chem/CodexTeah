@@ -249,7 +249,7 @@
 
 @media (max-width: 425px) {
   .contacti__title-text {
-    font-size: 24px;
+    font-size: 36px !important;
     margin-top: -40px;
   }
 
@@ -277,9 +277,6 @@
 
   .contacti__right {
     height: 200px;
-  }
-  .qqq {
-    margin-left: -25px;
   }
 }
 

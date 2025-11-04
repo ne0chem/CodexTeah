@@ -421,6 +421,10 @@
   .qwee {
     width: 400px;
   }
+  .product__title {
+    font-size: 36px !important;
+    margin-top: 20px;
+  }
 }
 @media (max-width: 475px) {
   .qwee {
@@ -429,11 +433,6 @@
 }
 /* Средние мобильные (425px - 376px) */
 @media (max-width: 425px) {
-  .product__title {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
   .product__text ul,
   .product__text li {
     font-size: 15px;
@@ -442,13 +441,13 @@
   .produt__right-img {
     width: 220px;
     height: 240px;
-    right: 10%;
+    right: 20%;
   }
 
   .produt__img {
     width: 220px;
     height: 240px;
-    right: 10%;
+    right: 20%;
   }
 
   .coal__title,

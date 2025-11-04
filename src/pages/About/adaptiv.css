@@ -250,9 +250,7 @@
   .doverie__right {
     margin-top: -50px;
   }
-  .missia__left__title {
-    margin-top: -20px !important;
-  }
+
   .cennosti__top__text {
     margin-top: -70px;
   }
@@ -277,6 +275,9 @@
   .zayavka-container {
     margin-top: -280px !important;
   }
+  .missia__left__title {
+    margin-top: -60px !important;
+  }
 }
 @media (max-width: 540px) {
   .doverie__left {
@@ -292,15 +293,13 @@
   }
   .doverie__right {
     margin-top: -90px;
+    margin-left: 40px;
   }
   .zayavka-container {
     margin-top: -200px !important;
   }
 }
 @media (max-width: 480px) {
-  .missia__left__title {
-    margin-top: -40px !important;
-  }
   .qwqw {
     margin-left: -15%;
   }

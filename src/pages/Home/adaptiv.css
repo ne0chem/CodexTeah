@@ -568,6 +568,7 @@
   }
   .qwe {
     margin-bottom: 80px;
+    margin-top: -30px;
   }
   .header__left-img,
   .header__left img {
@@ -577,7 +578,7 @@
     margin-right: -10px;
   }
   .header__left-img {
-    margin-right: -15px;
+    margin-right: -25px;
   }
 }
 

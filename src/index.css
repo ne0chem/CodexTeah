@@ -27,13 +27,13 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-ul {
+li {
   /* Сбрасываем отступы */
   margin: 0;
   padding: 0;
-
+  margin-left: 20px;
   /* Убираем маркеры */
-  list-style: none;
+  /* list-style: none; */
 
   /* Сбрасываем размер шрифта */
   font-size: inherit;
@@ -45,6 +45,13 @@ ul {
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
+}
+@media (max-width: 768px) {
+  ul {
+    font-size: 14px;
+    padding-left: 1rem;
+    line-height: 1.4;
+  }
 }
 body {
   margin: 0;

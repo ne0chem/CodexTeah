@@ -35,7 +35,10 @@ h1 {
   font-size: 2rem;
   animation: fadeIn 0.5s ease;
 }
-
+.service__info-item {
+  display: flex;
+  gap: 10px;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -180,6 +183,7 @@ h1 {
   }
   .service__info-item {
     font-size: 16px !important;
+    gap: 10px;
   }
   .included-features li,
   .additional-options li {

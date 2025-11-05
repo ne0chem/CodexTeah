@@ -374,7 +374,12 @@
     max-height: 0px !important; /* Добавляем ограничение */
   }
 }
-
+@media (max-width: 390px) {
+  .qwqw {
+    margin-left: -15%;
+    margin-top: 250px;
+  }
+}
 /* Маленькие мобильные (375px и меньше) */
 @media (max-width: 375px) {
   .cennosti__top__title,

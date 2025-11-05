@@ -249,6 +249,8 @@
 
   .section-header {
     margin-bottom: 30px;
+    width: 120%;
+    margin-left: -20px;
   }
 
   .section-header h2 {

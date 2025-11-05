@@ -28,9 +28,23 @@ code {
   box-sizing: border-box;
 }
 ul {
+  /* Сбрасываем отступы */
   margin: 0;
   padding: 0;
+
+  /* Убираем маркеры */
   list-style: none;
+
+  /* Сбрасываем размер шрифта */
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+
+  /* Сбрасываем современные CSS свойства */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
 }
 body {
   margin: 0;

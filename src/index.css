@@ -27,24 +27,40 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-li {
-  /* Сбрасываем отступы */
+/* Сброс для всех списков */
+ul,
+ol {
   margin: 0;
   padding: 0;
-  margin-left: 20px;
-  /* Убираем маркеры */
-  /* list-style: none; */
-
-  /* Сбрасываем размер шрифта */
+  list-style: none;
   font-size: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  line-height: inherit;
+}
 
-  /* Сбрасываем современные CSS свойства */
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
+/* Стили для элементов списка */
+li {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  margin-left: 12px;
+}
+
+/* Медиа-запросы для разных устройств */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  html {
+    font-size: 16px;
+  }
 }
 @media (max-width: 768px) {
   ul {

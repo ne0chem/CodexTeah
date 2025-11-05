@@ -353,24 +353,6 @@
     right: 50%;
   }
 }
-@media (max-width: 650px) {
-  .product__title {
-    margin-top: 50px;
-  }
-  .product__title,
-  .coal__title,
-  .advantages__title {
-    font-size: 25px !important;
-  }
-  .coal__subtitle {
-    font-size: 14px !important;
-    margin-bottom: 25px;
-  }
-  .product__text ul,
-  .product__text li {
-    font-size: 14px !important;
-  }
-}
 
 /* Мобильные устройства (600px - 426px) */
 @media (max-width: 600px) {
@@ -430,14 +412,28 @@
     width: 350px;
   }
   .product__tex li {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .product__text ul {
+    font-size: 20px;
+  }
+  .coal__title,
+  .advantages__title {
+    font-size: 36px !important;
+  }
+  .coal__subtitle,
+  .advantages__text {
+    font-size: 18px !important;
+  }
+  .advantages__title {
+    margin-top: -110px;
   }
 }
 /* Средние мобильные (425px - 376px) */
 @media (max-width: 425px) {
   .product__text ul,
   .product__text li {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .produt__right-img {

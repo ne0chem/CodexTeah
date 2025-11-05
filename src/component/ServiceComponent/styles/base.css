@@ -161,17 +161,29 @@ h1 {
   .price-amount {
     margin-bottom: 10px;
   }
+
   .service-detail-info h1 {
     line-height: 18px;
     padding: 0;
     margin: 0%;
-    margin-bottom: 30px !important;
+    margin-bottom: 0px !important;
+    margin-top: -10px !important;
+  }
+  .description-text p {
+    margin-bottom: 5px !important;
+    font-size: 18px !important;
+    text-align: left;
   }
   .category-title {
     font-size: 1.3rem;
     margin-bottom: 20px;
   }
-
+  .service__info-item {
+    font-size: 18px !important;
+  }
+  .included-features li {
+    font-size: 16px !important;
+  }
   .services-content {
     padding: 20px 15px;
     margin-top: -15px;
@@ -187,7 +199,7 @@ h1 {
     margin-bottom: 10px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   .services-section {
     border-radius: 16px;
   }

@@ -220,7 +220,6 @@
 
   .service-card:hover {
     transform: none !important;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1), 0 2px 15px rgba(0, 0, 0, 0.05) !important;
   }
 
   .services-carousel-wrapper .swiper-slide-active .service-card:hover {
@@ -268,7 +267,6 @@
   .carousel-button:hover:not(.disabled) {
     transform: none !important;
     border-color: #e0e0e0 !important;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
   }
 
   .carousel-button:hover:not(.disabled) svg {
@@ -571,7 +569,6 @@
 @media (max-width: 768px) {
   .feature-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(74, 157, 233, 0.15);
   }
 
   .feature-card:hover .feature-icon {

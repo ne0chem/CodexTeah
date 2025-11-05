@@ -472,7 +472,6 @@
 @media (max-width: 768px) {
   .feature-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(74, 157, 233, 0.15);
   }
 
   .feature-card:hover .feature-icon {

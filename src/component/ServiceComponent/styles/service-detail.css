@@ -77,7 +77,6 @@ body {
   max-width: 100%;
   font-weight: 400;
   letter-spacing: -0.1px;
-  text-align: justify;
 }
 
 /* Убираем точки у списков */
@@ -86,7 +85,6 @@ body {
   list-style: none;
   padding-left: 0;
   font-size: 18px;
-  text-align: justify;
 }
 
 .description-text li {

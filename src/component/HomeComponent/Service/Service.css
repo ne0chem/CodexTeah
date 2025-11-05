@@ -44,7 +44,6 @@
   text-align: center;
   line-height: 30px;
   font-weight: 400;
-  text-align: justify;
   margin-bottom: 75px;
   cursor: default;
   margin-left: 25%;
@@ -107,7 +106,6 @@
   font-weight: 400;
   flex-grow: 1;
   cursor: default;
-  text-align: justify;
 }
 
 .feature-card {

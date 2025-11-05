@@ -18,7 +18,6 @@
 .produt__left {
   width: 700px;
 
-  text-align: justify;
   line-height: 30px;
 }
 .product__text ul,
@@ -63,7 +62,7 @@
 }
 .coal__subtitle {
   font-size: 24px;
-  text-align: justify;
+
   width: 100%;
   line-height: 30px;
   margin-bottom: 75px;
@@ -96,7 +95,6 @@
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
-  text-align: justify;
 }
 .advantages__img {
   height: 80px;
@@ -111,7 +109,6 @@
   line-height: 1.4;
   white-space: normal;
   word-break: break-word;
-  text-align: justify;
 }
 @media (max-width: 1350px) {
   .product__text {
@@ -413,13 +410,15 @@
   .product__right {
     order: -1; /* Картинка будет ПЕРВОЙ (под h3) */
     margin-left: 80px;
+    margin-bottom: 20px;
   }
 
   .produt__left {
     order: 1; /* Текст будет ВТОРЫМ (под картинкой) */
   }
   .qwee {
-    width: 400px;
+    width: 120% !important;
+    margin-left: -40px;
   }
   .product__title {
     font-size: 36px !important;
@@ -429,6 +428,9 @@
 @media (max-width: 475px) {
   .qwee {
     width: 350px;
+  }
+  .product__tex li {
+    font-size: 16px;
   }
 }
 /* Средние мобильные (425px - 376px) */
@@ -471,10 +473,15 @@
   }
   .qwee {
     margin-top: -40px !important;
-    margin-left: -15px;
+    margin-left: -40px;
   }
 }
-
+@media (max-width: 390px) {
+  .qwee {
+    margin-top: -40px !important;
+    margin-left: -50px;
+  }
+}
 /* Маленькие мобильные (375px и меньше) */
 @media (max-width: 375px) {
   .product__title {
@@ -511,7 +518,7 @@
   }
   .qwee {
     width: 300px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 }
 

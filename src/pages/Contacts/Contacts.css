@@ -246,11 +246,16 @@
     margin-bottom: 80px;
   }
 }
-
-@media (max-width: 425px) {
+@media (max-width: 450px) {
+  .qqq {
+    margin-left: -50px !important;
+    width: 125%;
+  }
+}
+@media (max-width: 485px) {
   .contacti__title-text {
     font-size: 36px !important;
-    margin-top: -40px;
+    margin-top: -60px;
   }
 
   .contacti__title-p {
@@ -283,7 +288,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .contacti__title-img {
     width: 60px;
     height: 60px;
@@ -291,6 +296,7 @@
 
   .contacti__title-text {
     font-size: 22px;
+    margin-top: -60px;
   }
 
   .contacti__title-p {
@@ -311,9 +317,14 @@
   .qqq {
     margin-top: 80px;
     margin-bottom: 70px;
+    width: 120%;
   }
 }
-
+@media (max-width: 375px) {
+  .qqq {
+    margin-left: 10px !important;
+  }
+}
 @media (max-width: 320px) {
   .contacti__title-text {
     font-size: 20px;

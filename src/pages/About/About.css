@@ -23,7 +23,6 @@
   font-size: 24px;
   color: black;
   line-height: 30px;
-  text-align: justify;
 }
 .missia__right {
   position: relative;
@@ -73,7 +72,6 @@
   display: flex;
   gap: 40px; /* Расстояние между колонками */
   justify-content: space-between;
-  text-align: justify;
 }
 
 .cennosti__column {
@@ -130,7 +128,6 @@
   max-width: 1400px;
   color: #000000;
   line-height: 30px;
-  text-align: justify;
 }
 
 /*наши преимущества*/
@@ -150,7 +147,6 @@
   color: black;
   max-width: 1200px;
   line-height: 30px;
-  text-align: justify;
 }
 
 .plusi__container {
@@ -243,7 +239,6 @@
   /* height: 500px;
   width: 500px; */
   margin-left: -52px;
-  text-align: justify;
 }
 
 /* АДАПТИВНЫЕ СТИЛИ */

@@ -288,7 +288,7 @@
 @media (max-width: 868px) {
   .product__text ul,
   .product__text li {
-    font-size: 18px !important;
+    font-size: 16px !important;
     width: 300px;
   }
   .coal__subtitle {
@@ -412,10 +412,10 @@
     width: 350px;
   }
   .product__tex li {
-    font-size: 18px;
+    font-size: 16px !important;
   }
   .product__text ul {
-    font-size: 20px;
+    font-size: 16px !important;
   }
   .coal__title,
   .advantages__title {
@@ -423,7 +423,7 @@
   }
   .coal__subtitle,
   .advantages__text {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
   .advantages__title {
     margin-top: -110px;
@@ -433,7 +433,7 @@
 @media (max-width: 425px) {
   .product__text ul,
   .product__text li {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .produt__right-img {

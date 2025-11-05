@@ -171,7 +171,7 @@ h1 {
   }
   .description-text p {
     margin-bottom: 5px !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     text-align: left;
   }
   .category-title {
@@ -179,7 +179,7 @@ h1 {
     margin-bottom: 20px;
   }
   .service__info-item {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
   .included-features li,
   .additional-options li {

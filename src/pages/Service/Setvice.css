@@ -12,9 +12,9 @@
 }
 @media (max-width: 390px) {
   .qwer {
-    margin-left: 30px;
+    margin-left: 32px;
     margin-top: -120px !important;
-    width: 93%;
+    width: 92%;
   }
 }
 @media (max-width: 380px) {

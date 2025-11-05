@@ -41,7 +41,6 @@ li {
   margin: 0;
   padding: 0;
   font-size: inherit;
-  margin-left: 12px;
 }
 
 /* Медиа-запросы для разных устройств */
@@ -61,6 +60,18 @@ li {
   html {
     font-size: 16px;
   }
+} /* Вместо просто ul */
+body ul,
+.container ul,
+.your-parent-class ul {
+  display: block;
+  list-style-type: none !important; /* убираем маркеры */
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  padding-inline-start: 0 !important;
+  margin: 0;
+  padding: 0;
+  font-size: 14px; /* явно задаем размер */
 }
 @media (max-width: 768px) {
   ul {

@@ -44,7 +44,7 @@ root.render(
         <Route path="/portfolio" element={<Navigate to="/product" replace />} />
         <Route path="/product" element={<Product />} key="product" />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />{" "}
+        <Route path="/privacy" element={<PrivacyPolicy />} />{" "}
         {/* Добавляем маршрут */}
       </Routes>
       <Footer />

@@ -62,7 +62,7 @@ const Zayavka = () => {
           <span className="checkbox-custom"></span>
           <p>
             Нажимая «Отправить заявку», вы соглашаетесь с нашей 
-            <a href="/privacy-policy" className="privacy-link">
+            <a href="/privacy" className="privacy-link">
               <b>политикой конфиденциальности</b>
             </a>
           </p>

@@ -27,7 +27,15 @@ h1 {
   width: 800px;
   margin-top: 50px;
 }
-
+.service-detail-info {
+  margin-bottom: 20px;
+  margin-left: -20px;
+  /* margin-top: -40px; */
+  height: 100px;
+}
+.description-text p {
+  margin-top: -40px;
+}
 .category-title {
   text-align: center;
   margin-bottom: 75px;
@@ -47,6 +55,11 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media (max-width: 1250px) {
+  .description-text p {
+    margin-top: 0px;
   }
 }
 
@@ -73,6 +86,22 @@ h1 {
     padding: 50px 18px;
   }
 }
+@media (max-width: 1000px) {
+  .service-detail-info {
+    margin-left: -20px;
+    margin-top: -40px;
+    height: 100px;
+  }
+  .description-text p {
+    margin-top: -60px;
+    margin-bottom: -40px;
+    text-align: left;
+  }
+  .service__info-item {
+    margin-top: -10px;
+  }
+}
+
 /* Планшеты (992px и меньше) */
 @media (max-width: 992px) {
   .services-section {
@@ -144,6 +173,14 @@ h1 {
     margin-bottom: 12px;
   }
 }
+@media (max-width: 680px) {
+  .description-text p {
+    margin-top: -40px;
+    margin-bottom: -40px;
+    text-align: left;
+  }
+}
+
 @media (max-width: 576px) {
   .services-section {
     padding: 40px 0;
@@ -168,14 +205,15 @@ h1 {
   .service-detail-info h1 {
     line-height: 18px;
     padding: 0;
-    margin: 0%;
-    margin-bottom: 0px !important;
-    margin-top: -10px !important;
+    margin-top: 30px !important;
+    margin-left: 15px !important;
   }
+
   .description-text p {
-    margin-bottom: 5px !important;
+    margin-bottom: 15px !important;
     font-size: 16px !important;
     text-align: left;
+    margin-top: -80px !important;
   }
   .category-title {
     font-size: 1.3rem;
@@ -234,8 +272,13 @@ h1 {
     padding: 30px 10px;
   }
 
-  .service-placeholder h3 {
-    font-size: 1rem;
+  .description-text p {
+    margin-top: -80px !important;
+    margin-bottom: 0px !important;
+    text-align: left;
+  }
+  .service__info-item {
+    margin-top: -10px;
   }
 }
 @media (min-height: 800px) and (min-width: 769px) {

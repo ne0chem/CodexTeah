@@ -4,9 +4,8 @@
 
 body {
   margin: 0;
-  font-family: "Montserrat";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body {
   padding-top: 60px; /* Высота header */
@@ -46,13 +45,13 @@ li {
 /* Медиа-запросы для разных устройств */
 @media (max-width: 480px) {
   html {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -71,7 +70,7 @@ body ul,
   padding-inline-start: 0 !important;
   margin: 0;
   padding: 0;
-  font-size: 16px; /* явно задаем размер */
+  font-size: 14px; /* явно задаем размер */
 }
 .reset-list {
   display: block;
@@ -81,7 +80,7 @@ body ul,
   padding-inline-start: 0 !important;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .reset-list li {

@@ -131,7 +131,7 @@ body {
 .about .container,
 .home-page .container,
 .zayavka-unique-container .container,
-.qwe .container {
+.privacy-policy .container .qwe .container {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;

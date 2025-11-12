@@ -1,74 +1,85 @@
 .privacy-policy {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: "Arial", sans-serif;
+  color: #000000;
   line-height: 1.6;
-  color: #333;
-}
-
-.privacy-container {
-  background: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .privacy-policy h1 {
-  color: #2c3e50;
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5em;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #000000;
+  margin-left: 80px;
+  line-height: 20px;
+  margin-top: 18px;
+  padding: 0;
+}
+.policy-section {
+  margin-left: 90px;
+}
+.privacy-policy h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 25px 0 15px 0;
+  color: #000000;
+}
+
+.privacy-policy p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000000;
+  text-align: justify;
 }
 
 .policy-section {
   margin-bottom: 30px;
 }
-
-.policy-section h2 {
-  color: #3498db;
-  margin-bottom: 15px;
-  font-size: 1.4em;
+@media (max-width: 1250px) {
+  .privacy-policy h1,
+  .policy-section {
+    margin-left: 0;
+  }
 }
-
-.policy-section p {
-  margin-bottom: 15px;
-}
-
-.policy-section ul {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-.policy-section li {
-  margin-bottom: 8px;
-}
-
-.policy-date {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  text-align: center;
-  color: #7f8c8d;
-}
-
-/* Адаптивность */
+/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .privacy-policy {
-    padding: 20px 10px;
-  }
-
-  .privacy-container {
-    padding: 20px;
+    padding: 15px;
   }
 
   .privacy-policy h1 {
-    font-size: 2em;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 
-  .policy-section h2 {
-    font-size: 1.2em;
+  .privacy-policy h2 {
+    font-size: 18px;
+    margin: 20px 0 12px 0;
+  }
+
+  .privacy-policy p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-policy {
+    padding: 10px;
+  }
+
+  .privacy-policy h1 {
+    font-size: 22px;
+  }
+
+  .privacy-policy h2 {
+    font-size: 17px;
+  }
+
+  .privacy-policy p {
+    font-size: 14px;
+    text-align: left;
   }
 }

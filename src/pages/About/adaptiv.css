@@ -1,6 +1,11 @@
 /* Большие планшеты и маленькие десктопы (1200px - 1025px) */
-
-@media (max-width: 1700px) {
+@media (min-width: 1900px) {
+  .cennosti__top__title,
+  .comanda h3 {
+    margin-top: -20px !important;
+  }
+}
+@media (min-width: 1250px) {
   .cennosti__top__title {
     margin-top: 70px;
   }
@@ -8,11 +13,11 @@
     margin-top: 70px;
   }
 }
-@media (max-width: 1450px) {
+/* @media (max-width: 1450px) {
   .missia__right {
     margin-left: -80px;
   }
-}
+} */
 @media (max-width: 1200px) {
   .cennosti__top__title,
   .comanda h3,
@@ -331,7 +336,7 @@
   .plusi__text,
   .comanda p,
   .doverie__right p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .cennosti__top,
@@ -410,7 +415,7 @@
 
   .cennosti__right h4,
   .plusi__content h4 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .cennosti__right p,
@@ -601,7 +606,7 @@
     margin-top: -30px;
   }
   .missia__left__text {
-    font-size: 16px;
+    font-size: 14px;
     width: 320px;
   }
   .missia__right-img,
@@ -614,7 +619,7 @@
     width: 200px;
   }
   .missia__left__text {
-    font-size: 16px;
+    font-size: 14px;
     width: 280px;
   }
   .missia__right-img,

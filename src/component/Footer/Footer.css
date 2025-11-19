@@ -350,7 +350,11 @@
     font-size: 0.95rem;
   }
 }
-
+@media (max-width: 1000px) {
+  .footer__adres p {
+    text-align: left;
+  }
+}
 /* Дополнительно для очень маленьких экранов */
 @media (max-width: 600px) {
   .footer__nav-links,

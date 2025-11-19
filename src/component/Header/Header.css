@@ -71,7 +71,7 @@
 }
 
 .button {
-  background-color: var(--button--color);
+  background-color: #0385ce;
   color: white;
   font-size: 0.875rem;
   border: none;
@@ -87,9 +87,9 @@
 }
 
 .button:hover {
-  background: linear-gradient(135deg, #0056b3 0%, #004499 100%);
-  box-shadow: 0 6px 16px rgba(0, 113, 227, 0.4);
-  transform: translateY(-1px);
+  background: #0278bd;
+  box-shadow: 0 6px 20px rgba(3, 133, 206, 0.35), 0 2px 4px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px) scale(1.02);
 }
 .button:active {
   transform: translateY(0);

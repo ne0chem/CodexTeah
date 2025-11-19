@@ -38,19 +38,60 @@ export default function Footer() {
           </div>
           <div className="footer__contacts-container">
             <div className="footer__contacts-column-left">
-              <div className="footer__nomer">
-                <img src="./tlf.png" alt="Телефон" />
-                <p>+7 938 000-23-47</p>
+              <div className="footer__contacts-column-left">
+                <div
+                  className="footer__nomer"
+                  onClick={() => {
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                      navigator.userAgent
+                    );
+                    const phoneNumber = "89966650722";
+                    if (isMobile) {
+                      window.location.href = `tel:${phoneNumber}`;
+                    } else {
+                      navigator.clipboard
+                        .writeText(phoneNumber)
+                        .then(() =>
+                          alert(`Номер 8 (996) 665-07-22 скопирован!`)
+                        )
+                        .catch(() => alert(`Телефон: 8 (996) 665-07-22`));
+                    }
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img src="./tlf.png" alt="Телефон" />
+                  <p>8 (996) 665-07-22</p>
+                </div>
+
+                <div
+                  className="footer__email"
+                  onClick={() => {
+                    window.open(
+                      `https://mail.google.com/mail/?view=cm&fs=1&to=zalaev@codekstech.ru&su=Запрос%20с%20сайта%20CodexTech&body=Здравствуйте!%20Я%20заинтересован(а)%20в%20ваших%20услугах.`,
+                      "_blank"
+                    );
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img src="./inet.png" alt="Интернет" />
+                  <p>zalaev@codekstech.ru</p>
+                </div>
               </div>
-              <div className="footer__email">
-                <img src="./inet.png" alt="Интернет" />
-                <p>zalaev@codekstech.ru</p>
-              </div>
-            </div>
-            <div className="footer__contacts-column-right">
-              <div className="footer__email1">
-                <img src="/email.svg" alt="Email" />
-                <p>zalaev@codekstech.ru</p>
+
+              <div className="footer__contacts-column-right">
+                <div
+                  className="footer__email1"
+                  onClick={() => {
+                    window.open(
+                      `https://mail.google.com/mail/?view=cm&fs=1&to=info@codextech.ru&su=Запрос%20с%20сайта%20CodexTech&body=Здравствуйте!%20Я%20заинтересован(а)%20в%20ваших%20услугах.`,
+                      "_blank"
+                    );
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img src="/email.svg" alt="Email" />
+                  <p>info@codextech.ru</p>
+                </div>
               </div>
               <div className="footer__adres">
                 <img src="./location.svg" alt="Адрес" />

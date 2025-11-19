@@ -94,6 +94,13 @@ body ul,
     line-height: 1.4;
   }
 }
+@media (max-width: 500px) {
+  ul {
+    font-size: 14px !important;
+    padding-left: 1rem;
+    line-height: 1.4;
+  }
+}
 body {
   margin: 0;
   min-height: 100vh;

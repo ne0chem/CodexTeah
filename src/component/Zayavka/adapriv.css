@@ -4,8 +4,8 @@
 @media (max-width: 1024px) {
   .forma__right {
     width: min(550px, 90%);
-    height: 400px;
-    min-height: 380px;
+    height: 500px;
+    min-height: 500px;
     padding: 0;
   }
 

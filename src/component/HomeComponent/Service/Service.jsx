@@ -1,0 +1,94 @@
+import "./Service.css";
+import "./adaptiv.css";
+
+const Service = () => {
+  return (
+    <section
+      class="service-section wow slide-in-up"
+      data-wow-duration="1s"
+      data-wow-delay="1.5s"
+    >
+      <div class="section-header">
+        <h2>Сервис - наша сильная сторона</h2>
+      </div>
+
+      <p class="section-intro">
+        Мы создаём не просто продукты, а выстраиваем долгосрочные отношения с
+        клиентами, обеспечивая безупречный сервис на всех этапах сотрудничества.
+        Наша команда экспертов всегда готова предложить инновационные решения
+        для вашего бизнеса.
+      </p>
+
+      <div class="features-grid fade-in-right delay-200">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Персональная команда</h3>
+          <p>
+            На протяжении всего проекта с вами работает выделенная команда
+            специалистов, где у каждого члена команды есть своя зона
+            ответственности. Вы всегда знаете, к кому обратиться по любому
+            вопросу.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Соблюдение сроков</h3>
+          <p>
+            Мы ценим ваше время и гарантируем выполнение всех этапов работы в
+            оговоренные сроки.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>Помощь в подготовке</h3>
+          <p>Сбор всего необходимого для успешного запуска вашего проекта.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Эффективные решения</h3>
+          <p>
+            Опираясь на наш опыт, мы подбираем оптимальные ИТ-решения, чтобы
+            ваша система работала чётко, без сбоев и была готова к росту.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Круглосуточная поддержка</h3>
+          <p>
+            Наша техническая поддержка доступна 24/7 для решения любых вопросов
+            и проблем. Мы оперативно реагируем на запросы и обеспечиваем
+            бесперебойную работу ваших систем.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Аналитика и отчетность</h3>
+          <p>
+            Мы предоставляем детальные отчеты о ходе работы и результатах
+            проекта. Наша система аналитики позволяет отслеживать эффективность
+            и вносить корректировки в реальном времени.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Service;

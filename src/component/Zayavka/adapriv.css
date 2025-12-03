@@ -1,0 +1,363 @@
+/* АДАПТИВНЫЕ СТИЛИ */
+
+/* Планшеты (1024px - 769px) */
+@media (max-width: 1024px) {
+  .forma__right {
+    width: min(550px, 90%);
+    height: 500px;
+    min-height: 500px;
+    padding: 0;
+  }
+
+  .forma__tile {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    margin: 40px 20px 30px;
+  }
+
+  .forma__text {
+    gap: clamp(12px, 2vw, 15px);
+    padding: 0 30px;
+  }
+
+  .forma__text input {
+    width: min(220px, 100%);
+    height: 48px;
+    font-size: 1rem;
+    padding: 14px 18px;
+  }
+
+  .forma__bot {
+    gap: clamp(20px, 3vw, 25px);
+    margin-top: 25px;
+    padding: 0 30px;
+  }
+
+  .forma__button {
+    width: min(180px, 100%);
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .checkbox-container {
+    width: min(220px, 100%);
+    font-size: 0.8125rem;
+  }
+
+  .forma__bot p {
+    width: min(220px, 100%);
+    font-size: 0.6875rem;
+  }
+}
+
+/* Большие мобильные (768px - 601px) */
+@media (max-width: 768px) {
+  .forma__right {
+    width: min(500px, 90%); /* Увеличил с 85% до 90% для единообразия */
+    min-height: 520px;
+  }
+
+  .forma__tile {
+    font-size: clamp(1.375rem, 4vw, 1.5rem);
+    margin: 35px 20px 25px;
+  }
+
+  .forma__text {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 25px;
+  }
+
+  .forma__text input {
+    width: 100%;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
+    height: 48px; /* Выровнял высоту с планшетной версией */
+    font-size: 1rem; /* Выровнял размер шрифта */
+    padding: 14px 18px; /* Выровнял отступы */
+  }
+
+  .forma__bot {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+    padding: 0 25px;
+  }
+
+  .forma__button {
+    width: 100%;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
+    height: 48px; /* Выровнял высоту */
+    font-size: 1rem; /* Выровнял размер шрифта */
+    order: -1;
+  }
+
+  .checkbox-container {
+    width: 100%;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
+    font-size: 0.8125rem;
+    justify-content: center;
+  }
+
+  .forma__bot p {
+    width: 100%;
+    max-width: 300px; /* Добавил ограничение максимальной ширины */
+    font-size: 0.6875rem;
+    text-align: center;
+  }
+
+  /* Убираем сложные эффекты для производительности */
+  .forma__right::after {
+    display: none;
+  }
+}
+
+/* Мобильные устройства (600px - 481px) */
+@media (max-width: 600px) {
+  .forma__right {
+    width: min(450px, 90%); /* Сохранил 90% для единообразия */
+    min-height: 500px;
+  }
+
+  .forma__tile {
+    font-size: clamp(1.25rem, 5vw, 1.375rem);
+    margin: 30px 20px 20px;
+  }
+
+  .forma__text {
+    padding: 0 25px; /* Выровнял с предыдущим брейкпоинтом */
+    gap: 15px; /* Выровнял отступы */
+  }
+
+  .forma__text input {
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    padding: 14px 18px; /* Сохранил отступы */
+    border-radius: 10px;
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  .forma__bot {
+    padding: 0 25px; /* Выровнял с предыдущим брейкпоинтом */
+    gap: 20px; /* Выровнял отступы */
+    margin-top: 25px; /* Выровнял отступ */
+  }
+
+  .forma__button {
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    border-radius: 10px;
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  .checkbox-container {
+    font-size: 0.8125rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  .checkbox-custom {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  .checkbox-custom:after {
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+  }
+
+  .forma__bot p {
+    font-size: 0.6875rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
+  }
+}
+
+/* Маленькие мобильные (480px и меньше) */
+@media (max-width: 480px) {
+  .forma__right {
+    width: auto;
+    /* min-height: 500px; */
+    margin-left: 30px;
+    border-radius: 16px;
+  }
+  .forma__tile {
+    font-size: 1.25rem;
+    margin: 25px 20px 18px; /* Выровнял горизонтальные отступы */
+  }
+
+  .forma__text {
+    padding: 0 20px; /* Увеличил отступы для единообразия */
+    gap: 15px; /* Сохранил отступы */
+  }
+
+  .forma__text input {
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    padding: 14px 18px; /* Сохранил отступы */
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  .forma__bot {
+    padding: 0 20px; /* Увеличил отступы */
+    gap: 20px; /* Сохранил отступы */
+    margin-top: 25px; /* Сохранил отступ */
+  }
+
+  .forma__button {
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  .checkbox-container {
+    font-size: 0.8125rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  .forma__bot p {
+    font-size: 0.6875rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Добавил ограничение */
+    line-height: 1.4;
+  }
+
+  /* Упрощенные тени */
+  .forma__right {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .forma__button {
+    box-shadow: 0 2px 8px rgba(3, 133, 206, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Очень маленькие мобильные (375px и меньше) */
+@media (max-width: 375px) {
+  .forma__right {
+    width: auto;
+    min-height: 500px;
+    margin: -15px auto 25px;
+    padding-bottom: 18px;
+    border-radius: 14px;
+  }
+
+  .forma__tile {
+    font-size: 1.125rem;
+    margin: 22px 20px 16px; /* Выровнял горизонтальные отступы */
+  }
+
+  .forma__text {
+    padding: 0 20px; /* Сохранил отступы */
+    gap: 15px; /* Сохранил отступы */
+  }
+
+  .forma__text input {
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    padding: 14px 18px; /* Сохранил отступы */
+    max-width: 300px; /* Сохранил ограничение */
+  }
+
+  .forma__bot {
+    padding: 0 20px; /* Сохранил отступы */
+    gap: 20px; /* Сохранил отступы */
+    margin-top: 25px; /* Сохранил отступ */
+  }
+
+  .forma__button {
+    height: 48px; /* Сохранил высоту */
+    font-size: 1rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Сохранил ограничение */
+  }
+
+  .checkbox-container {
+    font-size: 0.8125rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Сохранил ограничение */
+  }
+
+  .checkbox-custom {
+    width: 18px; /* Сохранил размер */
+    height: 18px; /* Сохранил размер */
+    margin-right: 10px; /* Сохранил отступ */
+  }
+
+  .checkbox-custom:after {
+    left: 5px; /* Сохранил позицию */
+    top: 1px; /* Сохранил позицию */
+    width: 4px; /* Сохранил размер */
+    height: 8px; /* Сохранил размер */
+  }
+
+  .forma__bot p {
+    font-size: 0.6875rem; /* Сохранил размер шрифта */
+    max-width: 300px; /* Сохранил ограничение */
+  }
+}
+
+/* Landscape ориентация для мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+  .forma__right {
+    min-height: 320px;
+    margin: -15px auto 20px;
+    width: min(500px, 90%); /* Добавил ограничение ширины */
+  }
+
+  .forma__tile {
+    margin: 20px 20px 15px; /* Выровнял отступы */
+    font-size: 1.125rem;
+  }
+
+  .forma__text {
+    gap: 15px; /* Сохранил отступы */
+  }
+
+  .forma__text input {
+    height: 48px; /* Сохранил высоту */
+    padding: 14px 18px; /* Сохранил отступы */
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  .forma__bot {
+    margin-top: 20px; /* Немного уменьшил отступ */
+    gap: 15px; /* Немного уменьшил отступы */
+  }
+
+  .forma__button {
+    height: 48px; /* Сохранил высоту */
+    max-width: 300px; /* Добавил ограничение */
+  }
+
+  @media (max-width: 768px) {
+    .forma__text {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .forma__text input {
+      width: calc(50% - 10px);
+      max-width: none; /* Убрал ограничение для landscape */
+    }
+  }
+}
+
+/* Отключение анимаций на мобильных для производительности */
+@media (max-width: 768px) {
+  .forma__right,
+  .forma__text input,
+  .forma__button,
+  .checkbox-container {
+    transition: none;
+  }
+
+  .forma__text input:hover,
+  .forma__text input:focus {
+    transform: none;
+  }
+
+  .forma__button:hover {
+    transform: none;
+    box-shadow: 0 3px 10px rgba(3, 133, 206, 0.25),
+      0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+}

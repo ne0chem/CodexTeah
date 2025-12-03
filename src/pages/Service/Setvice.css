@@ -1,0 +1,31 @@
+.qwer {
+  margin-top: -90px !important;
+  margin-bottom: 30px;
+}
+@media (max-width: 470px) {
+  .qwer {
+    margin-left: 40px;
+    margin-top: -100px !important;
+    margin-bottom: 10px;
+    width: 95%;
+  }
+}
+@media (max-width: 390px) {
+  .qwer {
+    margin-left: 32px;
+    margin-top: -120px !important;
+    width: 92%;
+  }
+}
+@media (max-width: 380px) {
+  .qwer {
+    margin-left: 60px;
+    margin-top: -110px !important;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+.qwer {
+  display: flex;
+  justify-content: center;
+}

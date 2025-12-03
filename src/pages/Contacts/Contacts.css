@@ -1,0 +1,362 @@
+.contacti {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 75px;
+}
+.qqq {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  width: 120%;
+  padding: 0;
+  height: 480px;
+}
+.contacti__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 75px;
+}
+
+/*  */
+
+.contacti__title-text {
+  font-size: 60px;
+  font-weight: 600;
+  color: #030303;
+  margin-bottom: 75px;
+
+  line-height: 45px;
+}
+
+.contacti__title-p {
+  font-size: 24px;
+  color: #000000;
+  line-height: 1.6;
+  /* margin-bottom: 20px; */
+
+  line-height: 30px;
+}
+
+.contacti__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  width: 100%;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 10px;
+}
+
+.contacti__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.info {
+  font-size: 18px;
+  color: #2c3e50;
+  line-height: 1.5;
+  margin: 0;
+  width: 50%;
+}
+
+.contacti__right {
+  height: 400px;
+  margin-left: -200px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+}
+
+/* Стили для карты */
+.map-container {
+  width: 100%;
+  height: 100%;
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 1rem;
+}
+@media (max-width: 1450px) {
+  .qqq {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .contacti__box {
+    gap: 40px;
+    padding: 35px;
+    margin-top: -20px;
+  }
+
+  .contacti__right {
+    margin-left: -150px;
+    height: 380px;
+  }
+
+  .contacti__title-text {
+    font-size: 40px;
+  }
+
+  .contacti__title-p {
+    font-size: 22px;
+    margin-top: -25px;
+  }
+  .qqq {
+    margin-top: 65px;
+    margin-bottom: -15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contacti__box {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .contacti__right {
+    margin-left: 0;
+    height: 350px;
+    order: 2;
+  }
+
+  .contacti__left {
+    order: 1;
+  }
+
+  .contacti__title-text {
+    font-size: 36px;
+    margin-top: -10px;
+  }
+
+  .contacti__title-p {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .info {
+    font-size: 16px;
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .qqq {
+    margin-bottom: 120px;
+  }
+  .contacti__title {
+    margin-bottom: 40px;
+  }
+
+  .contacti__title-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contacti__title-text {
+    font-size: 32px;
+  }
+
+  .contacti__title-p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .contacti__box {
+    padding: 25px 20px;
+    gap: 35px;
+  }
+
+  .contacti__left {
+    gap: 25px;
+  }
+
+  .contacti__right {
+    height: 300px;
+  }
+  .qqq {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacti__title-img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .contacti__title-text {
+    font-size: 28px;
+    margin-top: -20px;
+  }
+
+  .contacti__title-p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .contacti__box {
+    padding: 20px 15px;
+    gap: 30px;
+    border-radius: 10px;
+  }
+
+  .contacti__left {
+    gap: 20px;
+  }
+
+  .text {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .info {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .contacti__right {
+    height: 250px;
+    border-radius: 6px;
+  }
+  .qqq {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 450px) {
+  .qqq {
+    margin-left: -50px !important;
+    width: 125%;
+  }
+}
+@media (max-width: 485px) {
+  .contacti__title-text {
+    font-size: 36px !important;
+    margin-top: -60px;
+  }
+
+  .contacti__title-p {
+    font-size: 15px;
+    margin-top: -30px;
+  }
+
+  .contacti__box {
+    padding: 18px 12px;
+    gap: 25px;
+  }
+
+  .contacti__left {
+    gap: 18px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .info {
+    font-size: 14px;
+  }
+
+  .contacti__right {
+    height: 200px;
+  }
+  .qqq {
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contacti__title-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contacti__title-text {
+    font-size: 22px;
+    margin-top: -60px;
+  }
+
+  .contacti__title-p {
+    font-size: 14px;
+  }
+
+  .contacti__box {
+    padding: 15px 10px;
+  }
+
+  .contacti__right {
+    height: 180px;
+    margin-bottom: 0px;
+  }
+  .contacti__box {
+    margin-bottom: 20px;
+  }
+  .qqq {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: 120%;
+  }
+}
+@media (max-width: 375px) {
+  .qqq {
+    margin-left: 10px !important;
+  }
+}
+@media (max-width: 320px) {
+  .contacti__title-text {
+    font-size: 20px;
+  }
+
+  .contacti__title-p {
+    font-size: 13px;
+  }
+
+  .contacti__box {
+    padding: 12px 8px;
+  }
+
+  .contacti__right {
+    height: 160px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  @media (max-width: 900px) {
+    .contacti__right {
+      height: 200px;
+    }
+  }
+}
+@media (min-width: 1700px) {
+  .qqq {
+    margin-top: 90px;
+  }
+}
+@media (max-width: 1025px) {
+  .zayavka-container {
+    margin-top: 100px !important;
+  }
+}

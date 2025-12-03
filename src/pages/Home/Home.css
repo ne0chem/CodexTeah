@@ -1,0 +1,289 @@
+/*первый раздел (главный)*/
+:root {
+  --text-primary: #000000; /* Основной темный текст */
+  --text-secondary: #000000; /* Вторичный текст */
+  --text-accent: #0385ce; /* Акцентный цвет */
+  --text-light: #6b7b8f; /* Светлый текст */
+  --text-white: #ffffff; /* Белый текст */
+  --button--color: #0385ce; /* Добавил цвет кнопки */
+}
+
+/* Основной контейнер страницы */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Контейнер для центрирования контента */
+.home-page__container {
+  width: 100%;
+  max-width: 1500px;
+  min-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Хедер секция */
+.heder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 75px;
+  box-sizing: border-box;
+  /* gap: 60px; */
+}
+
+.header__right {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+}
+
+.header__left-img {
+  margin-top: 30px;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #0385ce;
+  border-radius: 20px;
+  transform: rotate(15deg);
+  right: 13%;
+}
+.header__left img {
+  margin-top: 30px;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  right: 13%;
+}
+.header__left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+
+.img__title {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  display: block;
+  transform: scale(1);
+  transform-origin: center;
+  object-fit: contain;
+}
+
+.heder h3 {
+  width: 100%;
+  font-size: 60px;
+  color: var(--text-primary);
+  text-align: left;
+  font-weight: bold;
+  margin: 0;
+  line-height: 50px;
+  margin-bottom: 70px;
+}
+
+.heder h3 span {
+  color: var(--text-secondary);
+}
+
+.heder p {
+  margin-bottom: 75px;
+  font-size: 27px;
+  color: var(--text-secondary);
+  line-height: 30px;
+  width: 80% !important;
+}
+
+.menu__button {
+  display: flex;
+  gap: 30px;
+}
+
+.heder p {
+  margin-bottom: 75px;
+  font-size: 27px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  text-align: left;
+  width: 100%;
+}
+
+.menu__button {
+  display: flex;
+  gap: 30px;
+  margin-top: 75px;
+}
+
+.button__left,
+.button__right {
+  width: 280px;
+  height: 45px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Основная кнопка (синяя) */
+.button__left {
+  background-color: var(--button--color);
+  color: white;
+  border: none;
+}
+
+.button__left:hover {
+  background-color: #1b7cb4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--button--color);
+}
+
+.button__left:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px var(--button--color);
+}
+
+/* Контурная кнопка (белая с синей рамкой) */
+.button__right {
+  background-color: white;
+  color: #2295d4;
+  border: 2px solid #2295d4;
+  transition: all 0.3s ease, border-color 0.2s;
+}
+
+.button__right:hover {
+  background-color: #f0f8ff;
+  color: var(--button--color);
+  border-color: var(--button--color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px var(--button--color);
+}
+
+.button__right:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Общие эффекты для обеих кнопок */
+.button__left:hover,
+.button__right:hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Блок с опытом */
+.opit {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  margin-top: 75px;
+}
+/*Позвать Юлю и посмотреть вместе */
+.opit__centr,
+.opit__right {
+  display: flex;
+  gap: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.opit__left {
+  display: flex;
+  gap: 20px;
+  width: 220px;
+  text-align: center;
+}
+
+/* Секция услуг */
+.usligii__glanv {
+  font-size: 60px;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  margin-top: -0px;
+  box-sizing: border-box;
+  line-height: 45px;
+  margin-top: 75px;
+}
+
+.uslugi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Декоративные элементы */
+.logo {
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 500px;
+}
+
+.logo2 {
+  position: absolute;
+  transform: rotate(-70deg);
+  left: 10%;
+}
+
+.logo4 {
+  position: absolute;
+  transform: rotate(140deg);
+  right: 10%;
+  top: 100%;
+}
+
+/* Шрифты */
+body {
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Для заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.zayavka {
+  margin-top: -10px !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 80px !important;
+}
+/* АДАПТИВНЫЕ СТИЛИ */
+.qwe {
+  margin-top: -20px;
+  height: 480px;
+}

@@ -1,0 +1,251 @@
+.about {
+  height: 100pv;
+}
+
+.section__missia {
+  margin-top: 75px;
+  display: flex;
+}
+.missia__left {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-right: 50px;
+}
+.missia__left__title {
+  font-size: 60px;
+  /* width: 600px; */
+
+  line-height: 45px;
+}
+.missia__left__text {
+  width: 600px;
+  font-size: 24px;
+  color: black;
+  line-height: 30px;
+}
+.missia__right {
+  position: relative;
+
+  margin-left: 100px;
+}
+.missia__right-img {
+  margin-top: 30px;
+  margin-left: 100px;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #0385ce;
+  border-radius: 20px;
+  transform: rotate(15deg);
+}
+.missia__right img {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 100px;
+  width: 400px;
+  height: 400px;
+}
+/*наши ценности*/
+.cennosti__top {
+  display: flex;
+  flex-direction: column;
+}
+.cennosti__top__title {
+  font-size: 60px;
+  line-height: 45px;
+  margin-bottom: 75px;
+  margin-top: -25px;
+}
+.cennosti__top__text {
+  font-size: 24px;
+  color: black;
+  max-width: 1200px;
+  line-height: 30px;
+}
+.cennosti__bot {
+  width: 100%;
+  margin-top: 75px !important;
+}
+
+.cennosti__columns {
+  display: flex;
+  gap: 40px; /* Расстояние между колонками */
+  justify-content: space-between;
+}
+
+.cennosti__column {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Расстояние между элементами в колонке */
+  flex: 1;
+}
+
+.cennosti__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 500px;
+}
+
+.cennosti__left {
+  flex-shrink: 0;
+}
+
+.cennosti__left img {
+  width: 100px; /* Настройте по необходимости */
+  height: 100px;
+}
+
+.cennosti__right h4 {
+  margin: 0 0 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cennosti__right p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/*наша команда*/
+
+.comanda {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+
+.comanda h3 {
+  font-size: 60px;
+  line-height: 45px;
+
+  margin-top: -20px;
+}
+.comanda p {
+  font-size: 24px;
+  max-width: 1400px;
+  color: #000000;
+  line-height: 30px;
+}
+
+/*наши преимущества*/
+.plusi {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px !important;
+}
+
+.plusi__title {
+  font-size: 60px;
+  line-height: 45px;
+}
+
+.plusi__text {
+  font-size: 24px;
+  color: black;
+  max-width: 1200px;
+  line-height: 30px;
+}
+
+.plusi__container {
+  width: 100%;
+
+  margin-top: 75px !important;
+}
+
+.plusi__columns {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.plusi__column {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex: 1;
+}
+
+.plusi__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 500px;
+}
+
+.plusi__icon {
+  flex-shrink: 0;
+}
+
+.plusi__icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.plusi__content h4 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.plusi__content p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.doverie {
+  margin-top: 50px;
+
+  margin-top: 70px !important;
+}
+.doverie h3 {
+  font-size: 60px;
+  line-height: 45px;
+}
+.doverie__container {
+  display: flex;
+  margin-top: 50px;
+  gap: 120px;
+  justify-content: space-between;
+}
+
+.doverie__left {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.doverie__right {
+  flex: 1;
+  display: flex;
+  align-items: center; /* Выравниваем текст по центру */
+}
+.doverie__left img {
+  max-width: 90%;
+  height: 550px;
+  display: block;
+}
+.doverie__right p {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  margin-top: -12px;
+  font-size: 24px;
+  line-height: 1.6;
+  color: black;
+  text-align: left;
+  /* height: 500px;
+  width: 500px; */
+  margin-left: -52px;
+}
+
+/* АДАПТИВНЫЕ СТИЛИ */
+.qwqw {
+  display: flex;
+  justify-content: center;
+  width: 120%;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}

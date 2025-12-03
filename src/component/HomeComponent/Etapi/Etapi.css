@@ -1,0 +1,119 @@
+.etapi-container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.etapi-container h3 {
+  font-size: 60px;
+  text-align: center;
+}
+.etapi-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin: 80px 0 40px 0;
+  gap: 150px;
+
+  margin-top: 65px;
+}
+
+/* Общая соединительная линия - цвет как у бордера картинок */
+.etapi-steps::before {
+  content: "";
+  position: absolute;
+  top: 60px; /* Центрируем по вертикали относительно иконок */
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #0385ce; /* Тот же цвет, что и у бордера */
+  z-index: 1;
+}
+
+.etapi-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  padding: 0 15px;
+}
+
+/* Кружки для картинок с улучшенным выравниванием */
+.etapi-step-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgb(226, 228, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border: 3px solid #0385ce;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etapi-step-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.etapi-step-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Контент с улучшенным выравниванием */
+.etapi-step-content {
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.etapi-step-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+  line-height: 1.3;
+  width: 100%;
+  letter-spacing: -0.2px;
+}
+
+.etapi-step-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #718096;
+  text-align: left;
+  margin: 0 !important;
+  padding: 0 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Выравниваем высоту блоков */
+.etapi-step {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 280px;
+  justify-content: flex-start;
+}
+
+.etapi-step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

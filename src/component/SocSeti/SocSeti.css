@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+button,
+input {
+  -moz-outline-style: none;
+  outline-style: none;
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.add-butt-wrapper {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  border-radius: 16px;
+  z-index: 1000;
+
+  /* Адаптивные размеры */
+  @media (min-width: 768px) {
+    height: 100px;
+    width: 100px;
+    bottom: 30px;
+    right: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 120px;
+    width: 120px;
+    bottom: 40px;
+    right: 50px;
+  }
+
+  &::before {
+    content: "";
+    background: #0385ce;
+    z-index: 10;
+    height: 24px;
+    width: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+
+    @media (min-width: 768px) {
+      height: 32px;
+      width: 8px;
+    }
+  }
+
+  &::after {
+    content: "";
+    background: #0385ce;
+    z-index: 10;
+    height: 6px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+
+    @media (min-width: 768px) {
+      height: 8px;
+      width: 32px;
+    }
+  }
+
+  transition: 0.1s;
+  &:hover {
+    transform: rotate(45deg);
+    & > a {
+      animation: add-butt-hover 0.8s ease;
+      margin: 4px;
+      border-radius: 18px;
+      transition: 0.2s;
+      transition-delay: 0.45s;
+      & > i {
+        animation: add-butt-icons 0.8s linear;
+        transform: rotate(-45deg);
+        color: #0385ce;
+      }
+    }
+  }
+}
+
+.add-butt {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  padding-top: 12px;
+  background-color: #e9e9e9;
+  color: #0385ce;
+  text-align: center;
+  transition: 0.1s;
+
+  @media (min-width: 768px) {
+    height: 50px;
+    width: 50px;
+    padding-top: 16px;
+  }
+}
+
+/* Button positioning */
+.add-butt:nth-child(1) {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  border-radius: 12px 0 0 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.add-butt:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  border-radius: 0 12px 0 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.add-butt:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 0 0 12px 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.add-butt:nth-child(4) {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border-radius: 0 0 0 12px;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.add-butt > i {
+  color: rgba(255, 255, 255, 0);
+}
+
+@keyframes add-butt-icons {
+  from {
+    color: rgba(255, 255, 255, 0);
+  }
+  60% {
+    color: rgba(255, 255, 255, 0);
+  }
+  to {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+@-webkit-keyframes add-butt-icons {
+  from {
+    color: rgba(255, 255, 255, 0);
+  }
+  60% {
+    color: rgba(255, 255, 255, 0);
+  }
+  to {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Добавьте эти стили к вашему существующему CSS */
+
+.main-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  transition: 0.3s;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.add-butt-wrapper:hover .main-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-img {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: rotate(0deg);
+
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Анимация при наведении */
+.add-butt-wrapper:hover {
+  transform: rotate(45deg);
+  background-color: transparent;
+
+  & > a {
+    animation: add-butt-hover 0.8s ease;
+
+    & > .icon-img {
+      animation: add-butt-icons 0.8s linear;
+      opacity: 1;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* Обновляем анимацию */
+@keyframes add-butt-icons {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+}
+
+.add-butt-wrapper:hover > a > .icon-image {
+  animation: add-butt-icons 0.8s linear;
+  transform: rotate(-45deg);
+}
+
+/* Альтернативный вариант для очень маленьких экранов */
+@media (max-width: 550px) {
+  .add-butt-wrapper {
+    display: none;
+  }
+}

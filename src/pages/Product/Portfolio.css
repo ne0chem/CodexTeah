@@ -1,0 +1,589 @@
+.product__title {
+  font-size: 60px;
+  margin-top: 75px;
+  line-height: 45px;
+}
+.qwee {
+  display: flex;
+  justify-content: center;
+
+  width: 112%;
+  height: 480px;
+  margin-bottom: 40px;
+}
+.product {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+.produt__left {
+  width: 700px;
+
+  line-height: 30px;
+}
+.product__text ul,
+.product__text li {
+  font-size: 24px;
+  max-width: 700px;
+}
+.product__right {
+  position: relative;
+}
+.produt__right-img {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #0385ce;
+  border-radius: 20px;
+  top: -20%;
+  right: 11%;
+  transform: rotate(15deg);
+}
+.produt__img {
+  position: relative;
+  right: 10%;
+  height: 400px;
+  width: 400px;
+  top: -20%;
+}
+.produt__img img {
+  width: 400px;
+  height: 400px;
+}
+/*контейнер наша цель */
+.coal {
+  display: flex;
+  flex-direction: column;
+}
+.coal__title {
+  margin-top: -90px;
+  font-size: 60px;
+  margin-bottom: 75px;
+  line-height: 45px;
+}
+.coal__subtitle {
+  font-size: 24px;
+
+  width: 100%;
+  line-height: 30px;
+  margin-bottom: 75px;
+}
+
+/*контейнер преимущества*/
+.advantages__title {
+  font-size: 60px;
+  display: flex;
+  justify-content: left;
+  line-height: 45px;
+}
+.advantages__container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  margin-top: 75px;
+  margin-bottom: 80px;
+}
+.advantages__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #0385ce;
+  background-color: white;
+  width: 380px !important;
+  min-height: 298px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.advantages__img {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+.advantages__text {
+  font-size: 20px;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+}
+@media (max-width: 1350px) {
+  .product__text {
+    width: 600px;
+  }
+  .coal__title {
+    margin-top: -30px;
+  }
+}
+
+/* Большие планшеты (1200px - 1025px) */
+@media (max-width: 1250px) {
+  .product__title {
+    font-size: 56px;
+    margin-top: 75px;
+  }
+  .product__text {
+    margin-top: -20px;
+  }
+  .product__text ul,
+  .product__text li {
+    font-size: 24px;
+    max-width: 450px;
+  }
+  .produt__right-img {
+    width: 350px;
+    height: 350px;
+  }
+  .produt__img {
+    width: 350px;
+    height: 350px;
+  }
+  .produt__left {
+    width: 600px;
+  }
+  .coal__title {
+    margin-top: 40px;
+  }
+  .coal__title,
+  .advantages__title {
+    font-size: 42px;
+  }
+
+  .coal__subtitle {
+    font-size: 22px;
+    width: 700px;
+    margin-top: -30px;
+  }
+  .advantages__title {
+    margin-top: -20px;
+  }
+  .advantages__cards {
+    width: 350px;
+    min-height: 280px;
+    margin-top: -20px;
+  }
+
+  .advantages__text {
+    font-size: 18px;
+  }
+  .qwee {
+    margin-top: -20px;
+  }
+}
+
+/* Планшеты (1024px - 901px) */
+@media (max-width: 1024px) {
+  .product {
+    align-items: center;
+  }
+
+  .produt__left {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  .product__text {
+    text-align: left;
+  }
+
+  .produt__right-img {
+    top: 2%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .produt__img {
+    position: relative;
+    top: 0;
+    transform: rotate(-1.8deg);
+    width: 300px;
+    height: 300px;
+  }
+
+  .coal {
+    margin-top: 10px;
+  }
+
+  .coal__subtitle {
+    width: 90%;
+    max-width: 800px;
+  }
+  .advantages__container {
+    gap: 40px;
+  }
+  .advantages__cards {
+    width: 320px;
+    min-height: 260px;
+  }
+
+  .advantages__text {
+    font-size: 17px;
+  }
+  .qwee {
+    margin-top: -15px;
+    margin-bottom: 90px;
+  }
+}
+
+/* Средние планшеты (900px - 769px) */
+@media (max-width: 900px) {
+  .product__title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .product__text ul,
+  .product__text li {
+    font-size: 20px;
+  }
+
+  .produt__right-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .produt__img {
+    width: 250px;
+    height: 250px;
+  }
+  .coal__title {
+    margin-top: -10px;
+  }
+  .coal__title,
+  .advantages__title {
+    font-size: 36px;
+  }
+
+  .coal__subtitle {
+    font-size: 20px;
+    width: 90%;
+    margin-top: -50px;
+  }
+  .advantages__title {
+    margin-top: -70px;
+  }
+  .coal {
+    margin-top: 60px;
+    gap: 25px;
+  }
+
+  .advantages {
+    margin-top: 50px;
+  }
+
+  .advantages__cards {
+    width: 300px;
+    min-height: 240px;
+    padding: 15px;
+  }
+
+  .advantages__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 868px) {
+  .product__text ul,
+  .product__text li {
+    font-size: 16px !important;
+    width: 300px;
+  }
+  .coal__subtitle {
+    font-size: 18px !important;
+  }
+}
+/* Большие мобильные (768px - 601px) */
+@media (max-width: 768px) {
+  .product__title {
+    font-size: 40px;
+  }
+
+  .product {
+    gap: 40px;
+  }
+
+  .coal__title,
+  .advantages__title {
+    font-size: 40px !important;
+    margin-bottom: 30px;
+  }
+
+  .coal__subtitle {
+    font-size: 18px;
+    margin-bottom: 70px;
+    width: 95%;
+    margin-top: -10px;
+  }
+
+  .advantages__container {
+    gap: 20px;
+  }
+
+  .advantages__cards {
+    width: 100%;
+    max-width: 400px;
+    min-height: 200px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .advantages__text {
+    font-size: 16px;
+  }
+  .qwee {
+    margin-top: -40px;
+    margin-bottom: 100px;
+
+    width: 600px;
+  }
+}
+@media (max-width: 720px) {
+  .produt__right-img {
+    width: 200px;
+    height: 200px;
+    right: 50%;
+  }
+
+  .produt__img {
+    width: 200px;
+    height: 200px;
+    right: 50%;
+  }
+}
+
+/* Мобильные устройства (600px - 426px) */
+@media (max-width: 600px) {
+  .product {
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .product__text {
+    margin-top: 5px;
+  }
+  .coal {
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .advantages {
+    margin-top: 85px;
+  }
+
+  .advantages__cards {
+    padding: 15px;
+  }
+
+  .advantages__text {
+    font-size: 15px;
+  }
+  .qwee {
+    max-width: 500px;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 565px) {
+  .product {
+    flex-direction: column;
+  }
+
+  .product__right {
+    order: -1; /* Картинка будет ПЕРВОЙ (под h3) */
+    margin-left: 80px;
+    margin-bottom: 20px;
+  }
+
+  .produt__left {
+    order: 1; /* Текст будет ВТОРЫМ (под картинкой) */
+  }
+  .qwee {
+    width: 120% !important;
+    margin-left: -40px;
+  }
+  .product__title {
+    font-size: 36px !important;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 475px) {
+  .qwee {
+    width: 120% !important;
+    margin-left: -35px;
+  }
+  .product__tex li {
+    font-size: 16px !important;
+  }
+  .product__text ul {
+    font-size: 16px !important;
+  }
+  .coal__title,
+  .advantages__title {
+    font-size: 36px !important;
+  }
+  .coal__subtitle,
+  .advantages__text {
+    font-size: 14px !important;
+  }
+  .advantages__title {
+    margin-top: -110px;
+  }
+}
+/* Средние мобильные (425px - 376px) */
+@media (max-width: 425px) {
+  .product__text ul,
+  .product__text li {
+    font-size: 14px;
+  }
+
+  .produt__right-img {
+    width: 220px;
+    height: 240px;
+    right: 20%;
+  }
+
+  .produt__img {
+    width: 220px;
+    height: 240px;
+    right: 20%;
+  }
+
+  .coal__title,
+  .advantages__title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .coal__subtitle {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .advantages__cards {
+    border-radius: 15px;
+    padding: 12px;
+  }
+
+  .advantages__text {
+    font-size: 14px;
+  }
+  .advantages__title {
+    margin-top: -70px !important;
+  }
+  .qwee {
+    margin-top: -40px !important;
+    margin-left: -50px;
+
+    width: 120% !important;
+  }
+}
+@media (max-width: 390px) {
+  .qwee {
+    margin-top: -40px !important;
+    margin-left: -50px;
+  }
+}
+/* Маленькие мобильные (375px и меньше) */
+@media (max-width: 375px) {
+  .product__title {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .product__text ul,
+  .product__text li {
+    font-size: 14px;
+  }
+
+  .produt__right-img {
+    width: 200px;
+    height: 220px;
+  }
+
+  .produt__img {
+    width: 200px;
+    height: 220px;
+  }
+
+  .coal__title,
+  .advantages__title {
+    font-size: 24px;
+  }
+
+  .coal__subtitle {
+    font-size: 14px;
+  }
+
+  .advantages__text {
+    font-size: 13px;
+  }
+  .qwee {
+    width: 300px;
+    margin-left: 10px;
+  }
+}
+
+/* Очень маленькие мобильные (320px и меньше) */
+@media (max-width: 320px) {
+  .product__title {
+    font-size: 26px;
+  }
+
+  .product__text ul,
+  .product__text li {
+    font-size: 13px;
+  }
+
+  .produt__right-img {
+    width: 180px;
+    height: 200px;
+  }
+
+  .produt__img {
+    width: 180px;
+    height: 200px;
+  }
+
+  .coal__title,
+  .advantages__title {
+    font-size: 22px;
+  }
+
+  .coal__subtitle {
+    font-size: 13px;
+  }
+
+  .advantages__cards {
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .advantages__text {
+    font-size: 12px;
+  }
+}
+
+/* Landscape ориентация для планшетов и мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+  @media (max-width: 1024px) {
+    .product {
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    .produt__left {
+      width: 50%;
+      text-align: left;
+    }
+
+    .product__right {
+      order: 0;
+    }
+
+    .advantages__cards {
+      min-height: 180px;
+      margin-top: 30px;
+    }
+  }
+}

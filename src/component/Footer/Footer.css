@@ -1,0 +1,451 @@
+/* Footer.css */
+/* Footer.css */
+.container_f {
+  display: flex;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto; /* Добавьте это для центрирования */
+  width: 100%; /* Добавьте это */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-left: 20px;
+  background-color: rgb(226, 226, 226);
+  align-items: flex-start;
+
+  width: 100%; /* Добавьте это */
+  max-width: 100%; /* Ограничиваем максимальную ширину */
+  box-sizing: border-box; /* Важно! */
+  position: relative; /* Добавляем для псевдо-элемента */
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; /* Всегда на всю ширину viewport */
+  height: 4px;
+  background-color: #2295d4;
+  z-index: 1;
+}
+.footer__left {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 340px;
+}
+
+.footer__img {
+  width: 220px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer__img:hover {
+  transform: scale(1.03);
+}
+
+.footer__info {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.footer__centr {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 60px; /* Добавляем такой же отступ как у левого блока */
+}
+
+.footer__nav {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  margin-top: 0; /* Убираем стандартный отступ h3 */
+}
+
+.footer__glavnaya,
+.footer__yslugi,
+.footer__port,
+.footer__company {
+  font-size: 1.125rem;
+  color: #272a2c;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  text-align: left;
+}
+
+.footer__glavnaya::after,
+.footer__yslugi::after,
+.footer__port::after,
+.footer__company::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #0385ce;
+  transition: width 0.3s ease;
+}
+
+.footer__glavnaya:hover,
+.footer__yslugi:hover,
+.footer__port:hover,
+.footer__company:hover {
+  color: #2b6cb0;
+  transform: translateX(5px);
+}
+
+.footer__glavnaya:hover::after,
+.footer__yslugi:hover::after,
+.footer__port:hover::after,
+.footer__company:hover::after {
+  width: 30px;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 60px; /* Добавляем такой же отступ как у левого блока */
+}
+
+.footer__contakt h4 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  margin-top: 0; /* Убираем стандартный отступ h4 */
+}
+
+.footer__nomer,
+.footer__email,
+.footer__email1,
+.footer__adres {
+  display: flex;
+  align-items: center; /* Исправляем на center для правильного выравнивания */
+  gap: 20px;
+  transition: transform 0.2s ease;
+  min-height: 28px;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.footer__nomer:hover,
+.footer__email:hover,
+.footer__email1:hover,
+.footer__adres:hover {
+  transform: translateX(5px);
+}
+
+.footer__nomer img,
+.footer__email img,
+.footer__email1 img,
+.footer__adres img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.footer__nomer p,
+.footer__email p,
+.footer__email1 p,
+.footer__adres p {
+  font-size: 0.9375rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.5;
+  display: flex;
+  align-items: center; /* Исправляем на center */
+  min-height: 24px;
+}
+
+.footer__adres {
+  max-width: 300px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    padding: 3rem 5vw;
+    gap: 3rem;
+    align-items: center;
+  }
+  .footer__left {
+    display: none;
+  }
+  .footer__centr {
+    display: none;
+  }
+  .footer__right {
+    max-width: 100%;
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Заголовки */
+  .footer__nav,
+  .footer__contakt h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  /* Контейнер для двух колонок ссылок */
+  .footer__nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  /* Колонки ссылок */
+  .footer__nav-column-left,
+  .footer__nav-column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer__nav-column-left {
+    text-align: right;
+  }
+
+  .footer__nav-column-right {
+    text-align: left;
+  }
+
+  /* Ссылки */
+  .footer__glavnaya,
+  .footer__yslugi,
+  .footer__port,
+  .footer__company {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.25rem 0;
+  }
+
+  .footer__glavnaya:hover,
+  .footer__yslugi:hover,
+  .footer__port:hover,
+  .footer__company:hover {
+    color: #333;
+  }
+
+  /* Стили для контактов */
+  .footer__right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer__contacts-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .footer__contacts-column-left,
+  .footer__contacts-column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer__contacts-column-left {
+    text-align: right;
+  }
+
+  .footer__contacts-column-right {
+    text-align: left;
+  }
+
+  /* Стили для контактных элементов */
+  .footer__nomer,
+  .footer__email,
+  .footer__email1,
+  .footer__adres {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: #666;
+  }
+
+  .footer__nomer img,
+  .footer__email img,
+  .footer__email1 img,
+  .footer__adres img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+  }
+
+  .footer__nomer p,
+  .footer__email p,
+  .footer__email1 p,
+  .footer__adres p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .footer__adres p {
+    max-width: 200px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 5vw;
+    gap: 2.5rem;
+  }
+
+  .footer__nav,
+  .footer__contakt h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer__nav-links,
+  .footer__contacts-container {
+    gap: 3rem;
+  }
+
+  .footer__glavnaya,
+  .footer__yslugi,
+  .footer__port,
+  .footer__company {
+    font-size: 1.05rem;
+  }
+
+  .footer__nomer p,
+  .footer__email p,
+  .footer__email1 p,
+  .footer__adres p {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 1000px) {
+  .footer__adres p {
+    text-align: left;
+  }
+}
+/* Дополнительно для очень маленьких экранов */
+@media (max-width: 600px) {
+  .footer__nav-links,
+  .footer__contacts-container {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 5vw;
+    gap: 2rem;
+  }
+
+  .footer__nav,
+  .footer__contakt h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer__nav-links,
+  .footer__contacts-container {
+    /* flex-direction: column; */
+    gap: 1.5rem;
+  }
+
+  .footer__nav-column-left,
+  .footer__nav-column-right,
+  .footer__contacts-column-left,
+  .footer__contacts-column-right {
+    /* text-align: center; */
+    gap: 0.75rem;
+  }
+
+  .footer__nomer p,
+  .footer__email p,
+  .footer__email1 p,
+  .footer__adres p {
+    justify-content: center;
+    /* gap: 0.5rem; */
+    font-size: 14px;
+  }
+
+  .footer__glavnaya,
+  .footer__yslugi,
+  .footer__port,
+  .footer__company {
+    font-size: 14px;
+    padding: 0.5rem 0;
+  }
+
+  .footer__adres p {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 380px) {
+  .footer {
+    padding: 1.5rem 5vw;
+    gap: 1.5rem;
+  }
+  .footer__contacts-container {
+    /* flex-direction: column; */
+    gap: 0px;
+    margin: 0 0;
+  }
+  .footer__nav,
+  .footer__contakt h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer__glavnaya,
+  .footer__yslugi,
+  .footer__port,
+  .footer__company,
+  .footer__nomer p,
+  .footer__email p,
+  .footer__email1 p,
+  .footer__adres p {
+    font-size: 1 rem;
+  }
+  /*если Эмину не понрав удалить */
+  .footer__nomer p,
+  .footer__email p,
+  .footer__email1 p,
+  .footer__adres p {
+    font-size: 12px;
+  }
+  .footer__adres img {
+    margin-top: -50px;
+  }
+}

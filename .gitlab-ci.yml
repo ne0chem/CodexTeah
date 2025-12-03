@@ -16,8 +16,7 @@ build_app:
     - docker        # <--- ДОБАВИЛ
   script:
     - npm ci
-    - npm run build
-    - CI=false npm run build   # <-- вот это
+    - CI=false npm run build   # ← только эта команда
   artifacts:
     paths:
       - build/

@@ -13,10 +13,10 @@ build_app:
   stage: build
   image: node:18
   tags:
-    - docker        # <--- ДОБАВИЛ
+    - docker
   script:
     - npm ci
-    - CI=false npm run build   # ← только эта команда
+    - CI=false npm run build
   artifacts:
     paths:
       - build/
@@ -36,7 +36,9 @@ deploy_production:
     - chmod 600 ~/.ssh/id_rsa
     - ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts
   script:
-    - ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo 'DEPLOY PATH:' && pwd && ls -la '$DEPLOY_PATH'"
+    # опционально оставить проверку:
+    - ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo 'DEPLOY PATH:' && ls -la '$DEPLOY_PATH'"
+    # сам деплой
     - rsync -avz build/ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
   environment:
     name: production

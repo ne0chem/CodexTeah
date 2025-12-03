@@ -1,0 +1,52 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  NODE_ENV: production
+
+cache:
+  paths:
+    - node_modules/
+
+build_app:
+  stage: build
+  image: node:18
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 week
+  only:
+    - main
+
+deploy_production:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    # ставим ssh и rsync
+    - apk add --no-cache openssh-client rsync
+
+    # настраиваем SSH из переменной
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+
+    # добавляем host key (чтобы не спрашивал "Are you sure...")
+    - ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts
+
+  script:
+    # 1) Копируем билд на сервер
+    - rsync -avz --delete build/ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
+
+    # 2) (опционально) Выполнить команду на сервере, например перезапустить nginx или docker
+    # - ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "cd $DEPLOY_PATH && docker compose pull && docker compose up -d"
+
+  environment:
+    name: production
+    url: http://your-domain.com
+  only:
+    - main
+  when: manual   # можно убрать, чтобы деплоить автоматически после билда

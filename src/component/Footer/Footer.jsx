@@ -5,11 +5,18 @@ export default function Footer() {
     <div className="container_f">
       <div className="footer">
         <div className="footer__left">
-          <img className="footer__img" src="./CodexTech.svg" alt="лого" />
+          <img className="footer__img" src="/CodexTech.svg" alt="лого" />
           <p className="footer__info">
             Информационные технологии и решения от 0 до полностью готового
             продукта
           </p>
+          <div className="info_dop">
+            <p className="footer__info info_dop">ООО "Кодекстех"</p>
+            <p className="footer__info info_dop">ИНН 1683025377</p>
+            <p className="footer__info info_dop">
+              ОКВЭД 62.01, 62.02, 62.09, 63.11.1
+            </p>
+          </div>
         </div>
         <div className="footer__centr">
           <h3 className="footer__nav">Навигация</h3>
@@ -43,7 +50,7 @@ export default function Footer() {
                   className="footer__nomer"
                   onClick={() => {
                     const isMobile = /iPhone|iPad|iPod|Android/i.test(
-                      navigator.userAgent
+                      navigator.userAgent,
                     );
                     const phoneNumber = "89966650722";
                     if (isMobile) {
@@ -52,7 +59,7 @@ export default function Footer() {
                       navigator.clipboard
                         .writeText(phoneNumber)
                         .then(() =>
-                          alert(`Номер 8 (996) 665-07-22 скопирован!`)
+                          alert(`Номер 8 (996) 665-07-22 скопирован!`),
                         )
                         .catch(() => alert(`Телефон: 8 (996) 665-07-22`));
                     }
@@ -68,13 +75,13 @@ export default function Footer() {
                   onClick={() => {
                     window.open(
                       `https://mail.google.com/mail/?view=cm&fs=1&to=zalaev@codekstech.ru&su=Запрос%20с%20сайта%20CodexTech&body=Здравствуйте!%20Я%20заинтересован(а)%20в%20ваших%20услугах.`,
-                      "_blank"
+                      "_blank",
                     );
                   }}
                   style={{ cursor: "pointer" }}
                 >
                   <img src="./inet.png" alt="Интернет" />
-                  <p>zalaev@codekstech.ru</p>
+                  <p>e.zalaev@codextech.ru</p>
                 </div>
               </div>
 
@@ -84,7 +91,7 @@ export default function Footer() {
                   onClick={() => {
                     window.open(
                       `https://mail.google.com/mail/?view=cm&fs=1&to=info@codextech.ru&su=Запрос%20с%20сайта%20CodexTech&body=Здравствуйте!%20Я%20заинтересован(а)%20в%20ваших%20услугах.`,
-                      "_blank"
+                      "_blank",
                     );
                   }}
                   style={{ cursor: "pointer" }}

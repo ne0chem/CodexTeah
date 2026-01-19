@@ -46,7 +46,7 @@ export default function Header() {
       <div className="container">
         <div className="header__container">
           <div className="header__logo">
-            <img src="./CodexTech.svg" alt="CodexTech Logo" />
+            <img src="/CodexTech.svg" alt="CodexTech Logo" />
           </div>
           <nav className="nav">
             <Link to="/" className="nav__glavnaya" onClick={closeMenu}>

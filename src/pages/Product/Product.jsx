@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import "./Portfolio.css";
 import Zayavka from "../../component/Zayavka/Zayavka";
 import useWow from "../../animation/Wow";
+import { Link } from "react-router-dom";
 const Product = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,11 +16,11 @@ const Product = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const elements = document.querySelectorAll(
-      ".fade-in-left, .fade-in-right, .fade-in, .fade-in-down, .fade-in-up, .bounce-in"
+      ".fade-in-left, .fade-in-right, .fade-in, .fade-in-down, .fade-in-up, .bounce-in",
     );
     elements.forEach((el) => observer.observe(el));
 
@@ -152,6 +153,81 @@ const Product = () => {
                 Единый интерфейс — Android-приложение и веб-панель с
                 синхронизацией данных.
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="price__document">
+          <p className="price">Стоимость разработки ПО, от</p>
+          <p className="price bold">500 000 руб</p>
+        </div>
+        <div className="product__document">
+          <h1 className="advantages__title pr_title">Документы ПО</h1>
+          <div className="product__links">
+            <div className="product__link">
+              <img className="document__img" src="./pages.svg" alt="" />
+              <Link className="link__text" to="/product/specification">
+                Имметрикс Описание функциональных арактеристик и архитектуры
+              </Link>
+              <Link to="/product/specification" className="document__link">
+                <img
+                  src="./link.svg"
+                  alt="Ссылка на спецификацию"
+                  className="document__img1"
+                />
+              </Link>
+            </div>
+
+            <div className="product__link">
+              <img className="document__img" src="./pages.svg" alt="" />
+              <Link className="link__text" to="/product/installation">
+                Инструкция по установке
+              </Link>
+              <Link to="/product/installation" className="document__link">
+                <img
+                  src="./link.svg"
+                  alt="Ссылка на спецификацию"
+                  className="document__img1"
+                />
+              </Link>
+            </div>
+            <div className="product__link">
+              <img className="document__img" src="./pages.svg" alt="" />
+              <Link className="link__text" to=" /product/userManual/">
+                Инструкция по эксплуатации
+              </Link>
+              <Link to="/product/userManual/" className="document__link">
+                <img
+                  src="./link.svg"
+                  alt="Ссылка на спецификацию"
+                  className="document__img1"
+                />
+              </Link>
+            </div>
+            <div className="product__link">
+              <img className="document__img" src="./pages.svg" alt="" />
+              <Link className="link__text" to="/product/technical/">
+                Описание технических средств
+              </Link>
+              <Link to="/product/technical/" className="document__link">
+                <img
+                  src="./link.svg"
+                  alt="Ссылка на спецификацию"
+                  className="document__img1"
+                />
+              </Link>
+            </div>
+            <div className="product__link">
+              <img className="document__img" src="./pages.svg" alt="" />
+              <Link className="link__text" to="/product/lifecycle/">
+                Описание жизненного цикла
+              </Link>
+              <Link to="/product/lifecycle/" className="document__link">
+                <img
+                  src="./link.svg"
+                  alt="Ссылка на спецификацию"
+                  className="document__img1"
+                />
+              </Link>
             </div>
           </div>
         </div>

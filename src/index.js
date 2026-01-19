@@ -28,6 +28,11 @@ import Product from "./pages/Product/Product";
 import About from "./pages/About/About";
 import Contacts from "./pages/Contacts/Contacts";
 import PrivacyPolicy from "./component/PrivacyPolicy/PrivacyPolicy"; // Добавляем импорт
+import Installation from "./pages/Product/ProductDocument/Installation/Installation";
+import Specification from "./pages/Product/ProductDocument/Specification/Specification";
+import UserManual from "./pages/Product/ProductDocument/UserManual/UserManual";
+import Technical from "./pages/Product/ProductDocument/Technical/Technical";
+import Lifecycle from "./pages/Product/ProductDocument/Lifecycle/Lifecycle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -45,6 +50,11 @@ root.render(
         <Route path="/product" element={<Product />} key="product" />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />{" "}
+        <Route path="/product/specification" element={<Specification />} />
+        <Route path="/product/installation" element={<Installation />} />
+        <Route path="/product/userManual" element={<UserManual />} />
+        <Route path="/product/technical/" element={<Technical />} />
+        <Route path="/product/lifecycle/" element={<Lifecycle />} />
         {/* Добавляем маршрут */}
       </Routes>
       <Footer />
